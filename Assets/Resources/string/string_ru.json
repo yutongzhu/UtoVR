@@ -1,0 +1,3366 @@
+{
+	"OTT_Key":{
+		"content":"String (English)",
+		"description":"Category||Subcategory/Page||Application Scenario||Entry Type||UI Element Typ"
+	},
+	"home":{
+		"content":"Home",
+		"description":"Global||Navigation||Name of the home category in the navigation||UI string||Navigation"
+	},
+	"liveTV":{
+		"content":"Live TV",
+		"description":"Global||Navigation||Name of the live TV category in the navigation; title of the live TV home page||UI string||Navigation"
+	},
+	"on_demand":{
+		"content":"On Demand",
+		"description":"Global||Navigation||Name of the on demand category in the navigation||UI string||Navigation"
+	},
+	"mytv":{
+		"content":"My",
+		"description":"Global||Navigation||Name of the my category in the navigation||UI string||Navigation"
+	},
+	"message_network_download":{
+		"content":"Wi-Fi unavailable. Downloading the video will consume data traffic. Continue?",
+		"description":"Global||Pop-up box||Message displayed on any page to ask a subscriber whether to continue the download when the network is switched to the carrier network during download||Message||Common text"
+	},
+	"message_session_timeout":{
+		"content":"Login timed out. Please log in again.",
+		"description":"Global||Message||Message prompting a subscriber to re-log in||Message||Common text"
+	},
+	"copy_right":{
+		"content":"Copyright © Hybrid Video 2017. All rights reserved.",
+		"description":"Login||Startup page||Message displayed on the startup page||Message||Common text"
+	},
+	"new_version":{
+		"content":"There is a new version. Please update first.",
+		"description":"Login||Upgrade message||[Forcible upgrade] Message displayed in a dialog box to force a subscriber to upgrade when the app detects a new version||Message||Common text"
+	},
+	"version_update":{
+		"content":"There is a new version. Do you want to update?",
+		"description":"Login||Upgrade message||[Non-forcible upgrade] Message displayed in a dialog box to ask a subscriber whether to upgrade when the app detects a new version||Message||Common text"
+	},
+	"upgrade":{
+		"content":"Update",
+		"description":"Login||Upgrade message||Version upgrade button||UI string||Button"
+	},
+	"cancel":{
+		"content":"Cancel",
+		"description":"Login||Upgrade message||Cancel button||UI string||Button"
+	},
+	"loginId":{
+		"content":"Login ID",
+		"description":"Login||Login||Subscriber login ID||UI string||Label"
+	},
+	"password":{
+		"content":"Password",
+		"description":"Login||Login||Subscriber login password||UI string||Label"
+	},
+	"login":{
+		"content":"Log In",
+		"description":"Login||Login||Title of the login page; login button||UI string||Button"
+	},
+	"message_offline_mode":{
+		"content":"Network unavailable. Please wait or switch to offline mode.",
+		"description":"Login||Unavailable network||Message displayed when the network is unavailable, where a subscriber can select the offline mode or exit||Message||Common text"
+	},
+	"quit":{
+		"content":"Quit",
+		"description":"Login||Unavailable network||Exit button||UI string||Button"
+	},
+	"offline_mode":{
+		"content":"Offline Mode",
+		"description":"Login||Unavailable network||Offline mode button||UI string||Button"
+	},
+	"message_replace_device":{
+		"content":"The number of devices has reached the upper limit. Please replace a device and log in again.",
+		"description":"Login||Device replacement||Message indicating that the number of user devices has reached the maximum, where a subscriber can tap OK to replace the working device||Message||Common text"
+	},
+	"ok":{
+		"content":"OK",
+		"description":"Login||Device replacement||OK button||UI string||Button"
+	},
+	"select_device_to_replace":{
+		"content":"Select Device to Replace",
+		"description":"Login||Device replacement||Title of the page for selecting a target device from the login device list||UI string||Title"
+	},
+	"online":{
+		"content":"Online",
+		"description":"Login||Device replacement||Device online status||UI string||Label"
+	},
+	"device_replace_confirm":{
+		"content":"Are you sure you want to replace the device?",
+		"description":"Login||Device replacement||Message prompting a subscriber to confirm device replacement||Message||Common text"
+	},
+	"message_ssl_error":{
+		"content":"Unable to establish a secure connection to the server. Continue to trust the server's security?",
+		"description":"Login||Login error||Message indicating that the HTTPS certificate fails to be verified||Message||Common text"
+	},
+	"home":{
+		"content":"Home",
+		"description":"Home||Navigation||Home button in the bottom navigation||UI string||Navigation"
+	},
+	"liveTV":{
+		"content":"Live TV",
+		"description":"Home||Navigation||Live TV button in the bottom navigation||Message||Navigation"
+	},
+	"on_demand":{
+		"content":"On Demand",
+		"description":"Home||Navigation||On Demand button in the bottom navigation||UI string||Navigation"
+	},
+	"mytv":{
+		"content":"My",
+		"description":"Home||Navigation||My button in the bottom navigation||UI string||Navigation"
+	},
+	"everyone_is_watching":{
+		"content":"Everyone's Watching",
+		"description":"Home||Home category||Title of the popular recommendation category||UI string||Title"
+	},
+	"top_picks_for_you":{
+		"content":"Top Picks for You",
+		"description":"Home||Home category||Title of the personalized recommendation category||UI string||Title"
+	},
+	"morelike":{
+		"content":"More Like %1$s",
+		"description":"Home||Home category||Title of the personalized recommendation subcategory 1||UI string||Title"
+	},
+	"youlike":{
+		"content":"Because You Like %1$s",
+		"description":"Home||Home category||Title of the personalized recommendation subcategory 2||UI string||Title"
+	},
+	"hot_tv_show":{
+		"content":"Popular TV Shows",
+		"description":"Home||Home category||Title of the popular Catch-up TV program category||UI string||Title"
+	},
+	"view_all":{
+		"content":"More",
+		"description":"Home||Home category||View all button||UI string||Button"
+	},
+	"message_network_3G":{
+		"content":"You are using mobile network.",
+		"description":"Home||Network connection status||Message indicating that the current network is the mobile network||Message||Common text"
+	},
+	"using_wifi":{
+		"content":"You are using Wi-Fi.",
+		"description":"Home||Network connection status||Message indicating that the current network is Wi-Fi||Message||Common text"
+	},
+	"loading":{
+		"content":"Loading...",
+		"description":"Home||Page loading||Message displayed during loading||Message||Common text"
+	},
+	"pull_down_to_refresh":{
+		"content":"Pull down to refresh",
+		"description":"Home||Page loading||Message prompting a subscriber to pull down to refresh||Message||Common text"
+	},
+	"release_to_refresh":{
+		"content":"Release to refresh",
+		"description":"Home||Page loading||Message prompting a subscriber to release to refresh||Message||Common text"
+	},
+	"submit":{
+		"content":"Submit",
+		"description":"Home||Home category||Submit button||UI string||Button"
+	},
+	"content_expired":{
+		"content":"The content has expired.",
+		"description":"Home||Page loading||Message indicating that the content has expired||Message||Common text"
+	},
+	"message_network_continue":{
+		"content":"You are using mobile network. Click OK to continue.",
+		"description":"My||Page loading||Message indicating that the current network is the mobile network and prompting a subscriber to tap OK to continue||Message||Common text"
+	},
+	"liveTV":{
+		"content":"LIVE TV",
+		"description":"Live TV||Live TV home page||Title of the Live TV category||UI string||Title"
+	},
+	"all_channels":{
+		"content":"All Channels",
+		"description":"Live TV||Live TV home page||Entry to all channels on the live TV home page||UI string||Button"
+	},
+	"mini_favorite_channels":{
+		"content":"Favorite Channels",
+		"description":"Live TV||Live TV home page||Entry to favorite channels on the live TV home page||UI string||Button"
+	},
+	"what_is_on":{
+		"content":"WHAT'S ON",
+		"description":"Live TV||Live TV home page||Title of the ongoing program category||UI string||Title"
+	},
+	"happy_next":{
+		"content":"COMING SOON",
+		"description":"Live TV||Live TV home page||Title of the upcoming program category||UI string||Title"
+	},
+	"million":{
+		"content":"1 million +",
+		"description":"Live TV||Live TV home page||Message displayed when the recommended category is played for more than 1 million times||Message||Common text"
+	},
+	"watching":{
+		"content":" watching",
+		"description":"Live TV||Live TV home page||Message displayed when the recommended category is played for less than 1 million times||Message||Common text"
+	},
+	"view_all":{
+		"content":"More",
+		"description":"Live TV||Live TV home page||View all button||UI string||Button"
+	},
+	"pull_down_to_refresh":{
+		"content":"Pull down to refresh",
+		"description":"Live TV||Live TV home page||Message prompting a subscriber to pull down to refresh||Message||Common text"
+	},
+	"release_to_refresh":{
+		"content":"Release to refresh",
+		"description":"Live TV||Live TV home page||Message prompting a subscriber to release to refresh||Message||Common text"
+	},
+	"message_try_again":{
+		"content":"No data available. Please try again later.",
+		"description":"Live TV||Live TV home page||Message displayed when a category is empty||Message||Common text"
+	},
+	"message_network_3G":{
+		"content":"You are using mobile network.",
+		"description":"Live TV||Live TV home page||Message indicating that the current network is the mobile network||Message||Common text"
+	},
+	"tv_guide":{
+		"content":"TV GUIDE",
+		"description":"Live TV||Live TV home page||Entry to TV Guide||UI string||Title"
+	},
+	"prompt_input_password":{
+		"content":"Enter the super profile's password to unlock.",
+		"description":"Live TV||Channel details||Message prompting a subscriber to enter the password to unlock a channel when the channel is locked||Message||Common text"
+	},
+	"watching":{
+		"content":"watching",
+		"description":"Live TV||Live TV home page||Message displayed when the recommended category is played for more than 1 million times||Message||Common text"
+	},
+	"prompt_input_password":{
+		"content":"Enter the super profile's password to unlock.",
+		"description":"Live TV||Channel details||Message displayed in the unlock pop-up box||Message||Common text"
+	},
+	"message_unlock":{
+		"content":"Enter the super profile's password to unlock.",
+		"description":"Live TV||Channel details||Message prompting a subscriber to enter the password to unlock a controlled program or VOD||Message||Common text"
+	},
+	"input_password_to_subscribe":{
+		"content":"Enter the super profile's password to confirm the subscription.",
+		"description":"Live TV||Channel details||Message prompting a subscriber to enter the password for subscription||Message||Common text"
+	},
+	"unlock":{
+		"content":"Unlock",
+		"description":"Live TV||Channel details||Unlock button||UI string||Button"
+	},
+	"btn_cancel":{
+		"content":"Cancel",
+		"description":"Live TV||Channel details||Cancel button||UI string||Button"
+	},
+	"ok":{
+		"content":"OK",
+		"description":"Live TV||Channel details||OK button||UI string||Button"
+	},
+	"content_play_live":{
+		"content":"Content expired. Will play live for you.",
+		"description":"Live TV||Channel details||Message indicating that a program has expired, which is displayed on the program details page||Message||Common text"
+	},
+	"program_will_start":{
+		"content":"%1$s will start soon.",
+		"description":"Live TV||Channel details||Toast message indicating that a program is about to start when a subscriber accesses an upcoming live TV program from the reminder||Message||Common text"
+	},
+	"program_not_exist":{
+		"content":"The program does not exist or is offline.",
+		"description":"Live TV||Channel details||Message indicating that no program information is obtained when a subscriber accesses an application from the reminder||Message||Common text"
+	},
+	"today":{
+		"content":"Today",
+		"description":"Live TV||Channel details||Schedule time axis; today||UI string||Tab"
+	},
+	"tomorrow":{
+		"content":"Tomorrow",
+		"description":"Live TV||Channel details||Schedule time axis; tomorrow||UI string||Tab"
+	},
+	"yesterday":{
+		"content":"Yesterday",
+		"description":"Live TV||Channel details||Schedule time axis; yesterday||UI string||Tab"
+	},
+	"week_mon":{
+		"content":"Mon",
+		"description":"Live TV||Channel details||Schedule time axis; Monday||UI string||Tab"
+	},
+	"week_tues":{
+		"content":"Tues",
+		"description":"Live TV||Channel details||Schedule time axis; Tuesday||UI string||Tab"
+	},
+	"week_wed":{
+		"content":"Wed",
+		"description":"Live TV||Channel details||Schedule time axis; Wednesday||UI string||Tab"
+	},
+	"week_thur":{
+		"content":"Thur",
+		"description":"Live TV||Channel details||Schedule time axis; Thursday||UI string||Tab"
+	},
+	"week_fri":{
+		"content":"Fri",
+		"description":"Live TV||Channel details||Schedule time axis; Friday||UI string||Tab"
+	},
+	"week_sat":{
+		"content":"Sat",
+		"description":"Live TV||Channel details||Schedule time axis; Saturday||UI string||Tab"
+	},
+	"week_sun":{
+		"content":"Sun",
+		"description":"Live TV||Channel details||Schedule time axis; Sunday||UI string||Tab"
+	},
+	"message_on_now":{
+		"content":"On Now",
+		"description":"Live TV||Channel details||Text indicating that a program is ongoing||UI string||Common text"
+	},
+	"add_favorite_successful":{
+		"content":"Successfully added to favorites.",
+		"description":"Live TV||Channel favorites||Message indicating that the current channel is successfully added to favorites||Message||Common text"
+	},
+	"cancel_collection_success":{
+		"content":"Channel unfavorited successfully.",
+		"description":"Live TV||Channel favorites||Message indicating that the current channel is successfully removed from favorites||Message||Common text"
+	},
+	"message_add_lock_success":{
+		"content":"Channel locked successfully.",
+		"description":"Live TV||Channel lock||Message indicating that the current channel is successfully locked||Message||Common text"
+	},
+	"message_delete_lock_success":{
+		"content":"Channel unlocked successfully.",
+		"description":"Live TV||Channel lock||Message indicating that the current channel is successfully unlocked||Message||Common text"
+	},
+	"record":{
+		"content":"Record",
+		"description":"Live TV||Program details||Button for recording a program||UI string||Button"
+	},
+	"cancel_record":{
+		"content":"Cancel Recording",
+		"description":"Live TV||Program details||Button for canceling program recording||UI string||Button"
+	},
+	"add_program_record":{
+		"content":"Add Single Recording",
+		"description":"Live TV||Program details||Button for recording a single program||UI string||Button"
+	},
+	"add_series_record":{
+		"content":"Add Series Recording",
+		"description":"Live TV||Program details||Button for recording a series||UI string||Button"
+	},
+	"programme_scheduled_record":{
+		"content":"Recording scheduled.",
+		"description":"Live TV||Program details||Message indicating that a scheduled recording task is successfully added||Message||Common text"
+	},
+	"recording_failed":{
+		"content":"Failed to add the recording task.",
+		"description":"Live TV||Program details||Message indicating that a program recording task fails to be added||Message||Common text"
+	},
+	"programme_is_recording":{
+		"content":"This program is being recorded.",
+		"description":"Live TV||Program details||Message indicating that a program is being recorded||Message||Common text"
+	},
+	"programme_is_cancel":{
+		"content":"Recording canceled.",
+		"description":"Live TV||Program details||Message indicating that a program recording task is successfully canceled||Message||Common text"
+	},
+	"recording_failed_cancel":{
+		"content":"Failed to cancel the recording.",
+		"description":"Live TV||Program details||Message indicating that a program recording task fails to be canceled||Message||Common text"
+	},
+	"message_recording":{
+		"content":"This program is being recorded. If you cancel it now, the recorded part will be saved. Are you sure you want to cancel it?",
+		"description":"Live TV||Program details||Message displayed when a subscriber cancels an ongoing recording task and indicating that the recorded part will be saved||Message||Common text"
+	},
+	"input_password_to_record":{
+		"content":"Enter the super profile's password to record.",
+		"description":"Live TV||Program details||Message prompting a subscriber to enter the password for recording||Message||Common text"
+	},
+	"reminder":{
+		"content":"Reminder",
+		"description":"Live TV||Program details||Button for adding a program reminder||UI string||Button"
+	},
+	"cancel_reminder":{
+		"content":"Cancel Reminder",
+		"description":"Live TV||Program details||Button for canceling a program reminder||UI string||Button"
+	},
+	"add_reminder_successful":{
+		"content":"Reminder added.",
+		"description":"Live TV||Program details||Message indicating that a program reminder task is successfully added||Message||Common text"
+	},
+	"add_reminder_failed":{
+		"content":"Failed to add the reminder.",
+		"description":"Live TV||Program details||Message indicating that a program reminder task fails to be added||Message||Common text"
+	},
+	"remove_reminder_successful":{
+		"content":"Reminder removed.",
+		"description":"Live TV||Program details||Message indicating that a program reminder task is successfully canceled||Message||Common text"
+	},
+	"remove_reminder_failed":{
+		"content":"Failed to remove the reminder.",
+		"description":"Live TV||Program details||Message indicating that a program reminder task fails to be canceled||Message||Common text"
+	},
+	"no_permission_unlock":{
+		"content":"You do not have permission to unlock.",
+		"description":"Live TV||Program details||Message indicating that a subscriber does not have the unlock permission||Message||Common text"
+	},
+	"no_permission_lock":{
+		"content":"You do not have permission to add a lock.",
+		"description":"Live TV||Program details||Message indicating that a subscriber does not have the lock permission||Message||Common text"
+	},
+	"now":{
+		"content":"NOW",
+		"description":"Live TV||Program list||Text marking ongoing programs||UI string||Title"
+	},
+	"later":{
+		"content":"LATER",
+		"description":"Live TV||Program list||Text marking upcoming programs||UI string||Title"
+	},
+	"similar_recommendation":{
+		"content":"RECOMMENDATIONS",
+		"description":"Live TV||Program list||Recommended programs||UI string||Title"
+	},
+	"play":{
+		"content":"Play",
+		"description":"Live TV||Program playback||Play button||UI string||Button"
+	},
+	"replay":{
+		"content":"Replay",
+		"description":"Live TV||Player||Replay button||UI string||Button"
+	},
+	"message_network_3G":{
+		"content":"You are using mobile network.",
+		"description":"Live TV||Player||Message indicating that the current network is the mobile network||Message||Common text"
+	},
+	"subscribe":{
+		"content":"Subscribe",
+		"description":"Live TV||Player||Subscribe button||UI string||Button"
+	},
+	"channel_not_subscribed_android":{
+		"content":"Please subscribe to continue watching.",
+		"description":"Live TV||Player||Message indicating that a subscriber must subscribe to continue watching (for Android)||Message||Common text"
+	},
+	"channel_not_subscribed":{
+		"content":"You do not have permission to watch this channel.",
+		"description":"Live TV||Player||Message indicating that a user does not have permission to watch the channel (for iOS)||Message||Common text"
+	},
+	"no_order_channel_android":{
+		"content":"You have not subscribed to this channel. You can preview it for about %1$s minutes.",
+		"description":"Live TV||Player||Message indicating that a subscriber has not subscribed to the channel and can preview it for 5 minutes (for Android)||Message||Common text"
+	},
+	"no_order_channel":{
+		"content":"You can preview it for about %1$s minutes.",
+		"description":"Live TV||Player||Message indicating that a subscriber can preview a channel for 5 minutes (for iOS)||Message||Common text"
+	},
+	"channel_locked":{
+		"content":"This channel is locked. Please unlock to watch.",
+		"description":"Live TV||Player||Message indicating that the channel is locked||Message||Common text"
+	},
+	"message_add_brightness":{
+		"content":"Increase brightness",
+		"description":"Live TV||Player||Message indicating that a subscriber can flick up on the left of the screen to increase the brightness during full-screen playback||Message||Common text"
+	},
+	"message_reduce_brightness":{
+		"content":"Reduce brightness",
+		"description":"Live TV||Player||Message indicating that a subscriber can flick down on the left of the screen to reduce the brightness during full-screen playback||Message||Common text"
+	},
+	"message_add_volume":{
+		"content":"Increase volume",
+		"description":"Live TV||Player||Message indicating that a subscriber can flick up on the right of the screen to increase the volume during full-screen playback||Message||Common text"
+	},
+	"message_reduce_volume":{
+		"content":"Reduce volume",
+		"description":"Live TV||Player||Message indicating that a subscriber can flick down on the right of the screen to reduce the volume during full-screen playback||Message||Common text"
+	},
+	"message_left_rewind":{
+		"content":"Rewind",
+		"description":"Live TV||Player||Message indicating that a subscriber can flick left to rewind during full-screen playback if the current channel supports TSTV||Message||Common text"
+	},
+	"message_right_forward":{
+		"content":"Forward",
+		"description":"Live TV||Player||Message indicating that a subscriber can flick right to forward during full-screen playback if the current channel supports TSTV||Message||Common text"
+	},
+	"program_no_begin":{
+		"content":"The program has not started.",
+		"description":"Live TV||Player||Message indicating that a program has not started||Message||Common text"
+	},
+	"message_failed_to_play":{
+		"content":"Failed to play. Please try again.",
+		"description":"Live TV||Player||Message indicating that the player fails to obtain content||Message||Common text"
+	},
+	"failed_to_load":{
+		"content":"Failed to load content. Please try again.",
+		"description":"Live TV||Player||Message indicating that the content fails to be obtained||Message||Common text"
+	},
+	"search_result_failed":{
+		"content":"Failed to load content. Please try again.",
+		"description":"Live TV||Player||Message indicating that the content fails to be obtained||Message||Common text"
+	},
+	"select_top_box":{
+		"content":"Select an STB",
+		"description":"Live TV||Screen casting||Text prompting a subscriber to select a target STB for screen casting when there are multiple STBs||UI string||Title"
+	},
+	"message_tv_operation_error":{
+		"content":"Failed to cast to TV screen. Please try again.",
+		"description":"Live TV||Screen casting||Message indicating the failure status and prompting a subscriber to retry when screen casting fails||Message||Common text"
+	},
+	"channel_played_on_itv":{
+		"content":"Already cast to and now is being played on %1$s.",
+		"description":"Live TV||Screen casting||Message indicating that the current channel is being played on TV after screen casting||Message||Common text"
+	},
+	"no_stb_found":{
+		"content":"No STB found. Please make sure that your STB is working.",
+		"description":"Live TV||Screen casting||Message indicating that no STB is found during screen casting||Message||Common text"
+	},
+	"favorites":{
+		"content":"Favorites",
+		"description":"Live TV||Mini EPG||Favorite channel tab on the channel list page||UI string||Tab"
+	},
+	"subscribe":{
+		"content":"Subscribe",
+		"description":"Live TV||Subscription||Title of the subscription page; subscribe button||UI string||Common text"
+	},
+	"ratio":{
+		"content":"Aspect Ratio",
+		"description":"Live TV||Full-screen playback||Title of the aspect ratio area||UI string||Title"
+	},
+	"subtitles":{
+		"content":"Subtitle",
+		"description":"Live TV||Full-screen playback||Title of the subtitle area||UI string||Title"
+	},
+	"no_subtitles":{
+		"content":"No Subtitle",
+		"description":"Live TV||Full-screen playback||Option of no subtitle||UI string||Button"
+	},
+	"audio_track":{
+		"content":"Audio",
+		"description":"Live TV||Full-screen playback||Title of the audio track area||UI string||Title"
+	},
+	"operation_failed":{
+		"content":"Operation failed.",
+		"description":"Live TV||Full-screen playback||Message indicating the failure to switch the subtitle, audio track, or aspect ratio||Message||Common text"
+	},
+	"code_rate_auto":{
+		"content":"Auto",
+		"description":"Live TV||Full-screen playback||Bit rate option: automatic bit rate||UI string||Button"
+	},
+	"definition":{
+		"content":"Definition",
+		"description":"Live TV||Full-screen playback||Title of the video definition area||UI string||Title"
+	},
+	"hot_search":{
+		"content":"MOST WATCHED",
+		"description":"Search||Before search||Title of the popular search page||UI string||Title"
+	},
+	"no_search_result":{
+		"content":"No data found.\nChange the keywords and try again.",
+		"description":"Search||After search||Message indicating that no result is found based on the search keyword||Message||Common text"
+	},
+	"search_result_failed":{
+		"content":"Failed to load content. Please try again.",
+		"description":"Search||After search||Message indicating the content loading failure and prompting a subscriber to retry||Message||Common text"
+	},
+	"all_search":{
+		"content":"ALL",
+		"description":"Search||After search||Search result type: all||UI string||Title"
+	},
+	"on_demand_search":{
+		"content":"ON DEMAND",
+		"description":"Search||After search||Search result type: VOD||UI string||Tab"
+	},
+	"channels_search":{
+		"content":"CHANNELS",
+		"description":"Search||After search||Search result type: channel||UI string||Title"
+	},
+	"program_search":{
+		"content":"PROGRAMS",
+		"description":"Search||After search||Search result type: program||UI string||Title"
+	},
+	"play":{
+		"content":"Play ",
+		"description":"Search||Program details||Play button||UI string||Button"
+	},
+	"min":{
+		"content":"min",
+		"description":"Search||Search result list||Program duration unit: minute||UI string||Common text"
+	},
+	"genres":{
+		"content":"Genre",
+		"description":"Search||Search result list||Program type||UI string||Common text"
+	},
+	"show_you_watch":{
+		"content":"Choose TV shows and movies you like.",
+		"description":"Preference Settings||Subscriber preference collection||Message prompting a subscriber to select one or more favorite movies and programs||Message||Common text"
+	},
+	"select_shows_currently_watch":{
+		"content":"It will help us find content you may like.",
+		"description":"Preference Settings||Subscriber preference collection||Message surveying subscribers' favorite movies and programs||Message||Common text"
+	},
+	"skip":{
+		"content":"Skip",
+		"description":"Preference Settings||Subscriber preference collection||Button for skipping the current step||UI string||Button"
+	},
+	"add_more_continue":{
+		"content":"Choose at least one.",
+		"description":"Preference Settings||Subscriber preference collection||Message prompting a subscriber to select at least one item||Message||Button"
+	},
+	"next_step":{
+		"content":"Next",
+		"description":"Preference Settings||Subscriber preference collection||Next||UI string||Button"
+	},
+	"welcome_iptv":{
+		"content":"Welcome to Hybrid Video iTV",
+		"description":"Preference Settings||Subscriber preference collection||Welcome button for opening the home page||UI string||Button"
+	},
+	"on_demand":{
+		"content":"On Demand",
+		"description":"On Demand||On Demand home page||Title of the on demand page||UI string||Title"
+	},
+	"home":{
+		"content":"Home",
+		"description":"On Demand||On Demand home page||Name of the home category in the navigation||UI string||Navigation"
+	},
+	"liveTV":{
+		"content":"Live TV",
+		"description":"On Demand||On Demand home page||Name of the live TV category in the navigation; title of the live TV home page||UI string||Navigation"
+	},
+	"on_demand":{
+		"content":"On Demand",
+		"description":"On Demand||On Demand home page||Name of the on demand category in the navigation||UI string||Navigation"
+	},
+	"mytv":{
+		"content":"My",
+		"description":"On Demand||On Demand home page||Name of the my category in the navigation||UI string||Navigation"
+	},
+	"top_this_week":{
+		"content":"TOP THIS WEEK",
+		"description":"On Demand||On Demand home page||Title of a recommendation category containing top content in this week||UI string||Title"
+	},
+	"view_all":{
+		"content":"More",
+		"description":"On Demand||On Demand home page||View all button||UI string||Button"
+	},
+	"all_types":{
+		"content":"All Types",
+		"description":"On Demand||All content types||All types||UI string||Title"
+	},
+	"edit":{
+		"content":"Edit",
+		"description":"On Demand||All content types||Edit button||UI string||Button"
+	},
+	"save":{
+		"content":"Save",
+		"description":"On Demand||All content types||Save button||UI string||Button"
+	},
+	"long_press_adjust":{
+		"content":"Tap and hold a type and drag around to adjust the position.",
+		"description":"On Demand||All content types||Message teaching a subscriber to sort content types||Message||Common text"
+	},
+	"type_top":{
+		"content":"Top",
+		"description":"On Demand||Filter||Button for sorting by rating||UI string||Button"
+	},
+	"type_hot":{
+		"content":"Popular",
+		"description":"On Demand||Filter||Button for sorting by playback times||UI string||Button"
+	},
+	"type_new":{
+		"content":"New",
+		"description":"On Demand||Filter||Button for sorting by release time||UI string||Button"
+	},
+	"category":{
+		"content":"Category",
+		"description":"On Demand||Filter||Button for displaying the category list||UI string||Button"
+	},
+	"message_find_no_movie":{
+		"content":"No data meeting your filter criterion found.",
+		"description":"On Demand||Filter||Message indicating that no result is found based on the filter conditions||Message||Common text"
+	},
+	"filter":{
+		"content":"Filter",
+		"description":"On Demand||Content list||Filter button||UI string||Button"
+	},
+	"trailers":{
+		"content":"TRAILERS",
+		"description":"On Demand||Content details||Title of the trailer page||UI string||Title"
+	},
+	"stills":{
+		"content":"IMAGES",
+		"description":"On Demand||Content details||Title of the still page||UI string||Title"
+	},
+	"casts":{
+		"content":"CAST",
+		"description":"On Demand||Content details||Title of the cast list||UI string||Title"
+	},
+	"recommend_movies":{
+		"content":"Viewers Also Watched ",
+		"description":"On Demand||Content details||Title of the similar content recommendation area||UI string||Title"
+	},
+	"episodes":{
+		"content":"Episodes",
+		"description":"On Demand||Content details||Title of the episode selection page||UI string||Title"
+	},
+	"seasons":{
+		"content":"Seasons",
+		"description":"On Demand||Content details||Season option||UI string||Common text"
+	},
+	"play_film":{
+		"content":"Play Movie",
+		"description":"On Demand||Trailer playback||Button for playing the full-length content during trailer playback||UI string||Button"
+	},
+	"message_watch_trailer":{
+		"content":"You are watching the trailer.",
+		"description":"On Demand||Trailer playback||Message indicating that a subscriber is watching the trailer||Message||Common text"
+	},
+	"code_rate_auto":{
+		"content":"Auto",
+		"description":"On Demand||Content definition||Automatic bit rate (definition)||UI string||Button"
+	},
+	"kbps":{
+		"content":"kbit/s",
+		"description":"On Demand||Content definition||Bit rate unit (definition): Kbps||UI string||Common text"
+	},
+	"quality":{
+		"content":"Quality",
+		"description":"On Demand||Content definition||Title of the download bit rate selection area (which can be changed)||UI string||Title"
+	},
+	"fluent":{
+		"content":"Fluent",
+		"description":"On Demand||Downloaded program definition||Fluent option||UI string||Common text"
+	},
+	"sd":{
+		"content":"SD",
+		"description":"On Demand||Downloaded program definition||SD option||UI string||Common text"
+	},
+	"hd":{
+		"content":"HD",
+		"description":"On Demand||Downloaded program definition||HD option||UI string||Common text"
+	},
+	"share":{
+		"content":"Share",
+		"description":"On Demand||Sharing||Share button||UI string||Button"
+	},
+	"twitter":{
+		"content":"Twitter",
+		"description":"On Demand||Sharing||Sharing to Twitter||UI string||Button"
+	},
+	"facebook":{
+		"content":"Facebook",
+		"description":"On Demand||Sharing||Share to Facebook||UI string||Button"
+	},
+	"message_twitter_unbinded":{
+		"content":"You have not logged in to Twitter. Please log in.",
+		"description":"On Demand||Sharing||Message prompting a subscriber that Twitter account no bound when sharing||Message||Common text"
+	},
+	"subtitles":{
+		"content":"Subtitle",
+		"description":"On Demand||Subtitle||Subtitle||UI string||Title"
+	},
+	"audio_track":{
+		"content":"Audio",
+		"description":"On Demand||Audio track selection||Title of the audio track selection area||UI string||Title"
+	},
+	"restart":{
+		"content":"Replay",
+		"description":"On Demand||Player||Replay||Message||Common text"
+	},
+	"ratings":{
+		"content":"Rating",
+		"description":"On Demand||Rating||Rating||UI string||Title"
+	},
+	"v_rating_notice":{
+		"content":"Average Score:",
+		"description":"On Demand||Rating||Average score||UI string||Common text"
+	},
+	"your_score":{
+		"content":"Your Score:",
+		"description":"On Demand||Rating||Last score||UI string||Common text"
+	},
+	"resolution_ratio":{
+		"content":"Aspect Ratio",
+		"description":"On Demand||Aspect ratio||Aspect ratio||UI string||Title"
+	},
+	"prompt_input_password":{
+		"content":"Enter the super profile's password to unlock.",
+		"description":"On Demand||Content lock||Message prompting a subscriber to enter the password to unlock||Message||Common text"
+	},
+	"unlock":{
+		"content":"Unlock",
+		"description":"On Demand||Content lock||Unlock button||UI string||Button"
+	},
+	"prompt_input_password":{
+		"content":"Enter the super profile's password to unlock.",
+		"description":"On Demand||Content lock||Message prompting a subscriber to enter the password to unlock||Message||Common text"
+	},
+	"message_detail_info_fail":{
+		"content":"Failed to load content. Please try again.",
+		"description":"On Demand||Content details||Message indicating the content loading failure and prompting a subscriber to retry||Message||Common text"
+	},
+	"message_subscribed":{
+		"content":"Please subscribe to continue watching.",
+		"description":"On Demand||Content subscription||Message indicating that a subscriber can continue watching after subscription||Message||Common text"
+	},
+	"message_no_permission":{
+		"content":"You have no permission to watch this movie.",
+		"description":"On Demand||Content subscription||Message indicating that a subscriber does not have permission to watch the content||Message||Common text"
+	},
+	"vod_remove_from_favorite":{
+		"content":"Video unfavorited successfully.",
+		"description":"On Demand||Content favorites||Message indicating that the current content is successfully removed from favorites||Message||Common text"
+	},
+	"vod_add_to_favorite":{
+		"content":"Successfully added to favorites.",
+		"description":"On Demand||Content favorites||Message indicating that the current content is successfully added to favorites||Message||Common text"
+	},
+	"message_download_tip":{
+		"content":"A maximum of 50 downloading tasks are allowed.",
+		"description":"On Demand||Download||Message indicating that the number of concurrent download tasks cannot exceed 50||Message||Common text"
+	},
+	"add_downloading_successfully":{
+		"content":"Download task added successfully.",
+		"description":"On Demand||Download||Message indicating that a download task is successfully added||Message||Common text"
+	},
+	"message_network_add_download":{
+		"content":"Download task added successfully. You are using the mobile network. Continue to download?",
+		"description":"On Demand||Download||Message indicating that the current network is the mobile network and asking a subscriber whether to continue the download||Message||Common text"
+	},
+	"program_on_download":{
+		"content":"The program is already on the download list.",
+		"description":"On Demand||Download||Message indicating that the program is already in the download list||Message||Common text"
+	},
+	"video_on_download":{
+		"content":"The video is already on the download list.",
+		"description":"On Demand||Download||Message indicating that the video is already in the download list||Message||Common text"
+	},
+	"message_retry":{
+		"content":"Please try again.",
+		"description":"On Demand||On Demand home page||Please retry.||Message||Common text"
+	},
+	"watching":{
+		"content":"watching",
+		"description":"On Demand||On Demand home page||watching||Message||Common text"
+	},
+	"errorMessageDefault":{
+		"content":"is not defined.",
+		"description":"On Demand||On Demand home page||is not define||Message||Common text"
+	},
+	"log_in":{
+		"content":"Log In",
+		"description":"My||My home page||Login button on the my home page||UI string||Button"
+	},
+	"prompt_log_in":{
+		"content":"Log in to view more.",
+		"description":"My||My home page||Text indicating that a subscriber can experience more functions after login||UI string||Common text"
+	},
+	"my_videos":{
+		"content":"MY VIDEOS",
+		"description":"My||My home page||My videos||UI string||Title"
+	},
+	"my_channels":{
+		"content":"MY CHANNELS",
+		"description":"My||My home page||My channels||UI string||Title"
+	},
+	"favorite_videos":{
+		"content":"Favorite Videos",
+		"description":"My||My home page||Favorite videos||UI string||Button"
+	},
+	"title_locked_channels":{
+		"content":"Locked Channels",
+		"description":"My||My home page||Locked channels||UI string||Button"
+	},
+	"settings":{
+		"content":"Settings",
+		"description":"My||My home page||Setting||UI string||Button"
+	},
+	"download":{
+		"content":"Download",
+		"description":"My||My home page||Title of the download management category||UI string||Button"
+	},
+	"history":{
+		"content":"History",
+		"description":"My||My home page||Title of the history category||UI string||Button"
+	},
+	"title_purchased_channels":{
+		"content":"Purchased Channels",
+		"description":"My||My home page||Title of the subscribed channel category||UI string||Button"
+	},
+	"favorite_channels":{
+		"content":"Favorite Channels",
+		"description":"My||My home page||Title of the favorite channel category||UI string||Button"
+	},
+	"reminder":{
+		"content":"Reminder",
+		"description":"My||My home page||Reminder title||UI string||Button"
+	},
+	"recording_search":{
+		"content":"RECORDINGS",
+		"description":"My||My home page||List of content being recorded||UI string||Title"
+	},
+	"no_favorite_to_livetv":{
+		"content":"No favorite channels. Go to \"Live TV\" to add what you are interested in.",
+		"description":"My||Channel favorites management||Message indicating that the favorite channel list is empty and a subscriber can add favorite channels||Message||Common text"
+	},
+	"no_favorite_to_on_demand":{
+		"content":"No favorite videos. Go to \"On Demand\" to add what you are interested in.",
+		"description":"My||Content favorites management||Message indicating that the favorite content list is empty and a subscriber can add favorite content||Message||Common text"
+	},
+	"no_locked_channels":{
+		"content":"No locked channels. Go to \"Live TV\" to add channels.",
+		"description":"My||Locked channel management||Message displayed when there is no locked channel||Message||Common text"
+	},
+	"no_reminder_program":{
+		"content":"No program reminders. Go to \"Live TV\" to add what you don't want to miss.",
+		"description":"My||Reminder management||Message displayed when there is no reminder||Message||Common text"
+	},
+	"downloading":{
+		"content":"Downloading",
+		"description":"My||Download management||Title of the list of content being downloaded||UI string||Title"
+	},
+	"message_network_continue":{
+		"content":"You are using the mobile network. Click OK to continue.",
+		"description":"My||Download management||Message displayed when a subscriber taps the download button on the mobile network||Message||Common text"
+	},
+	"one_downloading":{
+		"content":"1 video is being downloaded",
+		"description":"My||Download management||Text indicating the number of videos being downloaded ||UI string||Label"
+	},
+	"count_downloading":{
+		"content":"%1$s videos are being downloaded",
+		"description":"My||Download management||Text indicating the number of videos being downloaded ||UI string||Label"
+	},
+	"waitting":{
+		"content":"Waiting",
+		"description":"My||Download management||Waiting state before download||Message||Common text"
+	},
+	"downloaded":{
+		"content":"Downloaded",
+		"description":"My||Download management||Title of the list of downloaded content||UI string||Title"
+	},
+	"videos":{
+		"content":"%1$s Videos",
+		"description":"My||Download management||Text indicating the number of episodes in a downloaded series||Message||Common text"
+	},
+	"season":{
+		"content":"Season %1$s",
+		"description":"My||Download management||Information about a downloaded series||Message||Common text"
+	},
+	"episode":{
+		"content":"Episode %1$s",
+		"description":"My||Download management||Information about a downloaded series||Message||Common text"
+	},
+	"no_download":{
+		"content":"No downloaded videos. Go to \"On Demand\" to download videos.",
+		"description":"My||Download management||Message indicating that the download list is empty and a subscriber can download content||Message||Common text"
+	},
+	"btn_delete":{
+		"content":"Delete",
+		"description":"My||Download management||Delete button||UI string||Button"
+	},
+	"failed":{
+		"content":"Failed",
+		"description":"My||Download management||Label indicating download failure||UI string||Label"
+	},
+	"pause":{
+		"content":"Pause",
+		"description":"My||Download management||Pause button||UI string||Button"
+	},
+	"download_occupied_space":{
+		"content":"Occupied space: %1$s",
+		"description":"My||Download management||Space used by downloaded content||Message||Common text"
+	},
+	"residual_space":{
+		"content":"Available space: %1$s",
+		"description":"My||Download management||Current available space||Message||Common text"
+	},
+	"remaining_space_insufficient":{
+		"content":"Download failed due to insufficient space.",
+		"description":"My||Download management||Message indicating that the available space is insufficient and the download fails||Message||Common text"
+	},
+	"download_pause_all":{
+		"content":"Pause All",
+		"description":"My||Download management||Pause all button||UI string||Button"
+	},
+	"watched_count":{
+		"content":"Watched %1$s",
+		"description":"My||Playback history management||Watched||UI string||Label"
+	},
+	"watched_finished":{
+		"content":"Finished",
+		"description":"My||Playback history management||Watch finished||UI string||Label"
+	},
+	"no_history_to_home":{
+		"content":"No playback history. Go to \"Home\" to watch what you are interested in.",
+		"description":"My||Playback history management||Message indicating that the watching history is empty and prompting a subscriber to watch videos||Message||Common text"
+	},
+	"this_week":{
+		"content":"This Week",
+		"description":"My||Playback history management||Text displayed in the time area||UI string||Common text"
+	},
+	"earlier":{
+		"content":"Earlier",
+		"description":"My||Playback history management||Text displayed in the time area||UI string||Common text"
+	},
+	"btn_select_all":{
+		"content":"Select All",
+		"description":"My||Batch editing||Select all button||UI string||Button"
+	},
+	"dis_select_all":{
+		"content":"Deselect All",
+		"description":"My||Batch editing||Deselect all button||UI string||Button"
+	},
+	"pprompt_delete_all":{
+		"content":"Are you sure you want to delete it?",
+		"description":"My||Batch editing||Message asking a subscriber whether to delete all||Message||Common text"
+	},
+	"episode":{
+		"content":"Episode %1$s",
+		"description":"My||Download management||Information about a downloaded series||Message||Common text"
+	},
+	"profile_name":{
+		"content":"Profile Name",
+		"description":"My||Profile management||Profile name||UI string||Label"
+	},
+	"login_id":{
+		"content":"Login ID",
+		"description":"My||Profile management||Login ID||UI string||Label"
+	},
+	"level":{
+		"content":"Level",
+		"description":"My||Profile management||Permission level||UI string||Label"
+	},
+	"credit_limit":{
+		"content":"Credit Limit",
+		"description":"My||Profile management||Credit level||UI string||Label"
+	},
+	"log_out":{
+		"content":"Log Out",
+		"description":"My||Profile management||Logout button||UI string||Button"
+	},
+	"prompt_log_out":{
+		"content":"Are you sure you want to log out?",
+		"description":"My||Profile management||Message asking a subscriber whether to log out||Message||Common text"
+	},
+	"old_password":{
+		"content":"Old Password",
+		"description":"My||Password change||Old password||UI string||Common text"
+	},
+	"new_password":{
+		"content":"New Password",
+		"description":"My||Password change||New password||UI string||Common text"
+	},
+	"confirm_password":{
+		"content":"Confirm Password",
+		"description":"My||Password change||Confirm password||UI string||Common text"
+	},
+	"message_password_old_new_same_error":{
+		"content":"The new password must be different from the old password.",
+		"description":"My||Password change||Message indicating that the new and old passwords must be different||Message||Common text"
+	},
+	"message_password_match_error":{
+		"content":"The confirm password is different from the new password.",
+		"description":"My||Password change||Message indicating that the confirm password is different from the new password||Message||Common text"
+	},
+	"character_not_support":{
+		"content":"The current input character is not supported.",
+		"description":"My||Password change||Message indicating that the current input parameter is not supported||Message||Common text"
+	},
+	"usename_positive_reverse_order_agreement":{
+		"content":"The password cannot be the same as the user name or any user name in reverse order.",
+		"description":"My||Password change||Message indicating that the password cannot be the same as the user name or the user name in reverse order||Message||Common text"
+	},
+	"message_password_same_error":{
+		"content":"The new password is the same as a historical password.",
+		"description":"My||Password change||Message indicating that the new password is the same as an earlier password||Message||Common text"
+	},
+	"valid_until":{
+		"content":"Expires on %1$s",
+		"description":"My||Content subscription management||Expiration time||Message||Common text"
+	},
+	"hours_left_expire":{
+		"content":"Expires in %1$s hours",
+		"description":"My||Content subscription management||Number of remaining hours before the expiration time||UI string||Common text"
+	},
+	"days_left_expire":{
+		"content":"Expires in %1$s days",
+		"description":"My||Content subscription management||Number of remaining days before the expiration time||UI string||Common text"
+	},
+	"time_expired":{
+		"content":"Expired ",
+		"description":"My||Content subscription management||Text indicating that a subscription has expired||UI string||Common text"
+	},
+	"no_purchased_content":{
+		"content":"No purchased content. Go to \"On Demand\" to add what you are interested in.",
+		"description":"My||Content subscription management||Message displayed when there is no purchased content||Message||Common text"
+	},
+	"no_purchased_channels":{
+		"content":"No purchased channels. Go to \"Live TV\" to add what you are interested in.",
+		"description":"My||Content subscription management||Message displayed when there is no purchased channel||Message||Common text"
+	},
+	"title_purchased_videos":{
+		"content":"Purchased Videos",
+		"description":"My||Recording||Title of the list of purchased content||UI string||Title"
+	},
+	"scheduled":{
+		"content":"Scheduled",
+		"description":"My||Recording||Title of the list of content being recorded||UI string||Title"
+	},
+	"recorded":{
+		"content":"Recorded",
+		"description":"My||Recording||Title of the list of recorded content ||UI string||Title"
+	},
+	"program_one_recording":{
+		"content":"1 program is being recorded",
+		"description":"My||Recording||Message indicating that a program is being recorded||Message||Common text"
+	},
+	"programs_recording":{
+		"content":"%1$s programs are being recorded",
+		"description":"My||Recording||Message indicating that programs are being recorded||Message||Common text"
+	},
+	"manual_record":{
+		"content":" Manual Recordings",
+		"description":"My||Manual recording creation||Manual recording||UI string||Common text"
+	},
+	"manual_recording_record_name_default":{
+		"content":"Manual Recording %1$s ",
+		"description":"My||Manual recording creation||Default name of a manual recording task||UI string||Common text"
+	},
+	"manual_recording_periodic":{
+		"content":"Periodic",
+		"description":"My||Manual recording creation||Recording type||UI string||Common text"
+	},
+	"manual_recording_single":{
+		"content":"Single ",
+		"description":"My||Manual recording creation||Recording type||UI string||Common text"
+	},
+	"record_name":{
+		"content":"Recording Name",
+		"description":"My||Manual recording creation||Recording name||UI string||Common text"
+	},
+	"channel_name":{
+		"content":"Channel & Name",
+		"description":"My||Manual recording creation||Channel and program name||UI string||Common text"
+	},
+	"repeat_date":{
+		"content":"Repeat",
+		"description":"My||Manual recording creation||Period||UI string||Common text"
+	},
+	"all_date":{
+		"content":"Every day",
+		"description":"My||Manual recording creation||Period option indicating that the period is not limited||UI string||Common text"
+	},
+	"start_date":{
+		"content":"Start Date",
+		"description":"My||Manual recording creation||Start date||UI string||Common text"
+	},
+	"end_date":{
+		"content":"End Date",
+		"description":"My||Manual recording creation||End date||UI string||Common text"
+	},
+	"days_later":{
+		"content":"30 days later",
+		"description":"My||Manual recording creation||End date 2||UI string||Common text"
+	},
+	"unlimited":{
+		"content":"Unlimited",
+		"description":"My||Manual recording creation||Unlimited end date||UI string||Common text"
+	},
+	"manual_record_to":{
+		"content":"%1$s to %2$s ",
+		"description":"My||Manual recording creation||Recording time segment||UI string||Common text"
+	},
+	"add_record":{
+		"content":"Add Recording",
+		"description":"My||Manual recording creation||Recording task adding||UI string||Common text"
+	},
+	"no_recorded_program":{
+		"content":"No recorded programs. Go to \"Live TV\" to add what you are interested in.",
+		"description":"My||Recording||Message indicating that there is no recorded program||Message||Common text"
+	},
+	"device_name":{
+		"content":"Device Name",
+		"description":"My||Settings||Device name||UI string||Button"
+	},
+	"language":{
+		"content":"Language",
+		"description":"My||Settings||Language||UI string||Button"
+	},
+	"about":{
+		"content":"About",
+		"description":"My||Settings||About||UI string||Button"
+	},
+	"feedback":{
+		"content":"Feedback",
+		"description":"My||Settings||Feedback||UI string||Button"
+	},
+	"latest_version":{
+		"content":"This is the latest version.",
+		"description":"My||About||Text indicating that the current version is the latest, where the button is unavailable||UI string||Common text"
+	},
+	"upgrade_immediately":{
+		"content":"Update Now",
+		"description":"My||About||Text prompting a subscriber to upgrade immediately when a new version is detected||UI string||Common text"
+	},
+	"copy_right":{
+		"content":"Copyright © Hybrid Video 2017. All rights reserved.",
+		"description":"My||About||Copyright description||UI string||Button"
+	},
+	"privacy":{
+		"content":"Privacy",
+		"description":"My||Privacy statement||Title||UI string||Common text"
+	},
+	"privacy_message_two":{
+		"content":"The system will collect your usage data (such as your browsing history, login/logout records, and viewing history) for refined operations. The system will mine and analyze your preferences based on your usage data. When you browse content recommendation slots or search for content, the system will recommend personalized content based on your preferences, helping you find your favorite content more quickly.",
+		"description":"My||Privacy statement||Privacy statement 2||Message||Common text"
+	},
+	"enter_suggestions":{
+		"content":"Please enter your suggestions.",
+		"description":"My||Feedback||Message prompting a subscriber to enter suggestions||Message||Common text"
+	},
+	"send":{
+		"content":"Send",
+		"description":"My||Feedback||Text for sending synchronization data||Message||Common text"
+	},
+	"profile":{
+		"content":"Profile",
+		"description":"My||Subscriber information||Title of the user information page||UI string||Title"
+	},
+	"modify_pass":{
+		"content":"Change Password",
+		"description":"My||Subscriber information||Button for changing the password||UI string||Button"
+	},
+	"preference_setting":{
+		"content":"Preferences",
+		"description":"My||Subscriber information||Title of the subscriber preference setting page||UI string||Title"
+	},
+	"avatar":{
+		"content":"Avatar",
+		"description":"My||Avatar||Avatar||UI string||Title"
+	},
+	"purchases":{
+		"content":"Purchases",
+		"description":"My||Subscription||Subscription||UI string||Title"
+	},
+	"message_send_logs_failed":{
+		"content":"Failed to send the data.",
+		"description":"My||My home page||Message indicating the data sending failure||UI string||Title"
+	},
+	"clear_all":{
+		"content":"Clear All",
+		"description":"My||My home page||Clear all button||UI string||Title"
+	},
+	"multiple_channels":{
+		"content":"MULTIVIEW",
+		"description":"Multiple Channels||Channel list selection page||Title of the multi-channel view page||UI string||Title"
+	},
+	"add_channels":{
+		"content":"Add 2 to 4 channels",
+		"description":"Multiple Channels||Channel list selection page||Button for adding multiple channels||UI string||提示语"
+	},
+	"watch_cahnnels":{
+		"content":"Watch %1$s Channels ",
+		"description":"Multiple Channels||Channel list selection page||Button for adding multiple channels||UI string||Button"
+	},
+	"select_device":{
+		"content":"Select Device",
+		"description":"Multi-Control||Soft remote control page||Title of the device selection page||UI string||Title"
+	},
+	"no_device":{
+		"content":"No devices",
+		"description":"Multi-Control||Soft remote control page||Text indicting that no device can be selected||UI string||Title"
+	},
+	"multi_home":{
+		"content":"HOME",
+		"description":"Multi-Control||Soft remote control page||Button for returning to the home page||UI string||Button"
+	},
+	"mutil_menu":{
+		"content":"MENU",
+		"description":"Multi-Control||Soft remote control page||Button for opening the TV menu||UI string||Button"
+	},
+	"multi_ok":{
+		"content":"OK",
+		"description":"Multi-Control||Soft remote control page||Select button||UI string||Button"
+	},
+	"multi_back":{
+		"content":"BACK",
+		"description":"Multi-Control||Soft remote control page||Back button||UI string||Button"
+	},
+	"multi_text":{
+		"content":"TEXT",
+		"description":"Multi-Control||Soft remote control page||Button for invoking the soft keyboard on a mobile phone||UI string||Button"
+	},
+	"multi_123":{
+		"content":"123",
+		"description":"Multi-Control||Soft remote control page||Button for invoking the digit keyboard||UI string||Button"
+	},
+	"unlink_stb":{
+		"content":"Are you sure you want to disconnect from the STB %1$s?",
+		"description":"Multi-Control||Soft remote control disconnection||Text indicating that an STB is being disconnected||UI string||Common text"
+	},
+	"remoter_disconnected":{
+		"content":"The remote control is disconnected.",
+		"description":"Multi-Control||Soft remote control disconnection||Message indicating that a soft remote control is disconnected||Message||Common text"
+	},
+	"remoter_connected":{
+		"content":"The remote control is connected.",
+		"description":"Multi-Control||Soft remote control disconnection||Message indicating that a soft remote control is automatically reconnected after disconnection||Message||Common text"
+	},
+	"pull_back_video":{
+		"content":"Pull Back Video",
+		"description":"Multi-Control||Video pullback||Title of the video pull pop-up box||UI string||Title"
+	},
+	"pull_back_tv":{
+		"content":"You are pulling back the video to your device: %1$s.",
+		"description":"Multi-Control||Video pullback||Message indicating the target client for video pull ||Message||Common text"
+	},
+	"failed_to_pull_back_video":{
+		"content":"Failed to pull back the video.",
+		"description":"Multi-Control||Soft remote control disconnection||Video pull failure||UI string||Title"
+	},
+	"offline":{
+		"content":"Offline",
+		"description":"My||Device selection||Text for stopping a device||UI string||Common text"
+	},
+	"bright":{
+		"content":"Brightness",
+		"description":"Live TV||Player||Text indicating that a subscriber can flick up and down on the right of the screen to change the brightness during full-screen playback||UI string||Common text"
+	},
+	"sound":{
+		"content":"Sound",
+		"description":"Live TV||Player||Text indicating that a subscriber can flick up and down on the left of the screen to change the volume during full-screen playback||UI string||Common text"
+	},
+	"modify_password_successful":{
+		"content":"Password changed successfully. Please log in again.",
+		"description":"My||Password change||Message indicating that a password is successfully changed||Message||Common text"
+	},
+	"new_films":{
+		"content":"Latest Works",
+		"description":"On Demand||Casts||Latest videos of a cast member on the cast list page||UI string||Common text"
+	},
+	"new_film":{
+		"content":"Latest Work",
+		"description":"On Demand||Casts||Latest videos of a cast member on the cast list page||UI string||Common text"
+	},
+	"set_recording_time":{
+		"content":"Set Recording Duration",
+		"description":"My||Manual recording||Text for setting the recording time segment||UI string||Common text"
+	},
+	"fill_program_click":{
+		"content":"No program information.",
+		"description":"Live TV||Channel details||Message indicating that no program information is obtained||Message||Common text"
+	},
+	"fill_program_name":{
+		"content":"No programs",
+		"description":"Live TV||Channel list||Message indicating that no program information is obtained||Message||Common text"
+	},
+	"history_episodes":{
+		"content":"%1$s episodes",
+		"description":"My||History list||Number of episodes in the history list||Message||Common text"
+	},
+	"tips_change_default_password":{
+		"content":"Login succeeded. You are required to change the default password to ensure account security.",
+		"description":"Login||First login||Message prompting a subscriber to change the password upon first login||Message||Common text"
+	},
+	"twitter_share_template":{
+		"content":"I am watching %1$s %2$s.",
+		"description":"Live TV/On Demand||Sharing||Message displayed when a subscriber shares to Twitter or Facebook||Message||Common text"
+	},
+	"password_requirement_contain":{
+		"content":"Password requirements: Do not use a simple or historical password",
+		"description":"My||Password change||Password change message 1||Message||Common text"
+	},
+	"password_contain":{
+		"content":"The password must contain",
+		"description":"My||Password change||Password change message 2||Message||Common text"
+	},
+	"password_upper_letter":{
+		"content":"uppercase letters",
+		"description":"My||Password change||Password change message 3||Message||Common text"
+	},
+	"password_lower_letter":{
+		"content":"lowercase letters",
+		"description":"My||Password change||Password change message 4||Message||Common text"
+	},
+	"password_dight":{
+		"content":"digits",
+		"description":"My||Password change||Password change message 5||Message||Common text"
+	},
+	"password_least_characters":{
+		"content":"at least %1$s characters",
+		"description":"My||Password change||Password change message 6||Message||Common text"
+	},
+	"password_special_characters":{
+		"content":"and one of the following special characters: %1$s",
+		"description":"My||Password change||Password change message 7||Message||Common text"
+	},
+	"password_not_contains_space":{
+		"content":"Spaces are not supported",
+		"description":"My||Password change||Password change message 8||Message||Common text"
+	},
+	"subscription_expired":{
+		"content":"Your subscription has expired. Please try again.",
+		"description":"Live TV||Player||Message indicating the subscription expiration and prompting a subscriber to retry||Message||Common text"
+	},
+	"pprompt_unlock_all":{
+		"content":"Are you sure you want to unlock it?",
+		"description":"My||Unlock||Message asking a subscriber whether to unlock all||Message||Common text"
+	},
+	"choose_date":{
+		"content":"Choose Date",
+		"description":"My||Recording||Date option||UI string||Common text"
+	},
+	"manual_record_am":{
+		"content":"AM",
+		"description":"My||Recording||Time option||UI string||Common text"
+	},
+	"manual_record_pm":{
+		"content":"PM",
+		"description":"My||Recording||Time option||UI string||Common text"
+	},
+	"season_episode":{
+		"content":"Season %1$s, Episode %2$s",
+		"description":"My||Download||Text displayed during episode download||UI string||Common text"
+	},
+	"subscription_expired":{
+		"content":"Your subscription has expired. Please try again.",
+		"description":"Live TV||Subscription||Subscription expiration message||Message||Common text"
+	},
+	"favorite_season":{
+		"content":"Season %1$s, %2$s episodes",
+		"description":"My||Favorites||Text displayed during favorite episode adding||UI string||Common text"
+	},
+	"search":{
+		"content":"Search",
+		"description":"Search||Search box||Default text displayed in the search box||UI string||Common text"
+	},
+	"movie":{
+		"content":"Movie",
+		"description":"Home ||Home page||Auxiliary banner information||UI string||Common text"
+	},
+	"other":{
+		"content":"Earlier",
+		"description":"On Demand||Filter||Search criterion||UI string||Common text"
+	},
+	"play_session_exceeded":{
+		"content":"The subscription has expired. Please subscribe again.",
+		"description":"All||Player||Message indicating that the number of playback sessions on OTT devices has exceeded the upper limit||Message||Common text"
+	},
+	"message_quit_application":{
+		"content":"Are you sure you want to exit?",
+		"description":"Login||Login||Message asking a subscriber whether to exit||Message||Common text"
+	},
+	"message_install_google_play":{
+		"content":"To use the Reminder function, please install Google Play Store and Google Play Service.",
+		"description":"My||Reminder||Message displayed when a subscriber attempts to enable the reminder function||Message||Common text"
+	},
+	"channel_not_support_btv":{
+		"content":"This channel does not support the live TV service.",
+		"description":"Live TV||Player||Message indicating that a channel does not support live TV||Message||Common text"
+	},
+	"creator":{
+		"content":"Created by: ",
+		"description":"Home ||Home page||Auxiliary banner information||UI string||Common text"
+	},
+	"time_limit":{
+		"content":"Validity Period:",
+		"description":"All||Purchase||Expiration date displayed on the subscription page||UI string||Common text"
+	},
+	"note":{
+		"content":"Details:",
+		"description":"All||Purchase||Note displayed on the subscription page||UI string||Common text"
+	},
+	"record_type":{
+		"content":"Recording Type",
+		"description":"Live TV||Recording||Recording type||UI string||Common text"
+	},
+	"stars":{
+		"content":"Stars:",
+		"description":"Home ||Home page||Auxiliary banner information||UI string||Common text"
+	},
+	"input_password_to_download":{
+		"content":"Enter the super profile's password to download.",
+		"description":"On Demand||Download||Message prompting a subscriber to enter a password during download||Message||Common text"
+	},
+	"start":{
+		"content":"Start",
+		"description":"Login||Startup page||Text for starting experience||UI string||Common text"
+	},
+	"modes":{
+		"content":"Modes",
+		"description":"MultiView||MultiView||Watching mode||UI string||Common text"
+	},
+	"message_subscribed_download":{
+		"content":"Please subscribe to continue downloading.",
+		"description":"On Demand||Download||Message displayed when a subscriber taps the download button without subscription||Message||Common text"
+	},
+	"dst":{
+		"content":"DST",
+		"description":"Live TV||Program details||DST||UI string||Common text"
+	},
+	"device_rooted":{
+		"content":"Your device has been rooted, which is highly risky.",
+		"description":"All||All||Message indicating that the current mobile phone has been rooted||Message||Common text"
+	},
+	"phone_risky_ios":{
+		"content":"Your phone has been jailbroken, which is highly risky.",
+		"description":"All||All||Message indicating that the current mobile phone has been jailbroken||Message||Common text"
+	},
+	"keep_logged_in":{
+		"content":"Auto Login",
+		"description":"Login||Login||Login status||Message||Common text"
+	},
+	"play_mobile_network":{
+		"content":"Use Data to Play",
+		"description":"My||Settings||Switch for playback on the mobile network||UI string||Common text"
+	},
+	"message_play_mobile_network":{
+		"content":"Are you sure you want to enable data playback?",
+		"description":"My||Settings||Message asking a subscriber whether to play on the mobile network when the subscriber taps the play button||Message||Common text"
+	},
+	"notify_mobile_network_and_advice":{
+		"content":"Enable Wi-Fi or enable data playback on the Settings page.",
+		"description":"Live TV||Player||Message prompting a subscriber to open Wi-Fi or enable playback on the mobile network||Message||Common text"
+	},
+	"confirm_use_mobile_network":{
+		"content":"You are using the mobile network. Continue to play?",
+		"description":"Live TV||Player||Message asking a subscriber whether to play on the mobile network||Message||Common text"
+	},
+	"my_download":{
+		"content":"MY DOWNLOADS",
+		"description":"My||My home page||My Downloads||UI string||Title"
+	},
+	"continue_mobile_network":{
+		"content":"Continue",
+		"description":"Live TV||Player||Message asking a subscriber whether to play on the mobile network||UI string||Button"
+	},
+	"site_security":{
+		"content":"The site's security certificate is not trusted.",
+		"description":"Login||Login||Message indicating that the security certificate is not trusted||Message||Common text"
+	},
+	"no_order_channel_one_minute_android":{
+		"content":"You have not yet subscribed to this channel. You can preview it for about 1 minute.",
+		"description":"Live TV||Player||Message indicating that a subscriber has not subscribed to the channel and can preview it for 1 minute (for Android)||Message||Common text"
+	},
+	"no_order_channel_one_minute":{
+		"content":"You can preview it for about 1 minute.",
+		"description":"Live TV||Player||Message indicating that a subscriber can preview a channel for about 1 minute (for iOS)||Message||Common text"
+	},
+	"channel_not_support_cutv":{
+		"content":"This channel does not support the Catch-up TV service.",
+		"description":"Live TV||Player||Message indicating that a channel does not support Catch-up TV||Message||Common text"
+	},
+	"play_before_swipe":{
+		"content":"Perform screen casting after the playback starts. ",
+		"description":"Live TV||Player||Message indicating that the screen casting function can be used only after the playback starts.||Message||Common text"
+	},
+	"title_series":{
+		"content":"Series ",
+		"description":"My||Recording||Series recording button||UI string||Button"
+	},
+	"title_type":{
+		"content":"Type",
+		"description":"My||Recording||Recording type||UI string||Title"
+	},
+	"title_storage":{
+		"content":"Storage",
+		"description":"My||Recording||Recording storage mode||UI string||Title"
+	},
+	"extended_setting":{
+		"content":"Advanced",
+		"description":"My||Recording||Extended setting during recording||UI string||Title"
+	},
+	"cloud":{
+		"content":"Cloud",
+		"description":"My||Recording||Button for selecting cloud storage||UI string||Button"
+	},
+	"stb":{
+		"content":"STB",
+		"description":"My||Recording||Button for selecting STB storage||UI string||Button"
+	},
+	"my_recordings":{
+		"content":"MY RECORDINGS",
+		"description":"My||Recording||My recordings||UI string||Title"
+	},
+	"cloud_recordings":{
+		"content":"Cloud",
+		"description":"My||Recording||Cloud recordings||UI string||Title"
+	},
+	"stb_recordings":{
+		"content":"STB",
+		"description":"My||Recording||STB recordings||UI string||Title"
+	},
+	"add_manual_recording":{
+		"content":"Manual",
+		"description":"My||Recording||Button for adding manual recording tasks||UI string||Button"
+	},
+	"recording_storage_limit":{
+		"content":"No sufficient storage in the cloud. \nGo to the recording list to delete some recordings.",
+		"description":"My||Recording||Message displayed when the storage space is insufficient||Message||Common text"
+	},
+	"recording_list":{
+		"content":"Recording List",
+		"description":"My||Recording||Recording list||UI string||Title"
+	},
+	"latest_first":{
+		"content":"Latest",
+		"description":"My||Recording||Sorting by recording time in descending order||UI string||Tab"
+	},
+	"oldest_first":{
+		"content":"Earliest",
+		"description":"My||Recording||Sorting by recording time in ascending order||UI string||Tab"
+	},
+	"available":{
+		"content":"Available",
+		"description":"My||Recording||Successfully recorded videos in the list||UI string||Tab"
+	},
+	"unavailable":{
+		"content":"Unavailable",
+		"description":"My||Recording||Unsuccessfully recorded videos in the list||UI string||Tab"
+	},
+	"furthest_first":{
+		"content":"Earliest",
+		"description":"My||Recording||Sorting by recording time in ascending order||UI string||Tab"
+	},
+	"stb_and_cloud":{
+		"content":"STB & Cloud",
+		"description":"My||Recording||STB and cloud storage modes||UI string||Common text"
+	},
+	"recording_setting":{
+		"content":"Recording Settings",
+		"description":"My||Recording||Recording setting||UI string||Button"
+	},
+	"recording_stop":{
+		"content":"Stop Recording",
+		"description":"My||Recording||Pause||UI string||Button"
+	},
+	"delete_mode":{
+		"content":"Delete Mode",
+		"description":"My||Recording||Delete mode||UI string||Title"
+	},
+	"no_cloud_recording_program":{
+		"content":"No cloud recordings. Go to \"Live TV\" or \"manual recording\" to add what you don't want to miss.",
+		"description":"My||Recording||Message displayed when the cloud recording list is empty||Message||Common text"
+	},
+	"no_scheduled_recording_program":{
+		"content":"No scheduled recordings. Go to \"Live TV\" or \"manual recording\" to add what you don't want to miss.",
+		"description":"My||Recording||Message displayed when the scheduled recording list is empty||Message||Common text"
+	},
+	"no_stb_recording_program":{
+		"content":"No STB recordings. Go to \"Live TV\" or \"manual recording\" to add what you don't want to miss.",
+		"description":"My||Recording||Message displayed when the STB recording list is empty||Message||Common text"
+	},
+	"date_time":{
+		"content":"Date & Time",
+		"description":"My||Recording||Recording date and time||UI string||Title"
+	},
+	"some_programs":{
+		"content":"%1$s programs",
+		"description":"My||Recording||Number of tasks in the recorded list||UI string||Common text"
+	},
+	"record_total":{
+		"content":"Total:",
+		"description":"My||Recording||nPVR space||UI string||Common text"
+	},
+	"record_finished":{
+		"content":"Finished:",
+		"description":"My||Recording||nPVR space||UI string||Common text"
+	},
+	"new_recording":{
+		"content":"New Recording",
+		"description":"My||Recording||New recordings in the recording list||UI string||Common text"
+	},
+	"add_record_successful":{
+		"content":"Recording task added successfully.",
+		"description":"My||Recording||Message indicating that a recording task is successfully added||Message||Common text"
+	},
+	"add_record_failed":{
+		"content":"Failed to add the recording task.",
+		"description":"My||Recording||Message indicating that a recording task fails to be added||Message||Common text"
+	},
+	"manual_delete":{
+		"content":"Manual Delete ",
+		"description":"My||Recording||Manual deletion option||UI string||Common text"
+	},
+	"until_storage_full":{
+		"content":"Until storage is full",
+		"description":"My||Recording||Option for deleting until storage is full||UI string||Common text"
+	},
+	"manual_latest":{
+		"content":"Latest",
+		"description":"My||Recording||Sorting by recording time in descending order||UI string||Tab"
+	},
+	"manual_oldest":{
+		"content":"Earliest",
+		"description":"My||Recording||Sorting by recording time in ascending order||UI string||Tab"
+	},
+	"favorite_episode":{
+		"content":"%1$s episode",
+		"description":"My||History list||Number of episodes in the history list (used when there is only one episode)||Message||Common text"
+	},
+	"favorite_season_episode":{
+		"content":"Season %1$s, %2$s episodes",
+		"description":"My||Favorites||Number of episodes in favorites (used when there is only one episode)||UI string||Common text"
+	},
+	"start_time_later_current":{
+		"content":"The start time must be later than the current time.",
+		"description":"My||Recording||Message displayed when the start time is earlier than the current time||Message||Common text"
+	},
+	"record_pre_pading":{
+		"content":"%1$s min pre-padding",
+		"description":"My||Recording||Pre-padding of recording||UI string||Title"
+	},
+	"record_post_pading":{
+		"content":"%1$s min post-padding",
+		"description":"My||Recording||Post-padding of recording||UI string||Title"
+	},
+	"no_downloading":{
+		"content":"No video is being downloaded. Go to \"On Demand\" to find content to download.",
+		"description":"My||Download management||Message indicating that the download list is empty and a subscriber can download content||Message||Common text"
+	},
+	"record_available":{
+		"content":"Available:",
+		"description":"My||Recording||nPVR space||UI string||Common text"
+	},
+	"record_scheduled":{
+		"content":"Scheduled:",
+		"description":"My||Recording||nPVR space||UI string||Common text"
+	},
+	"record_hours":{
+		"content":"%1$s hours",
+		"description":"My||Recording||nPVR space||UI string||Common text"
+	},
+	"future_space_manage":{
+		"content":"Operation succeeded, but the available space is insufficient. Please delete some recordings.",
+		"description":"My||Recording||Message indicating that the future space is insufficient||Message||Common text"
+	},
+	"hours_space_delete":{
+		"content":"%1$s hours of space will be deleted.",
+		"description":"My||Recording||Estimated space to be deleted||UI string||Common text"
+	},
+	"video_search":{
+		"content":"VIDEOS",
+		"description":"My||Search||Title of the video tab on the search page||UI string||Title"
+	},
+	"password_not_conform_rules":{
+		"content":"The password does not conform to the rules. Please change it.",
+		"description":"My||Password change||Message indicating that the password strength does not conform to rules||Message||Common text"
+	},
+	"channel_unavailable":{
+		"content":"No available channels to record.",
+		"description":"My||Recording||Message indicating that there is no available channel during manual recording task adding||Message||Common text"
+	},
+	"end_later_start_date":{
+		"content":"The end date must be later than the start date.",
+		"description":"My||Recording||Message displayed when the end date and start date are the same during periodic recording task adding||Message||Common text"
+	},
+	"day_later":{
+		"content":"%1$s days later",
+		"description":"My||Recording||End date during recording task adding||UI string||Common text"
+	},
+	"start_time_over":{
+		"content":"The start time has elapsed.",
+		"description":"My||Recording||Message indicating that the start time has passed during manual recording||Message||Common text"
+	},
+	"pre_padding":{
+		"content":"Pre-padding",
+		"description":"My||Recording||Pre-padding of recording when only nPVR is supported||UI string||Common text"
+	},
+	"post_padding":{
+		"content":"Post-padding",
+		"description":"My|| Recording||Post-padding of recording when only nPVR is supported||UI string||Common text"
+	},
+	"manual_record_name":{
+		"content":"Name",
+		"description":"My|| Recording||Manual recording name||UI string||Common text"
+	},
+	"manual_repeat":{
+		"content":"Repeat",
+		"description":"My||Recording||Repeating date during manual recording||UI string||Common text"
+	},
+	"to":{
+		"content":"to",
+		"description":"My||Recording||Repeating date during manual recording||UI string||Common text"
+	},
+	"delete_record_success":{
+		"content":"Task deleted successfully.",
+		"description":"My||Recording||Message indicating that a recording task is successfully deleted||UI string||Common text"
+	},
+	"gb_space":{
+		"content":"GB",
+		"description":"My||Recording||Space unit||UI string||Common text"
+	},
+	"hour":{
+		"content":"%1$s hour",
+		"description":"My||Recording||nPVR space (used when the space is sufficient for 1 hour or shorter)||UI string||Common text"
+	},
+	"delete_space_singular":{
+		"content":"%1$s hour of space will be deleted.",
+		"description":"My||Recording||Estimated space to be deleted (used when the space is sufficient for 1 hour or shorter)||UI string||Common text"
+	},
+	"manual_date":{
+		"content":"Date",
+		"description":"My||Recording||Date when only nPVR is supported||UI string||Common text"
+	},
+	"manual_time":{
+		"content":"Time",
+		"description":"My||Recording||Time when only nPVR is supported||UI string||Common text"
+	},
+	"program_record":{
+		"content":"%1$s programs",
+		"description":"My||Recording||Number of programs displayed in the recording list||UI string||Common text"
+	},
+	"add_record_not_enough_storage":{
+		"content":"Recording task submitted successfully, but there is no sufficient storage in the cloud. Go to the recording list to delete some cloud recording tasks so that all scheduled tasks can be recorded.\n",
+		"description":"My||Recording||Text displayed when the cloud space is insufficient for recording||UI string||Common text"
+	},
+	"do_later":{
+		"content":"Later",
+		"description":"My||Recording||Text displayed when the cloud space is insufficient for recording||UI string||Common text"
+	},
+	"program_recorded":{
+		"content":"The current program has been added to the recording task.",
+		"description":"My||Recording||Text indicating that the program has been added to recording during program recording task adding||UI string||Common text"
+	},
+	"add_downloading_failed":{
+		"content":"Failed to add the download task.",
+		"description":"On Demand||Download||Message indicating that a download task fails to be added||Message||Common text"
+	},
+	"program_blackout":{
+		"content":"Sorry, this program cannot be watched.",
+		"description":"Live TV||Player||Message indicating that the program cannot be watched||Message||Common text"
+	},
+	"record_operation_succeeded":{
+		"content":"Operation succeeded.",
+		"description":"My||Recording||Message displayed when a program recording task is added||Message||Common text"
+	},
+	"record_operation_failed":{
+		"content":"Operation failed.",
+		"description":"My||Recording||Message displayed when a program recording task is added||Message||Common text"
+	},
+	"single_program":{
+		"content":"%1$s program",
+		"description":"My||Recording||Number of tasks in the recorded list||UI string||Common text"
+	},
+	"sub_task":{
+		"content":"%1$s sub-task",
+		"description":"My||Recording||Number of subtasks in the recorded list||UI string||Common text"
+	},
+	"sub_tasks":{
+		"content":" %1$s sub-tasks",
+		"description":"My||Recording||Number of subtasks in the recorded list||UI string||Common text"
+	},
+	"input_not_conform_rules":{
+		"content":"The input is invalid. Please change it. ",
+		"description":"My||Personalized data setting||Message indicating that the personalized data complexity does not conform to rules||Message||Common text"
+	},
+	"input_must_contain":{
+		"content":"The input can contain:",
+		"description":"My||Personalized data modification||Message displayed during personalized data modification||Message||Common text"
+	},
+	"close":{
+		"content":"Close",
+		"description":"My||Recording||Button for stopping recording download||UI string||Button"
+	},
+	"input_special_characters":{
+		"content":"Cannot contain the following special characters: %1$s",
+		"description":"My||Personalized data modification||Message displayed during personalized data modification||Message||Common text"
+	},
+	"input_least_characters":{
+		"content":"Enter at least %1$s characters.",
+		"description":"My||Personalized data modification||Message displayed during personalized data modification||Message||Common text"
+	},
+	"four_k":{
+		"content":"4K",
+		"description":"My||Recorded content definition||UHD||UI string||Common text"
+	},
+	"add":{
+		"content":"Add",
+		"description":"My||PVR||Button for adding manual recording tasks||UI string||Common text"
+	},
+	"record_from":{
+		"content":"From",
+		"description":"My||Manual recording creation||Recording time segment||UI string||Common text"
+	},
+	"refresh":{
+		"content":"Next Batch",
+		"description":"On Demand||Home page||Category refresh button||UI string||Button"
+	},
+	"update_to":{
+		"content":"Update to",
+		"description":"On Demand||Content details||Episode update status||UI string||Common text"
+	},
+	"total_episodes":{
+		"content":"Total %1$s episodes",
+		"description":"On Demand||Content details||Total number of episodes||UI string||Common text"
+	},
+	"record_conflict_title":{
+		"content":"Recording Conflict",
+		"description":"My||nPVR||Recording conflict||UI string||Common text"
+	},
+	"login_to_watch":{
+		"content":"You have not logged in. You can preview it for about %1$s minutes.",
+		"description":"On Demand||Player||Message indicating that a subscriber has not logged in and can preview videos for about 5 minutes||Message||Common text"
+	},
+	"login_to_watch_one_minute":{
+		"content":"You have not logged in. You can preview it for about 1 minute.",
+		"description":"On Demand||Player||Message indicating that a subscriber has not logged in and can preview videos for about 1 minute||Message||Common text"
+	},
+	"subscribe_to_watch_android":{
+		"content":"You have not subscribed to this channel. You can preview it for about %1$s minutes.",
+		"description":"On Demand||Player||Message indicating that a subscriber must subscribe to continue watching||Message||Common text"
+	},
+	"subscribe_to_watch_one_minute_andriod":{
+		"content":"You have not subscribed to this channel. You can preview it for about 1 minute.",
+		"description":"On Demand||Player||Message indicating that a subscriber must subscribe to continue watching||Message||Common text"
+	},
+	"login_to_watching":{
+		"content":"Please log in to continue watching.",
+		"description":"On Demand||Player||Message indicating that a subscriber can continue watching after subscription||Message||Common text"
+	},
+	"forget_password":{
+		"content":"Forgot password?",
+		"description":"My||Login||Message displayed when a subscriber forgets the password at login||Message||Common text"
+	},
+	"experience_improvement_program":{
+		"content":"User Experience Improvement Plan",
+		"description":"My||Settings||User experience improvement plan||UI string||Common text"
+	},
+	"recording_number_conflict":{
+		"content":"The number of concurrent recording tasks exceeds the maximum. To solve the conflict, delete some tasks.",
+		"description":"My||PVR||Text indicating a recording conflict||UI string||Common text"
+	},
+	"solve_conflict":{
+		"content":"Solve Conflict",
+		"description":"My||PVR||Button on the conflict page displayed when a new series recording task conflicts with other recording tasks of different types (episode, series, or periodic)||UI string||Button"
+	},
+	"record_all_episode":{
+		"content":"Record All",
+		"description":"My||PVR||Button on the conflict page displayed when a new series recording task conflicts with other recording tasks of different types (episode, series, or periodic)||UI string||Button"
+	},
+	"mix_conflict_notice_singular":{
+		"content":"If you set this recording as a series recording, it will conflict with %1$s existing recording. Do you want to keep this recording and manually solve the conflict or do you want to cancel the recording?",
+		"description":"My||PVR||Message on the conflict page displayed when a new series recording task conflicts with other recording tasks of different types (episode, series, or periodic)||UI string||Common text"
+	},
+	"mix_conflict_notice":{
+		"content":"If you set this recording as a series recording, it will conflict with %1$s existing recordings. Do you want to keep this recording and solve the conflicts one by one or do you want to cancel the recording?",
+		"description":"My||PVR||Message on the conflict page displayed when a new series recording task conflicts with other recording tasks of different types (episode, series, or periodic)||UI string||Common text"
+	},
+	"guest_failed_message":{
+		"content":"Please log in.",
+		"description":"Login||Guest login||Message displayed on the login page after guest login failure||UI string||Common text"
+	},
+	"no_recording_task_contain":{
+		"content":"No content to be recorded in the selected period. Please try again.",
+		"description":"My||Recording||Message indicating that there is no content to be recorded in the selected period||Message||Common text"
+	},
+	"register":{
+		"content":"Register",
+		"description":"Login||Registration||Register button||UI string||Button"
+	},
+	"phone_number":{
+		"content":"Phone Number",
+		"description":"Login||Registration||Text prompting a subscriber to enter a phone number||UI string||Common text"
+	},
+	"verification_code":{
+		"content":"Verification Code",
+		"description":"Login||Registration||Text prompting a subscriber to enter a verification code||UI string||Common text"
+	},
+	"accept_the_agreement":{
+		"content":"Register and log in to read and accept the user agreement.",
+		"description":"Login||Registration||Message prompting a subscriber to read and accept the user agreement on the registration page||UI string||Common text"
+	},
+	"get_verification_code":{
+		"content":"Get Code",
+		"description":"Login||Registration||Button for obtaining a verification code on the registration page||UI string||Button"
+	},
+	"resend_code":{
+		"content":"Resend",
+		"description":"Login||Registration||Verification code resend button||UI string||Button"
+	},
+	"my_member":{
+		"content":"MY MEMBER",
+		"description":"My||Member||VIP center||UI string||Title"
+	},
+	"vip_club":{
+		"content":"VIP Club",
+		"description":"My||Member||VIP center||UI string||Common text"
+	},
+	"vip_remove":{
+		"content":"Remove",
+		"description":"My||Member||VIP unsubscription||UI string||Button"
+	},
+	"my_package":{
+		"content":"My Package",
+		"description":"My||Member||Subscribed packages||UI string||Common text"
+	},
+	"recommend_package":{
+		"content":"Recommended Packages",
+		"description":"My||Member||Recommended packages ||UI string||Common text"
+	},
+	"join_now":{
+		"content":"Join NOW",
+		"description":"My||Member||Subscribing to a package||UI string||Button"
+	},
+	"privileges_for_vip":{
+		"content":"Privileges for VIP",
+		"description":"My||Member||Introduction to the privileges for VIP members||UI string||Common text"
+	},
+	"cancel_order_the_package":{
+		"content":"Are you sure you want to unsubscribe from this package? The cancellation will take effect next month.",
+		"description":"My||Member||Message confirming the package unsubscription||UI string||Common text"
+	},
+	"package_canceled_successfully":{
+		"content":"Package unsubscribed successfully.",
+		"description":"My||Member||Message indicating that the package is successfully unsubscribed from||Message||Common text"
+	},
+	"scan_qr_code":{
+		"content":"Scan QR Code",
+		"description":"My||Account binding||Open to scan the QR code||UI string||Common text"
+	},
+	"my_purchased":{
+		"content":"MY PURCHASED",
+		"description":"My||Subscription||My subscription||UI string||Title"
+	},
+	"purchased_title":{
+		"content":"Purchased",
+		"description":"My||Subscription||My subscription||UI string||Common text"
+	},
+	"messages":{
+		"content":"Messages",
+		"description":"My||Messages||Message notification||UI string||Common text"
+	},
+	"view_message":{
+		"content":"View",
+		"description":"My||Messages||Button for viewing messages||UI string||Common text"
+	},
+	"scan_to_bind_phone_number_with_super_profile":{
+		"content":"1. Scan the QR code (on the My TV -> Profiles -> Super Profile -> Bind Account page) to bind your phone number to the super profile.\n",
+		"description":"My||Account binding||Operation guidance on the QR scanning page||UI string||Common text"
+	},
+	"login_any_ott_device":{
+		"content":"2. Then you can log in from any OTT device as the super profile using this phone number.",
+		"description":"My||Account binding||Operation guidance on the QR scanning page||UI string||Common text"
+	},
+	"successfully_to_bind_account":{
+		"content":"Account bound successfully. Use the STB password to log in.",
+		"description":"My||Account binding||Message indicating that the account is successfully bound||Message||Common text"
+	},
+	"failed_to_bind_account":{
+		"content":"Failed to bind the account. Please try again.",
+		"description":"My||Account binding||Message indicating that the account fails to be bound||Message||Common text"
+	},
+	"phone_number_be_bound_super_profile":{
+		"content":"Your phone number has been bound to the super profile.",
+		"description":"My||Account binding||Message indicating that the subscriber's phone number has been bound to the super profile||Message||Common text"
+	},
+	"upper_limit_to_bind_account":{
+		"content":"Failed to bind the account. The number of accounts bound to the super profile has reached the upper limit.",
+		"description":"My||Account binding||Message indicating that the number of the super profile bindings has reached the upper limit||Message||Common text"
+	},
+	"receive_message":{
+		"content":"Receive Message",
+		"description":"My||Messages||Switch for receiving messages||UI string||Common text"
+	},
+	"estimate_data_flow":{
+		"content":"Estimate Data Traffic",
+		"description":"My||Settings||Switch for estimating data traffic||UI string||Common text"
+	},
+	"package_production":{
+		"content":"Package Details",
+		"description":"My||VIP||Introduction to subscription details||UI string||Common text"
+	},
+	"package_limit":{
+		"content":"Validity Period:",
+		"description":"My||VIP||Validity period of a subscribed product||UI string||Common text"
+	},
+	"privilege":{
+		"content":"Privilege for VIP",
+		"description":"My||VIP||Page displaying the privileges for VIP members||UI string||Common text"
+	},
+	"repeat_periodic_date":{
+		"content":"Repeat Cycle: %1$s",
+		"description":"My||Recording||Selection of repeat cycle for recording||UI string||Common text"
+	},
+	"fail_play":{
+		"content":"Failed to play content in the current recording task.",
+		"description":"My||Recording||Toast message displayed when content in the current recording task fails to play||UI string||Common text"
+	},
+	"purchase_validity_latest":{
+		"content":"Expiring Soonest",
+		"description":"My||Subscription||Filter criteria for subscription||UI string||Common text"
+	},
+	"purchase_package":{
+		"content":"Package",
+		"description":"My||Subscription||Filter criteria for subscription||UI string||Common text"
+	},
+	"no_data_purchased":{
+		"content":"No subscription records.",
+		"description":"My||Subscription||Message displayed when there is no subscription record ||UI string||Common text"
+	},
+	"all_available":{
+		"content":"All available",
+		"description":"My||Subscription||Filter criteria for subscription||UI string||Common text"
+	},
+	"thousand":{
+		"content":"Thousand",
+		"description":"On Demand||Likes||Number of subscribers who give likes||UI string||Common text"
+	},
+	"sing_million":{
+		"content":"Million",
+		"description":"On Demand||Likes||Number of subscribers who give likes||UI string||Common text"
+	},
+	"billion":{
+		"content":"Billion ",
+		"description":"On Demand||Likes||Number of subscribers who give likes||UI string||Common text"
+	},
+	"new_all":{
+		"content":"All",
+		"description":"On Demand||Filter||Button for sorting by rating||UI string||Button"
+	},
+	"agree_to_complete_login":{
+		"content":"Agree %1$s.",
+		"description":"My||Login||Login||UI string||Common text"
+	},
+	"agree_to_complete_registeration":{
+		"content":"Agree %1$s to complete registration.",
+		"description":"My||Login||Login||UI string||Common text"
+	},
+	"register_set_password":{
+		"content":"Set Password",
+		"description":"My||registration||Registration||UI string||Common text"
+	},
+	"get_code_button":{
+		"content":"Get Code",
+		"description":"My||registration||Registration||UI string||Common text"
+	},
+	"no_account_to_register":{
+		"content":"No account yet? Please %1$s.",
+		"description":"My||Login||Login||UI string||Common text"
+	},
+	"application_not_permission_camera":{
+		"content":"This app does not have permission to access your camera. You can choose Settings -> Privacy -> Camera to enable the permission.\n",
+		"description":"My||Account binding||Message indicating that the app does not have permission to access the camera ||UI string||Common text"
+	},
+	"watch_multiple_channels":{
+		"content":"Watch Multiple Channels",
+		"description":"Live TV||Player||Message indicating that the subscriber can select multiple channels during full-screen playback||UI string||Common text"
+	},
+	"no_messages":{
+		"content":"No messages. Check whether message notification is enabled in %1$s.",
+		"description":"My||My TV||Message indicating that there is no notification after login||UI string||Common text"
+	},
+	"my_message":{
+		"content":"MY MESSAGES",
+		"description":"My||My TV||My messages||UI string||Title"
+	},
+	"message_profile_str":{
+		"content":"Profile",
+		"description":"My||My TV||Link to my profile page||UI string||Common text"
+	},
+	"play_within_network":{
+		"content":"You will use about %1$s MB data to watch this video.",
+		"description":"Live TV||Player||Estimation of data traffic for playback on the mobile network||Message||Common text"
+	},
+	"use_agreement":{
+		"content":"User Agreement",
+		"description":"My||Login||Login||UI string||Common text"
+	},
+	"no_notification":{
+		"content":"No messages.",
+		"description":"My||My TV||Message indicating that there is no notification in guest state||UI string||Common text"
+	},
+	"record_furthest":{
+		"content":"Earliest",
+		"description":"My||Recording||Sorting by recording time from the earliest to the latest||UI string||Tab"
+	},
+	"no_advert":{
+		"content":"No ad",
+		"description":"My||Member||Description of VIP privileges||UI string||Common text"
+	},
+	"enjoy_hellywood":{
+		"content":"Enjoy Hollywood",
+		"description":"My||Member||Description of VIP privileges||UI string||Common text"
+	},
+	"speed_up":{
+		"content":"Speed up",
+		"description":"My||Member||Description of VIP privileges||UI string||Common text"
+	},
+	"blue_ray":{
+		"content":"Blu-ray",
+		"description":"My||Member||Description of VIP privileges||UI string||Common text"
+	},
+	"viewing_coupon":{
+		"content":"Movie coupon",
+		"description":"My||Member||Description of VIP privileges||UI string||Common text"
+	},
+	"privilege_vip":{
+		"content":"1080p",
+		"description":"My||Member||Description of VIP privileges||UI string||Common text"
+	},
+	"manual_purchased_single":{
+		"content":"Single",
+		"description":"My||Subscription||Subscription||UI string||Common text"
+	},
+	"featured":{
+		"content":"Featured",
+		"description":"My||Subscription||Subscription||UI string||Common text"
+	},
+	"play_with_network_traffic":{
+		"content":"The playback will use %1$s MB data traffic.",
+		"description":"All||Playback||Playback traffic estimation||UI string||Common text"
+	},
+	"phone_number_registered":{
+		"content":"The current phone number has been registered.",
+		"description":"My||Registration||Message indicating that the current phone number has been registered||UI string||Common text"
+	},
+	"mix_conflict_notice_singular":{
+		"content":"Setting this task as a series recording task will generate %1$s conflicts with existing recording tasks. Do you want to arrange this task and solve the conflicts or cancel the recording?",
+		"description":"My||PVR||Message on the conflict page displayed when a new series recording task conflicts with other recording tasks of different types (single, series, or periodic)||UI string||Common text"
+	},
+	"featured_videos":{
+		"content":"Featured Videos",
+		"description":"On Demand||Content list||Title of the subcategory page||UI string||Common text"
+	},
+	"guest_preview_info":{
+		"content":"Please log in to continue watching. Or you can %1$s.",
+		"description":"On Demand||Player||Text prompting for login or replay when the preview ends||Message||Common text"
+	},
+	"subscrib_to_continue_watching":{
+		"content":"Please subscribe to continue watching. Or you can %1$s.",
+		"description":"On Demand||Player||Text prompting for subscription or replay when the preview ends||Message||Common text"
+	},
+	"guest_preview_replay":{
+		"content":"Replay",
+		"description":"On Demand||Player||Text prompting for subscription/login or replay when the preview ends||Message||Common text"
+	},
+	"click_lock":{
+		"content":"Click to lock",
+		"description":"All||Player||Text prompting a subscriber to lock screen rotation during playback||Message||Common text"
+	},
+	"cancel_lock":{
+		"content":"Click to unlock",
+		"description":"All||Player||Text prompting a subscriber to unlock screen rotation during playback||Message||Common text"
+	},
+	"recording_not_support":{
+		"content":"The recording is not supported.",
+		"description":"PVR||Recording||Message indicating that the current recording type is not supported||Message||Common text"
+	},
+	"message_no_movie_permission_to_download":{
+		"content":"You have no permission to download this movie in your area.",
+		"description":"On Demand||Download||Message indicating that download is not supported in current area||Message||Common text"
+	},
+	"active_desktop_update":{
+		"content":"Updating dynamic desktop…",
+		"description":"All||Dynamic desktop||Text indicating that dynamic desktop is being updated||Message||Common text"
+	},
+	"share_wechat":{
+		"content":"WeChat",
+		"description":"All||Sharing||Video sharing||Message||Common text"
+	},
+	"share_moments":{
+		"content":"Moments",
+		"description":"All||Sharing||Video sharing||Message||Common text"
+	},
+	"share_weibo":{
+		"content":"Weibo",
+		"description":"All||Sharing||Video sharing||Message||Common text"
+	},
+	"copy_link":{
+		"content":"Copy Link",
+		"description":"All||Sharing||Video sharing||Message||Common text"
+	},
+	"please_install_first":{
+		"content":"You are not currently installing %1$s. Please install %1$s first.",
+		"description":"All||Sharing||Video sharing||Message||Common text"
+	},
+	"you_not_login":{
+		"content":"You have not logged in to %1$s. Please log in first.",
+		"description":"All||Sharing||Video sharing||Message||Common text"
+	},
+	"invalid_request":{
+		"content":"Invalid request.",
+		"description":"All||Dynamic desktop||Message indicating that the request is invalid||Message||Common text"
+	},
+	"copy_link_successfully":{
+		"content":"Link copied successfully.",
+		"description":"All||Sharing||Video sharing||Message||Common text"
+	},
+	"can_not_scan_in_split_screen":{
+		"content":"You cannot scan the QR code in split screen state.",
+		"description":"All||Account binding||Message indicating that the QR code cannot be scanned in split screen state||Message||Common text"
+	},
+	"view_up":{
+		"content":"View up",
+		"description":"All||VR||Message displayed upon first playback||Message||Common text"
+	},
+	"view_down":{
+		"content":"View down",
+		"description":"All||VR||Message displayed upon first playback||Message||Common text"
+	},
+	"view_left":{
+		"content":"View left",
+		"description":"All||VR||Message displayed upon first playback||Message||Common text"
+	},
+	"view_right":{
+		"content":"View right",
+		"description":"All||VR||Message displayed upon first playback||Message||Common text"
+	},
+	"shifting_to":{
+		"content":"Casting to %1$s...",
+		"description":"All||Far-field screen casting||Message displayed during far-field screen casting||Message||Common text"
+	},
+	"successfully_to_shifting":{
+		"content":"Successfully cast to %1$s.",
+		"description":"All||Far-field screen casting||Message displayed during far-field screen casting||Message||Common text"
+	},
+	"failed_to_shifting":{
+		"content":"Failed to cast to %1$s.",
+		"description":"All||Far-field screen casting||Message displayed during far-field screen casting||Message||Common text"
+	},
+	"network_busy_no_retroaction":{
+		"content":"Network busy. There is no response.",
+		"description":"All||Far-field screen casting||Message displayed during far-field screen casting||Message||Common text"
+	},
+	"dlna_stb":{
+		"content":"DLNA STB",
+		"description":"All||Far-field screen casting||Page displaying the far-field screen casting list||Message||Common text"
+	},
+	"shift_cloud_stb":{
+		"content":"Cloud STB",
+		"description":"All||Far-field screen casting||Page displaying the far-field screen casting list||Message||Common text"
+	},
+	"no_available_stb":{
+		"content":"No STBs available. Please try again.",
+		"description":"All||Far-field screen casting||Message indicating that no STB is available||Message||Common text"
+	},
+	"scheduled_latest_first":{
+		"content":"Latest",
+		"description":"My||PVR||Sorting by recording time in descending order||UI string||Common text"
+	},
+	"storyline":{
+		"content":"STORYLINE",
+		"description":"On Demand||Content details||Description of the movie storyline||UI string||Title"
+	},
+	"touch_remote":{
+		"content":"Touch Mode",
+		"description":"Multi-Control||Soft remote control page||Touch mode||UI string||Common text"
+	},
+	"button_remote":{
+		"content":"Button Mode",
+		"description":"Multi-Control||Soft remote control page||Button mode||UI string||Common text"
+	},
+	"switching_Channel":{
+		"content":"Keypad",
+		"description":"Multi-Control||Soft remote control page||Numeric keypad ||UI string||Common text"
+	},
+	"soft_keyboard":{
+		"content":"Keyboard",
+		"description":"Multi-Control||Soft remote control page||Soft keyboard||UI string||Common text"
+	},
+	"no_vr_plugin":{
+		"content":"You have not installed the VR plug-in. Please install the plug-in first.",
+		"description":"All||VR||Message indicating that you have not installed the VR plug-in||Message||Common text"
+	},
+	"channel_info_initializing":{
+		"content":"Initializing channel information... Please try again later.",
+		"description":"Live TV||Live TV home page||Message indicating that channel loading is not complete during manual recording||Message||Common text"
+	},
+	"tap_to_search_device":{
+		"content":"Tap to Search for Devices",
+		"description":"Multi-Control||Soft remote control page||Title of the page which the subscriber can tap to search for devices||UI string||Common text"
+	},
+	"successfully_to_scan_QR":{
+		"content":"QR code scanned successfully. Please use the STB password to log in.",
+		"description":"My||Account binding||Message indicating that the account is successfully bound||Message||Common text"
+	},
+	"choose_device":{
+		"content":"Select Device",
+		"description":"Multi-Control||Soft remote control page||Button for selecting a device||UI string||Common text"
+	},
+	"my_settings":{
+		"content":"My Settings",
+		"description":"My||My TV||My Settings page||UI string||Common text"
+	},
+	"unsupported_jump":{
+		"content":"Unsupported jump.",
+		"description":"Home ||Home ||Message indicating that an error occurs ||Message||Common text"
+	},
+	"failed_to_associate":{
+		"content":"Failed to associate. \nPlease change the keyword.",
+		"description":"Search||Search Page||Message indicating that there is no associated word when a keyword is entered on the search page||Message||Common text"
+	},
+	"recording_stopped":{
+		"content":"Recording stopped.",
+		"description":"My||Recording||Message indicating that the recording is successfully stopped||UI string||Common text"
+	},
+	"sub_profile":{
+		"content":"Common Profiles ",
+		"description":"My||Multi-profile||Title of the common profile list||UI string||Common text"
+	},
+	"add_profile":{
+		"content":"Add Profile",
+		"description":"My||Multi-profile||Button for adding a new common profile||UI string||Common text"
+	},
+	"most_search":{
+		"content":"MOST SEARCHED",
+		"description":"Search||Search||Title of the popular search section||UI string||Title"
+	},
+	"searching_count":{
+		"content":"%1$s searches",
+		"description":"Search||Search||Search times||UI string||Common text"
+	},
+	"search_series":{
+		"content":"SERIES",
+		"description":"Search||Search||Series||UI string||Title"
+	},
+	"search_movies":{
+		"content":"MOVIES",
+		"description":"Search||Search||Movies||UI string||Title"
+	},
+	"download_location":{
+		"content":"Download Storage",
+		"description":"My||Scheduled download||Download storage||UI string||Common text"
+	},
+	"mobile_storage":{
+		"content":"Mobile storage",
+		"description":"My||Scheduled download||Phone storage||UI string||Common text"
+	},
+	"SD_storage":{
+		"content":"SD storage",
+		"description":"My||Scheduled download||SD card storage||UI string||Common text"
+	},
+	"download_lead_traffic":{
+		"content":"Enabling download over mobile network may lead to excessive traffic. \nAre you sure you want to enable it?",
+		"description":"My||Scheduled download||Message displayed upon scheduled download||Message||Common text"
+	},
+	"tap_share":{
+		"content":"Tap to share",
+		"description":"Player||Player||Text prompting the subscriber to tap to share||UI string||Common text"
+	},
+	"share_screenshot":{
+		"content":"Share Screenshot",
+		"description":"Player||Player||Title of the page for sharing a screenshot||UI string||Common text"
+	},
+	"share_git":{
+		"content":"Share GIF",
+		"description":"Player||Player||Title of the page for sharing a GIF image||UI string||Common text"
+	},
+	"record_second":{
+		"content":"Record at least 3s to share. ( %1$ss )",
+		"description":"Player||Player||Message displayed during the recording||UI string||Common text"
+	},
+	"tap_share_second":{
+		"content":"Tap button to share. ( %1$ss )",
+		"description":"Player||Player||Message displayed during the recording||UI string||Common text"
+	},
+	"fail_screenshoot":{
+		"content":"Failed to take the screenshot. Please try again later.",
+		"description":"Player||Player||Message indicating screenshot failure||Message||Common text"
+	},
+	"failed_recording":{
+		"content":"Failed to record GIF images. Please try again later.",
+		"description":"Player||Player||Message indicating recording failure||Message||Common text"
+	},
+	"allow_network_download":{
+		"content":"Use Data to Download",
+		"description":"My||Download||Button for enabling download over mobile network||UI string||Common text"
+	},
+	"unavailable_network_to_download":{
+		"content":"Task download failed because no network is available.",
+		"description":"On Demand||Download||Message indicating that no network is available||Message||Common text"
+	},
+	"connect_WIFI_network_to_download":{
+		"content":"Download over mobile network is disabled. Connect to the WI-FI or change the settings.",
+		"description":"On Demand||Download||Message indicating that download over mobile network is not supported||Message||Common text"
+	},
+	"waiting_for_download":{
+		"content":"%1$s is waiting for download.",
+		"description":"On Demand||Download||Message indicating that the download task automatically enters the waiting state||Message||Common text"
+	},
+	"play_and_download":{
+		"content":"Play and Download",
+		"description":"My||Settings||Settings||UI string||Title"
+	},
+	"allow_operator_network_to_download":{
+		"content":"Enabling download over mobile network may lead to excessive traffic. \nAre you sure you want to enable it?",
+		"description":"My||Settings||Message prompting for confirmation when a subscriber enables download over mobile network||UI string||Common text"
+	},
+	"conversion_in_progress":{
+		"content":"The conversion is in progress. Please try again later.",
+		"description":"Player||Player||Message displayed upon screenshot share, indicating that GIF image conversion is in progress||Message||Common text"
+	},
+	"convert_successfully":{
+		"content":"Image converted successfully.",
+		"description":"Player||Player||Message indicating that GIF image conversion is complete||UI string||Common text"
+	},
+	"processing":{
+		"content":"Processing %1$s%",
+		"description":"Player||Player||Message indicating the GIF image conversion progress||UI string||Common text"
+	},
+	"sub_level":{
+		"content":"Level: %1$s",
+		"description":"My||Profile management||Level of the common profile||UI string||Common text"
+	},
+	"sub_credit_limit":{
+		"content":"Credit Limit: %1$s",
+		"description":"My||Profile management||Credit limit of the common profile||UI string||Common text"
+	},
+	"enter_password_to_edit":{
+		"content":"Enter the super profile's password to edit.",
+		"description":"My||Profile management||Message displayed when the super profile edits other profiles||Message||Common text"
+	},
+	"phone_number_invalid":{
+		"content":"Invalid phone number. Please try again.",
+		"description":"My||registration||Message indicating that the phone number entered by the subscriber is invalid||Message||Common text"
+	},
+	"total_space":{
+		"content":"Total space: %1$s",
+		"description":"My||Download management||Total space of the phone||Message||Common text"
+	},
+	"admin_password":{
+		"content":"Super Profile's Password",
+		"description":"My TV||Profile management||Text in the password input box when the super profile changes a common profile's password||Message||Common text"
+	},
+	"save_to_sd":{
+		"content":"No sufficient space in the local storage. Save to the SD card to re-download?",
+		"description":"My||Download management||Message displayed when the local storage is insufficient||Message||Common text"
+	},
+	"save_to_local_storage":{
+		"content":"No sufficient space in the SD card. Save to the local storage to re-download?",
+		"description":"My||Download management||Message displayed when the SD card storage is insufficient||Message||Common text"
+	},
+	"start_to_download":{
+		"content":"%1$s starts to download.",
+		"description":"On Demand||Download||Message indicating that the download task automatically starts||Message||Common text"
+	},
+	"not_exist_time":{
+		"content":"Due to the daylight saving time change, the time you selected does not exist. Please re-select.",
+		"description":"My||Recording||Message displayed when a subscriber selects a daylight saving time that does not exist||Message||Common text"
+	},
+	"downloaded_use_mobile_network":{
+		"content":"%1$s is being downloaded over the mobile network.",
+		"description":"On Demand||Download||Message displayed when a subscriber uses the mobile network to download a video||Message||Common text"
+	},
+	"downloaded_use_wifi":{
+		"content":"%1$s is being downloaded.",
+		"description":"On Demand||Download||Message displayed when a subscriber uses Wi-Fi to download a video||Message||Common text"
+	},
+	"tab_latest":{
+		"content":"Latest",
+		"description":"My||Recording||Sorting by recording time in Latest order||UI string||Tab"
+	},
+	"login_agreement":{
+		"content":"Thank you for using Envision Video Platform products. The following Hybrid Video product agreement clause is your legal agreement with Hybrid Video Technologies Co., Ltd. and its affiliated companies (hereinafter referred to as \"Hybrid Video\"). This provision establishes the full legal responsibility and rights that you have when you use Hybrid Video products, software, services, and related sites (collectively the \"Service\"). In this clause, \"you\" means any individual who accesses and uses the Service. Hybrid Video Envision Video Platform will capture user page behavior trajectories (such as user page browsing history, user login and logout records, and content viewing records). The data will be applied in refined video user operations support; that is, the system will analyze user preferences based on the user page behavior trajectories; with the user preferences, the system will perform personalized recommendation when users browse content recommendation slots and search for content. In this way, users can quickly find preferred content, and user experience is enhanced. Please read the following terms carefully and click \"agree\" to show that you have read and accept these terms. The software needs to connect to the network to provide you with related services. If you do not agree with all or any part of the terms, you will not and should not use the Service.",
+		"description":"My||Login||User agreement during login||UI string||Common text"
+	},
+	"register_agreement":{
+		"content":"You can use by Hybrid Video account Hybrid Video cloud services, applications market, Hybrid Video Mall, pollen club, game centers (including  downloadable games), membership services, purses, payment, library, theme, music, video, wear, backup, file management, Sports, health, life services, family care, voice assistant, Hybrid Video network disk, contact person, input method, SMS, skyline, location sharing, student mode, photo album, only assistant, calendar, memo, reading and other Hybrid Video services  by Hybrid Video account. Hybrid Video equipment and country-owned, we will provide you different services, may in certain special services on your device unusable. For details, please refer to the supporting user manual of your Hybrid Video terminal equipment. This service includes double achievable, people involved in the instant messaging service, you can publish situation, text, images, voice, video, and links to other users via the message function. In the course of your use of the service, Hybrid Video will account requesting access to your storage, telephone, SMS, microphones, location, communication and camera; You promise yourself responsible for keeping your user name and password on their own.",
+		"description":"Login||Registration||User agreement during registration||UI string||Common text"
+	},
+	"paused_state_not_recording":{
+		"content":"In paused state, the current recording cannot be performed.",
+		"description":"My||Recording||Message indicating that recording is not supported when the playback is paused||Message||Common text"
+	},
+	"password_errors_exceed_limit":{
+		"content":"Password errors exceed the limit.",
+		"description":"All||Password input||Message indicating that the number of password errors reaches the maximum||Message||Common text"
+	},
+	"unlock_after":{
+		"content":"Unlock after %1$s",
+		"description":"All||Password input||Message indicating that the password text box is locked when the number of password errors exceeds the maximum||Message||Common text"
+	},
+	"input_password_to_unsubscribe":{
+		"content":"Enter the super profile's password to unsubscribe.",
+		"description":"My||Member||Message confirming the package unsubscription||Message||Common text"
+	},
+	"processing_android":{
+		"content":"Processing %1$s%%",
+		"description":"Player||Player||Message indicating the GIF image conversion progress||UI string||Common text"
+	},
+	"watch_a_while":{
+		"content":"You can preview it for a while.",
+		"description":"On Demand||Player||Message indicating that a subscriber or log must subscribe/ log in to continue watching||Message||Common text"
+	},
+	"jan_month":{
+		"content":"Jan",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"feb_month":{
+		"content":"Feb",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"march_month":{
+		"content":"Mar",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"april_month":{
+		"content":"Apr",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"may_month":{
+		"content":"May",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"jun_month":{
+		"content":"Jun",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"jul_month":{
+		"content":"Jul",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"aug_month":{
+		"content":"Aug",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"sep_month":{
+		"content":"Sep",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"oct_month":{
+		"content":"Oct",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"nov_month":{
+		"content":"Nov",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"dec_month":{
+		"content":"Dec",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"voice_you_say":{
+		"content":"You can say that:",
+		"description":"Search||Voice search||Voice search instruction||UI string||Common text"
+	},
+	"voice_say_that":{
+		"content":"I want to watch %1$s.",
+		"description":"Search||Voice search||Voice search instruction||UI string||Common text"
+	},
+	"voice_failed_to_load":{
+		"content":"Failed to load content. Please try again.",
+		"description":"Search||Voice search||Message indicating that content fails to be loaded during voice search||UI string||Common text"
+	},
+	"voice_long_press":{
+		"content":"Touch and hold to speak.",
+		"description":"Search||Voice search||Voice search instruction||UI string||Common text"
+	},
+	"voice_set_language":{
+		"content":"You can reset the language or say it again.",
+		"description":"Search||Voice search||Message displayed upon voice recognition failure||UI string||Common text"
+	},
+	"change_setting_to_download":{
+		"content":"Download task successfully added. It will start to download when Wi-Fi is available. To download immediately, enable download over mobile network on the settings page.",
+		"description":"On Demand||Download||Message displayed when a download task is created in a non-Wi-Fi environment (mobile network download is disabled)||Message||Common text"
+	},
+	"voice_failed_to_recognize":{
+		"content":"Failed to recognize your speech. Please try again.",
+		"description":"Search||Voice search||Voice search instruction||UI string||Common text"
+	},
+	"voice_no_data":{
+		"content":"No data found. ",
+		"description":"Search||Voice search||Voice search instruction||UI string||Common text"
+	},
+	"slide_up_to_cancel":{
+		"content":"Slide up to cancel.",
+		"description":"Multi-Control||Soft remote control page||Soft remote control voice instruction||UI string||Common text"
+	},
+	"release_to_cancel":{
+		"content":"Release to cancel.",
+		"description":"Multi-Control||Soft remote control page||Soft remote control voice instruction||UI string||Common text"
+	},
+	"in_identifying":{
+		"content":"Recognizing",
+		"description":"Multi-Control||Soft remote control page||Soft remote control voice message||UI string||Common text"
+	},
+	"long_press_voice_speak":{
+		"content":"Touch and hold to speak.",
+		"description":"Multi-Control||Soft remote control page||Soft remote control voice instruction||UI string||Common text"
+	},
+	"what_you_said":{
+		"content":"Sorry, I don't understand what you said.",
+		"description":"Multi-Control||Soft remote control page||Soft remote control voice instruction||UI string||Common text"
+	},
+	"pu_tong_hua":{
+		"content":"Mandarin",
+		"description":"Multi-Control||Soft remote control page||Soft remote control voice instruction||UI string||Common text"
+	},
+	"yue_yu":{
+		"content":"Cantonese",
+		"description":"Multi-Control||Soft remote control page||Soft remote control voice instruction||UI string||Common text"
+	},
+	"preview_a_while":{
+		"content":"Preview",
+		"description":"Live TV||Player||Message indicating that a subscriber has not subscribed to the channel and can preview it for 5 minutes (for Android)||Message||Common text"
+	},
+	"player_min":{
+		"content":"min",
+		"description":"Live TV||Player||Message indicating that a subscriber has not subscribed to the channel and can preview it for 5 minutes (for Android)||Message||Common text"
+	},
+	"player_second":{
+		"content":"s",
+		"description":"Live TV||Player||Message indicating that a subscriber has not subscribed to the channel and can preview it for 5 minutes (for Android)||Message||Common text"
+	},
+	"voice_english":{
+		"content":"English",
+		"description":"Search||Voice search||Message displayed upon voice recognition failure||UI string||Common text"
+	},
+	"download_all":{
+		"content":"Download All",
+		"description":"My||Download management||Download All button||UI string||Button"
+	},
+	"search_no_network":{
+		"content":"Network unavailable. ",
+		"description":"Search||Voice search||Message indicating that no network is available during search by keyword||Message||Common text"
+	},
+	"sqm_eformat":{
+		"content":"eFormat:",
+		"description":"My||Settings||U-vMOS counter information in the playback and download module||UI string||Title"
+	},
+	"sqm_vheight":{
+		"content":"vHeight:",
+		"description":"My||Settings||U-vMOS counter information in the playback and download module||UI string||Title"
+	},
+	"sqm_dspeed":{
+		"content":"dSpeed:",
+		"description":"My||Settings||U-vMOS counter information in the playback and download module||UI string||Title"
+	},
+	"sqm_estalling":{
+		"content":"sStalling:",
+		"description":"My||Settings||U-vMOS counter information in the playback and download module||UI string||Title"
+	},
+	"sqm_ecodec":{
+		"content":"eCodec:",
+		"description":"My||Settings||U-vMOS counter information in the playback and download module||UI string||Title"
+	},
+	"sqm_vbitrate":{
+		"content":"vBitRate:",
+		"description":"My||Settings||U-vMOS counter information in the playback and download module||UI string||Title"
+	},
+	"sqm_ptime":{
+		"content":"pTime:",
+		"description":"My||Settings||U-vMOS counter information in the playback and download module||UI string||Title"
+	},
+	"sqm_vmos":{
+		"content":"vMOS:",
+		"description":"My||Settings||U-vMOS counter information in the playback and download module||UI string||Title"
+	},
+	"sqm_stalling_total":{
+		"content":"stalling Total:",
+		"description":"My||Settings||U-vMOS counter information in the playback and download module||UI string||Title"
+	},
+	"sqm_cpu":{
+		"content":"CPU:",
+		"description":"My||Settings||U-vMOS counter information in the playback and download module||UI string||Title"
+	},
+	"sqm_buffer_size":{
+		"content":"playerBuffer:",
+		"description":"My||Settings||U-vMOS counter information in the playback and download module||UI string||Title"
+	},
+	"voice_remote_play":{
+		"content":"Play %1$s.",
+		"description":"Search||Remote control||Voice search instruction||UI string||Common text"
+	},
+	"voice_remote_like_to":{
+		"content":"I'd like to watch %1$s.",
+		"description":"Search||Remote control||Voice search instruction||UI string||Common text"
+	},
+	"voice_remote_time_short":{
+		"content":"Speaking time is too short.",
+		"description":"Search||Remote control||Voice search instruction||UI string||Common text"
+	},
+	"voice_remote_play_episode":{
+		"content":"Play episode XXXX.",
+		"description":"Search||Remote control||Voice search instruction||UI string||Common text"
+	},
+	"voice_remote_change_episode":{
+		"content":"Failed to find the episode. Change another episode and try again.",
+		"description":"Search||Remote control||Message indicating that no network is available during search by keyword||Message||Common text"
+	},
+	"voice_remote_failed_load_channel":{
+		"content":"Failed to load the channel. Please try another one.",
+		"description":"Search||Remote control||Message indicating that no network is available during search by keyword||Message||Common text"
+	},
+	"voice_remote_next_channel":{
+		"content":"Next channel.",
+		"description":"Search||Remote control||Voice search instruction||UI string||Common text"
+	},
+	"voice_remote_enter_channel":{
+		"content":"Failed to load the channel. Please enter a live TV channel first.",
+		"description":"Search||Remote control||Message indicating that a channel fails to load||Message||Common text"
+	},
+	"voice_remote_using_recording":{
+		"content":"Another app is using the recording function now. Please try again later.",
+		"description":"Search||Remote control||Message indicating that the recording function is being used by another app||Message||Common text"
+	},
+	"voice_guide":{
+		"content":"I want to watch American TV series.\nPlay Prison Break season 2.\nI'd like to watch Andy Liu's movies.\nI want to watch CCTV5.\nPrevious channel.\nNext channel.\nPlay episode xxxx.\nFast-forward 15 minutes.\nRewind 15 minutes.\nFast-forward to 30 minutes.\nPause.\nExit.",
+		"description":"Search||Remote control||Voice search instruction||Message||Common text"
+	},
+	"watch_cctv5":{
+		"content":"I want to watch CCTV5.",
+		"description":"Search||Remote control||Voice search instruction||Message||Common text"
+	},
+	"watch_jacks_movies":{
+		"content":"I want to watch Jackie Chan's movies.",
+		"description":"Search||Remote control||Voice search instruction||Message||Common text"
+	},
+	"watch_prison2":{
+		"content":"I want to watch Prison Break season 2.",
+		"description":"Search||Remote control||Voice search instruction||Message||Common text"
+	},
+	"watch_zhangyimous_movies":{
+		"content":"I want to watch Director Spielberg's movies.",
+		"description":"Search||Remote control||Voice search instruction||Message||Common text"
+	},
+	"watch_jacksons_prison2":{
+		"content":"I want to watch Jackson's Prison Break season 2.",
+		"description":"Search||Remote control||Voice search instruction||Message||Common text"
+	},
+	"uvmos":{
+		"content":"U-vMOS",
+		"description":"My||Settings||U-vMOS counter information in the playback and download module||UI string||Title"
+	},
+	"click_to_detail_page":{
+		"content":"Failed to play content. Tap to enter the details page.",
+		"description":"Live TV||Player||Message displayed when the playback fails||UI string||Common text"
+	},
+	"voice_search_guide":{
+		"content":"I want to watch Jackie Chan's movies.\nI want to watch Prison Break season 2.\nI want to watch director Spielberg's movies.\nI want to watch Jackson's Prison Break season 2.\nI want to watch Hunan TV.",
+		"description":"Search||Remote control||Voice search instruction||Message||Common text"
+	},
+	"voice_operation_failed":{
+		"content":"Sorry, cannot execute your command.",
+		"description":"Search||Remote control||Voice search instruction||Message||Common text"
+	},
+	"voice_search_you_say":{
+		"content":"You can say that:\n",
+		"description":"Search||Voice search||Voice search instruction||UI string||Common text"
+	},
+	"software_license_agreement":{
+		"content":"Software License Agreement",
+		"description":"My||Settings||My settings||UI string||Common text"
+	},
+	"min_second":{
+		"content":"%1$s min %2$ss",
+		"description":"Live TV||Player||Message indicating that a subscriber has not subscribed to the channel and can preview it for 5 minutes (for Android)||Message||Common text"
+	},
+	"multiple_channel_play_failed":{
+		"content":"Failed to play content.",
+		"description":"Live TV||Player||Message indicating that the player fails to obtain content||UI string||Common text"
+	},
+	"left_quotation_mark":{
+		"content":"\"",
+		"description":"Search||Voice search||Voice search instruction||UI string||Common text"
+	},
+	"right_quotation_mark":{
+		"content":"\"",
+		"description":"Search||Voice search||Voice search instruction||UI string||Common text"
+	},
+	"remote_previous_channel":{
+		"content":"Previous channel",
+		"description":"Search||Remote control||Voice search instruction||UI string||Common text"
+	},
+	"remote_fast_forward":{
+		"content":"Fast-forward 15 minutes.",
+		"description":"Search||Remote control||Voice search instruction||UI string||Common text"
+	},
+	"remote_rewind":{
+		"content":"Rewind 15 minutes.",
+		"description":"Search||Remote control||Voice search instruction||UI string||Common text"
+	},
+	"remote_forward_minutes":{
+		"content":"Fast-forward to 30 minutes.",
+		"description":"Search||Remote control||Voice search instruction||UI string||Common text"
+	},
+	"remote_quite_playing":{
+		"content":"Exit",
+		"description":"Search||Remote control||Voice search instruction||UI string||Common text"
+	},
+	"sub_profile_no_locked_channels":{
+		"content":"No locked channels. ",
+		"description":"My||Locked channel management||Message displayed when there is no locked channel||Message||Common text"
+	},
+	"failed_associate":{
+		"content":"No associated content now.",
+		"description":"Search||Search Page||Message indicating that there is no associated word when a keyword is entered on the search page||Message||Common text"
+	},
+	"network_unavailable":{
+		"content":"Network unavailable.",
+		"description":"Search||After search||Message indicating the content loading failure and prompting a subscriber to retry||Message||Common text"
+	},
+	"message_multiple_to_channel":{
+		"content":"Do you want to exit the MultiView mode and watch this channel in full screen?",
+		"description":"Multiple Channels||Channel list selection page||Message asking whether to exit the MultiView mode||UI string||提示语"
+	},
+	"chinese":{
+		"content":"中文",
+		"description":"Search||Remote control||Voice search instruction||UI string||Common text"
+	},
+	"what_is_going_on":{
+		"content":"What's On",
+		"description":"Live TV||Live TV home page||Title of the ongoing program category||UI string||Title"
+	},
+	"coming_soon":{
+		"content":"Coming Soon",
+		"description":"Live TV||Live TV home page||Title of the upcoming program category||UI string||Title"
+	},
+	"most_search_title":{
+		"content":"Most Searched",
+		"description":"Search||Search||Title of the popular search section||UI string||Title"
+	},
+	"english":{
+		"content":"English",
+		"description":"Search||Remote control||Voice search instruction||UI string||Common text"
+	},
+	"btn_yes":{
+		"content":"Yes",
+		"description":"Login||Exit login||Yes button||UI string||Button"
+	},
+	"btn_no":{
+		"content":"No",
+		"description":"Login||Exit login||No  button||UI string||Button"
+	},
+	"allow_to_microphone":{
+		"content":"Allow the app to access your microphone in the iPhone \"Settings > Privacy > Microphone.\"",
+		"description":"All||All||Message asking for the microphone permission||Message||Common text"
+	},
+	"record_now":{
+		"content":"Now",
+		"description":"Live TV||Program list||Text marking ongoing programs||UI string||Title"
+	},
+	"mic_no_permission":{
+		"content":"Your microphone is in use or has no recording permission.",
+		"description":"Search||Voice search||Voice search instruction||UI string||Common text"
+	},
+	"zxing_camera_permissions":{
+		"content":"This app requires to use your camera.",
+		"description":"All||All||Message askng for the camera permission||Message||Common text"
+	},
+	"share_more":{
+		"content":"More",
+		"description":"On Demand||Sharing||Share to Facebook||UI string||Button"
+	},
+	"collect_user_behavior":{
+		"content":"Do you allow us to collect your page behavior tracks? The collected data will help us improve the product usage experience.",
+		"description":"Login||Startup page||Text requiring to collect page behavior tracks upon first login||UI string||提示语"
+	},
+	"week_Monday":{
+		"content":"Monday",
+		"description":"Live TV||Channel details||Schedule time axis; Monday||UI string||Tab"
+	},
+	"week_Tuesday":{
+		"content":"Tuesday ",
+		"description":"Live TV||Channel details||Schedule time axis; Tuesday||UI string||Tab"
+	},
+	"week_Wednesday":{
+		"content":"Wednesday ",
+		"description":"Live TV||Channel details||Schedule time axis; Wednesday||UI string||Tab"
+	},
+	"week_Thursday":{
+		"content":"Thursday ",
+		"description":"Live TV||Channel details||Schedule time axis; Thursday||UI string||Tab"
+	},
+	"week_Friday":{
+		"content":"Friday",
+		"description":"Live TV||Channel details||Schedule time axis; Friday||UI string||Tab"
+	},
+	"week_Saturday":{
+		"content":"Saturday",
+		"description":"Live TV||Channel details||Schedule time axis; Saturday||UI string||Tab"
+	},
+	"week_Sunday":{
+		"content":"Sunday",
+		"description":"Live TV||Channel details||Schedule time axis; Sunday||UI string||Tab"
+	},
+	"jan_month_full":{
+		"content":"January",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"feb_month_full":{
+		"content":"February",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"march_month_full":{
+		"content":"March",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"april_month_full":{
+		"content":"April",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"may_month_full":{
+		"content":"May",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"jun_month_full":{
+		"content":"June",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"jul_month_full":{
+		"content":"July",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"aug_month_full":{
+		"content":"August",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"sep_month_full":{
+		"content":"September",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"oct_month_full":{
+		"content":"October",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"nov_month_full":{
+		"content":"November",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"dec_month_full":{
+		"content":"December",
+		"description":"All||Details||Month display||Message||Common text"
+	},
+	"skip_credits":{
+		"content":"Skip Credits",
+		"description":"Preference settings||Preference settings||VOD playback||UI string||Button"
+	},
+	"skip_credits_already":{
+		"content":"Skipped the opening credits.",
+		"description":"On Demand||Player||VOD playback||Message||Common text"
+	},
+	"skip_credits_will":{
+		"content":"Will skip the closing credits.",
+		"description":"On Demand||Player||VOD playback||Message||Common text"
+	},
+	"no_search_history":{
+		"content":"No data found.",
+		"description":"Search||Search history||Message indicating that the search history is empty||UI string||Common text"
+	},
+	"date_am":{
+		"content":"a.m.",
+		"description":"All||Details||Time display||UI string||Common text"
+	},
+	"date_pm":{
+		"content":"p.m.",
+		"description":"All||Details||Time display||UI string||Common text"
+	},
+	"no_hot_search":{
+		"content":"No data found.",
+		"description":"Search||Hot search||Message indicating that the hot  search  is empty||UI string||Common text"
+	},
+	"process_failed":{
+		"content":"Operation failed.",
+		"description":"Player||Sharing||Message indicating an operation failure||UI string||Common text"
+	},
+	"play_now":{
+		"content":"Play Now",
+		"description":"On Demand||Details||Player display||UI string||Common text"
+	},
+	"show_description":{
+		"content":"Synopsis",
+		"description":"On Demand||Details||Content synopsis||UI string||Button"
+	},
+	"details_display":{
+		"content":"Details",
+		"description":"On Demand||Details||Content description||UI string||Common text"
+	},
+	"sort_type_preference":{
+		"content":"Preference",
+		"description":"On Demand||On Demand home page||Sorting rules||UI string||Common text"
+	},
+	"details_share":{
+		"content":"To share content, assign the SD card reading permission to the application in Settings.",
+		"description":"On Demand||Details||Share dynamic rights||UI string||Common text"
+	},
+	"offline_operation_failed":{
+		"content":"Operation failed.",
+		"description":"My||Profile management||Message indicating an operation failure||UI string||Common text"
+	},
+	"mins_left_expire":{
+		"content":"Expires in %1$s minutes",
+		"description":"My||Content subscription management||Number of remaining minutes before the expiration time||UI string||Common text"
+	},
+	"episode_update_tip":{
+		"content":"Episode %2$s of %1$s has updates.",
+		"description":"My||Message||Reminder of an updated series episode||UI string||Common text"
+	},
+	"allow_permission":{
+		"content":"DH OTT needs the following permissions for normal use.",
+		"description":"All||All||Message asking for permission||Message||Common text"
+	},
+	"telephone_permission":{
+		"content":"Permission to make phone calls",
+		"description":"All||All||Message asking for permission||Message||Common text"
+	},
+	"telephone_permission_desc":{
+		"content":"To verify the IMEI and IMSI for account authentication.",
+		"description":"All||All||Message asking for permission||Message||Common text"
+	},
+	"storage_permission":{
+		"content":"Storage permissions",
+		"description":"All||All||Message asking for permission||Message||Common text"
+	},
+	"storage_permission_desc":{
+		"content":"To cache images and videos to reduce data consumption.",
+		"description":"All||All||Message asking for permission||Message||Common text"
+	},
+	"message_quit_app":{
+		"content":"Are you sure you want to exit now?",
+		"description":"All||All||Message prompting if the user wants to exit the app when the user clicks Cancel||Message||Common text"
+	},
+	"skip_ad":{
+		"content":"Skip Ad",
+		"description":"All||All||Advertisement||UI string||Common text"
+	},
+	"view_details":{
+		"content":"View Details",
+		"description":"All||All||Advertisement||UI string||Common text"
+	},
+	"vr_not_support":{
+		"content":"Sorry. Your device does not support this function.",
+		"description":"Live TV||Live TV home page||Message prompting if the user uses non-Huawei and Samsung phones to click on the VR button||Message||Common text"
+	},
+	"my_business_permissions":{
+		"content":"Basic service data privacy policy",
+		"description":"My||Settings||Privacy permissions||UI string||Common text"
+	},
+	"my_quality_permissions":{
+		"content":"Quality monitoring data privacy policy",
+		"description":"My||Settings||Privacy permissions||UI string||Common text"
+	},
+	"my_behavior_permissions":{
+		"content":"User behavior data collection policy",
+		"description":"My||Settings||Privacy permissions||UI string||Common text"
+	},
+	"my_product_permissions":{
+		"content":"Product marketing agreement",
+		"description":"My||Settings||Privacy permissions||UI string||Common text"
+	},
+	"privacy_permissions_on":{
+		"content":"On",
+		"description":"My||Settings||Privacy permissions switch||UI string||Common text"
+	},
+	"privacy_permissions_off":{
+		"content":"Off",
+		"description":"My||Settings||Privacy permissions switch||UI string||Common text"
+	},
+	"agreement_updated_notice":{
+		"content":"Privacy Statement Update Notification",
+		"description":"All||All||Agreement box displayed when the user opens the app||UI string||Common text"
+	},
+	"agreement_content_one":{
+		"content":"If you tap Agree, you have read and agreed with the previous statements. You also agree with the items selected.",
+		"description":"All||All||Agreement box displayed when the user opens the app||UI string||Common text"
+	},
+	"agreement_content_two":{
+		"content":"If you tap Agree, you agree with the latest %1$s",
+		"description":"All||All||Agreement box displayed when the user opens the app||UI string||Common text"
+	},
+	"agreement_agree":{
+		"content":"Agree",
+		"description":"All||All||Agreement box displayed when the user opens the app||UI string||Common text"
+	},
+	"agreement_reject":{
+		"content":"Reject",
+		"description":"All||All||Agreement box displayed when the user opens the app||UI string||Common text"
+	},
+	"select_browser ":{
+		"content":"Please select a browser to open it.",
+		"description":"All||Advertisement||When multiple browsers sup[port the browsing, the user is prompted to select a browser||UI string||Common text"
+	},
+	"no_browser":{
+		"content":"There is no app supporting browsing.",
+		"description":"All||Advertisement||Prompt the user when no browser is available||UI string||Common text"
+	},
+	"privacy_statement":{
+		"content":"Privacy Statement",
+		"description":"All||All||Statement of agreement on first entry||UI string||Common text"
+	},
+	"privacy_statement_content":{
+		"content":"Huawei Hybrid Video application will provide you with online video and local video playback services. When you use this service, we will collect your personal information, including your user ID, browsing history, and number of your video playbacks.",
+		"description":"All||All||Statement of agreement on first entry||UI string||Common text"
+	},
+	"agreement_update_statement":{
+		"content":"To provide better services, we updated the agreement. During your service usage, we will collect your personal information, including the user ID, browsing history, and number of video playbacks.",
+		"description":"All||All||Agreement update statement upon non-first entry ||UI string||Common text"
+	},
+	"clear_cache":{
+		"content":"Clear the Cache",
+		"description":"My||Settings||Clear the Cache||UI string||Button"
+	},
+	"confirm_clear_cache":{
+		"content":"Are you sure you want to clear the cache?",
+		"description":"My||Settings||Clear the Cache||UI string||Common text"
+	},
+	"behavior_permissions":{
+		"content":"User behavior data collection policy",
+		"description":"Login||Login||Login||UI string||Common text"
+	},
+	"product_permissions":{
+		"content":"Product marketing agreement",
+		"description":"Login||Login||Login||UI string||Common text"
+	},
+	"allow_behavior_permissions":{
+		"content":"Allow behavior data collection",
+		"description":"Login||Login||Login||UI string||Common text"
+	},
+	"allow_product_permissions":{
+		"content":"Send me product marketing materials",
+		"description":"Login||Login||Login||UI string||Common text"
+	},
+	"business_permissions":{
+		"content":"Basic service data privacy policy",
+		"description":"Login||Login||Login||UI string||Common text"
+	},
+	"quality_permissions":{
+		"content":"Quality monitoring data privacy policy",
+		"description":"Login||Login||Login||UI string||Common text"
+	},
+	"profile_right":{
+		"content":"This profile needs to sign the privacy agreement again.",
+		"description":"My||Profile management||Message indicating that the profile needs to sign the privacy agreement after it is created||UI string||Common text"
+	},
+	"check_content":{
+		"content":"You can also allow the following items so that we can provide more considerate services for you:",
+		"description":"Login||Login||Login||UI string||Common text"
+	},
+	"grant_right_to_account":{
+		"content":"Create this profile, and assign permission to sign a privacy statement to the profile.",
+		"description":"My||Profile management||Inform a subscriber who creates a profile that the profile will be assigned the permission to sign a privacy statement.||UI string||Common text"
+	},
+	"subscribe_time_limit":{
+		"content":"Valid for:",
+		"description":"My||Subscription||My subscription||UI string||Common text"
+	},
+	"month":{
+		"content":"month",
+		"description":"My||Subscription||My subscription||UI string||Common text"
+	},
+	"multi_months":{
+		"content":"months",
+		"description":"My||Subscription||My subscription||UI string||Common text"
+	},
+	"week":{
+		"content":"week",
+		"description":"My||Subscription||My subscription||UI string||Common text"
+	},
+	"multi_weeks":{
+		"content":"weeks",
+		"description":"My||Subscription||My subscription||UI string||Common text"
+	},
+	"day":{
+		"content":"day",
+		"description":"My||Subscription||My subscription||UI string||Common text"
+	},
+	"multi_days":{
+		"content":"days",
+		"description":"My||Subscription||My subscription||UI string||Common text"
+	},
+	"privacy_statement_content_more":{
+		"content":"For more information, please read the",
+		"description":"All||All||Statement of agreement on first entry||UI string||Common text"
+	},
+	"shift_not_support":{
+		"content":"Video casting from Cloud STB to TV is not supported.",
+		"description":"Multi-Control||Soft remote control page||Message indicating that screen casting is not supported  ||UI string||Common text"
+	},
+	"times":{
+		"content":"views",
+		"description":"My||Subscription||Subscribe by time||UI string||Common text"
+	},
+	"bind_successfully":{
+		"content":"Successfully bound. Please log in again.",
+		"description":"Multi-Control||Soft remote control page||Message indicating binding success when a mobile phone is used to scan the QR code on the STB||UI string||Common text"
+	},
+	"scan_to_bind_phone_number_with_super_profile_internal":{
+		"content":"1. Scan the QR code (on the My -> Profiles page) to bind your phone number to the super profile.",
+		"description":"My||Account binding||Operation guidance on the QR code scanning page (internal)||UI string||Common text"
+	},
+	"watch_hunan_tv":{
+		"content":"I want to watch Hunan TV.",
+		"description":"Search||Remote control||Voice search instruction||Message||Common text"
+	},
+	"stb_no_response":{
+		"content":"The STB does not respond. It may not be online.",
+		"description":"Multi-Control||Soft remote control page||Message indicating that the STB does not respond within 5s||UI string||Common text"
+	},
+	"playback_speed":{
+		"content":"Playback Speed",
+		"description":"Live TV||Full-screen playback||Title of the subtitle area||UI string||Title"
+	},
+	"shift_to":{
+		"content":"Cast to",
+		"description":"All||Far-field screen casting||Message displayed during far-field screen casting||UI string||Title"
+	},
+	"connecting_to_chromecast":{
+		"content":"Connecting to Chromecast device...",
+		"description":"All||Chromecast||Message displayed during Chromecast connection||UI string||Common text"
+	},
+	"connected_to_chromecast":{
+		"content":"Already cast to and now is being played on %1$s.",
+		"description":"All||Chromecast||Message displayed after successful connection to a Chromecast device||UI string||Common text"
+	},
+	"select_content_to_tv":{
+		"content":"Select content to cast.",
+		"description":"All||Chromecast||Message displayed when there is no content during chromecast connection||UI string||Common text"
+	},
+	"stop_connection":{
+		"content":"Disconnect",
+		"description":"All||Chromecast||Button to disconnect from Chromecast||UI string||Button"
+	},
+	"chromecast_settings":{
+		"content":"Settings",
+		"description":"All||Chromecast||Chromecast settings||UI string||Common text"
+	},
+	"chromecast_fail":{
+		"content":"Operation failed. Please try again.",
+		"description":"All||Chromecast||Message displayed upon cast failure ||UI string||Common text"
+	},
+	"no_content":{
+		"content":"No content",
+		"description":"All||Chromecast||Message displayed when there is no content to cast||UI string||Common text"
+	},
+	"device_upper_limit":{
+		"content":"Failed to connect to Chromecast because the number of connected devices has reached the upper limit.",
+		"description":"All||Chromecast||Message displayed when the number of connected devices exceeds the upper limit||UI string||Common text"
+	},
+	"chromecast_enter_password":{
+		"content":"Enter the super profile's password to continue watching on Chromecast.",
+		"description":"All||Chromecast||Message displayed for entering the password||UI string||Common text"
+	},
+	"chromecast_confirm_stop_connection":{
+		"content":"Are you sure you want to disconnect from %1$s?",
+		"description":"All||Chromecast||Message displayed for confirming whether to stop connection||UI string||Common text"
+	},
+	"chromecast_stop_connection":{
+		"content":"You have disconnected from Chromecast.",
+		"description":"All||Chromecast||Message displayed after Chromecast is disconnected||UI string||Common text"
+	},
+	"chromecast_resume_play":{
+		"content":"You have disconnected from Chromecast. Tap the button to resume playback.",
+		"description":"All||Chromecast||Message displayed for resuming playback||UI string||Common text"
+	},
+	"chromecast_stop_connection":{
+		"content":"You have disconnected from Chromecast.",
+		"description":"All||Chromecast||Message displayed after Chromecast is disconnected||UI string||Common text"
+	},
+	"chromecast_resume_play":{
+		"content":"You have disconnected from Chromecast. Tap the button to resume playback.",
+		"description":"All||Chromecast||Message displayed for resuming playback||UI string||Common text"
+	},
+	"unknow_language":{
+		"content":"Unknown",
+		"description":"Search||Voice search||Message displayed for no language||UI string||Common text"
+	},
+	"set_voice_language":{
+		"content":"Please set up the voice language.",
+		"description":"Search||Voice search||Message displayed for clicking when there is no language||Message||Common text"
+	},
+	"message_too_long":{
+		"content":"The message is too long to send.",
+		"description":"Search||Voice search||Message displayed when the sending massage is too long.||Message||Common text"
+	},
+	"facebook_login":{
+		"content":"Facebook",
+		"description":"Login||Login||Third-party login||UI string||Common text"
+	},
+	"google_login":{
+		"content":"Google",
+		"description":"Login||Login||Third-party login||UI string||Common text"
+	},
+	"third_party_login_failure":{
+		"content":"Third-party login failure.",
+		"description":"Login||Login||Message displayed for failed Third-party login ||Message||Common text"
+	}
+}

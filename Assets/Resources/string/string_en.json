@@ -1,0 +1,470 @@
+﻿{
+ "new_version":{
+    "content":"There is a new version. Please update first.",
+    "description":"Login||升级提示||【强制升级】进入APP时，检测到有新版本，以对话框形式提示用户更新版本，用户只能选择升级||提示语||普通文本"
+  },
+ "version_update":{
+    "content":"There is a new version. Do you want to update?",
+    "description":"Login||升级提示||【非强制升级】进入APP时，检测到有新版本，以对话框形式提示用户更新版本，用户可选择升级或取消||提示语||普通文本"
+  },
+ "version_update_fail_nopermission":{
+    "content":"This software upgrade failed because you did not grant the installation permission.",
+    "description":"Login||升级提示||无权限提示||Toast||普通文本"
+  },
+ "version_update_fail_download":{
+    "content":"Download failed.",
+    "description":"Login||升级提示||下载失败||Toast||普通文本"
+  },
+ "loginId":{
+    "content":"Login ID",
+    "description":"Login||登录||用户登录使用的ID||界面词条||标签"
+  },
+ "password":{
+    "content":"Password",
+    "description":"Login||登录||用户登录使用的密码||界面词条||标签"
+  },
+ "login":{
+    "content":"Log In",
+    "description":"Login||登录||登录页面标题显示内容；登录按钮显示内容||界面词条||按钮"
+  },
+ "login_expired":{
+    "content":"Login timeout",
+    "description":"Login||登录||Toast||界面词条||按钮"
+  },
+ "content_expired":{
+    "content":"The current content has expired.",
+    "description":"Home||页面加载||内容过期||提示语||普通文本"
+  },
+ "program_no_begin":{
+    "content":"The program hasn\'t started yet.",
+    "description":"Live TV||播放器||节目未开始||提示语||普通文本"
+  },
+ "login_config_quit":{
+    "content":"Your changes will be lost if exit without save. Are you sure to exit?",
+    "description":"Login||Configure||返回而不保存信息||Toast||普通文本"
+  },
+ "login_config_save":{
+    "content":"You need to restart the application for take effect configuration. Do you want to continue?",
+    "description":"Login||Configure||保存储存信息||Toast||普通文本"
+  },
+ "downloading":{
+    "content":"Downloading",
+    "description":"My||下载管理||下载中影片||界面词条||标题"
+  },
+ "downloaded":{
+    "content":"Downloaded",
+    "description":"My||下载管理||已下载影片||界面词条||标题"
+  },
+ "keep_logged_in":{
+    "content":"Auto Login",
+    "description":"Login||登录||提示登录状态||提示语||普通文本"
+  },
+ "input_special_characters":{
+    "content":"Cannot contain the following special characters: %1$s",
+    "description":"My||修改个性化数据||修改个性化数据提示||提示语||普通文本"
+  },
+ "collect_user_behavior":{
+    "content":"Do you allow us to collect your page behavior tracks? The collected data will help us improve the product usage experience.",
+    "description":"Login||启动页||首次登录时，SQM采集上报询问||界面词条||提示语"
+  },
+ "message_quit_app":{
+    "content":"Are you sure you want to exit now?",
+    "description":"All||全部||当用户点击Cancel时，提示用户是否要退出程序||提示语||普通文本"
+  },
+ "my_business_permissions":{
+    "content":"Basic service data privacy policy",
+    "description":"My||设置||隐私权限||界面词条||普通文本"
+  },
+ "agreement_content_one":{
+    "content":"If you tap Agree, you have read and agreed with the previous statements. You also agree with the items selected.",
+    "description":"All||全部||用户进入程序时的协议弹框||界面词条||普通文本"
+  },
+ "agreement_agree":{
+    "content":"Agree",
+    "description":"All||全部||用户进入程序时的协议弹框||界面词条||普通文本"
+  },
+ "agreement_reject":{
+    "content":"Reject",
+    "description":"All||全部||用户进入程序时的协议弹框||界面词条||普通文本"
+  },
+ "privacy_statement":{
+    "content":"Privacy Statement",
+    "description":"All||全部||首次进入时的协议申明||界面词条||普通文本"
+  },
+ "privacy_statement_content":{
+    "content":"Huawei Hybrid Video application will provide you with online video and local video playback services. When you use this service, we will collect your personal information, including your user ID, browsing history, and number of your video playbacks.",
+    "description":"All||全部||首次进入时的协议申明||界面词条||普通文本"
+  },
+ "behavior_permissions":{
+    "content":"User behavior data collection policy",
+    "description":"Login||登录||登录||界面词条||普通文本"
+  },
+ "product_permissions":{
+    "content":"Product marketing agreement",
+    "description":"Login||登录||登录||界面词条||普通文本"
+  },
+ "allow_behavior_permissions":{
+    "content":"Allow behavior data collection.",
+    "description":"Login||登录||登录||界面词条||普通文本"
+  },
+ "allow_product_permissions":{
+    "content":"Send me product marketing materials.",
+    "description":"Login||登录||登录||界面词条||普通文本"
+  },
+ "business_permissions":{
+    "content":"Basic service data privacy policy",
+    "description":"Login||登录||登录||界面词条||普通文本"
+  },
+ "quality_permissions":{
+    "content":"Quality monitoring data privacy policy",
+    "description":"Login||登录||登录||界面词条||普通文本"
+  },
+ "check_content":{
+    "content":"You can also allow the following items so that we can provide more considerate services for you:",
+    "description":"Login||登录||登录||界面词条||普通文本"
+  },
+ "privacy_statement_content_more":{
+    "content":"For more information, please read the",
+    "description":"All||全部||首次进入时的协议申明||界面词条||普通文本"
+  },
+ "search_recommend":{
+    "content":"Everyone is watching",
+    "description":"搜索界面上的推荐文本"
+  },
+ "search_result_title":{
+    "content":"\"{0}\" Search result({1})",
+    "description":"搜索结果的标题"
+  },
+ "search_hint":{
+    "content":"Please enter a name to search",
+    "description":"搜索结果的标题"
+  },
+ "no_data":{
+    "content":"No data. ",
+    "description":"数据为空提示"
+  },
+ "voice_tip1":{
+    "content":"Please say the name of movie after click.",
+    "description":"语音输入提示"
+  },
+ "voice_tip2":{
+    "content":"Please click again after speech.",
+    "description":"语音输入提示"
+  },
+ "voice_tip3":{
+    "content":"Voice Recognizing…",
+    "description":"语音输入提示"
+  },
+ "voice_tip4":{
+    "content":"Failed to recognize your speech. Please try again.",
+    "description":"语音输入提示"
+  },
+ "voice_tip5":{
+    "content":"Speech recognition successful.",
+    "description":"语音输入提示"
+  },
+ "favorite_manage":{
+    "content":"Favorites",
+    "description":"收藏管理标题"
+  },
+ "favorite_del_success":{
+    "content":"Delete successfully.",
+    "description":"删除收藏成功提示"
+  },
+ "favorite_add_success":{
+    "content":"Add successfully.",
+    "description":"删除收藏成功提示"
+  },
+ "favorite_del_failed":{
+    "content":"Delete failed({0}).",
+    "description":"删除收藏失败提示"
+  },
+ "favorite_query_failed":{
+    "content":"Failed to query the data({0}).",
+    "description":"获取收藏列表失败提示"
+  },
+ "launcher_title_left":{
+    "content":"Watch recently",
+    "description":"Launcher||页面显示||首页左侧栏目标题||普通文本"
+  },
+ "launcher_title_middle":{
+    "content":"Special recommend",
+    "description":"Launcher||页面显示||首页中间栏目标题||普通文本"
+  },
+ "launcher_title_right":{
+    "content":"Special columns",
+    "description":"Launcher||页面显示||首页右侧栏目标题||普通文本"
+  },
+ "icon_search":{
+    "content":"Search",
+    "description":"All||图标||搜索||普通文本"
+  },
+ "icon_back":{
+    "content":"Back",
+    "description":"All||图标||返回||普通文本"
+  },
+ "icon_voice":{
+    "content":"Voice",
+    "description":"All||图标||语音||普通文本"
+  },
+ "icon_play":{
+    "content":"Play",
+    "description":"All||图标||播放||普通文本"
+  },
+ "icon_skin":{
+    "content":"Skin",
+    "description":"All||图标||播放||普通文本"
+  },
+ "icon_subscribe":{
+    "content":"Subscribe",
+    "description":"All||图标||订购||普通文本"
+  },
+ "icon_collect":{
+    "content":"Favorites",
+    "description":"All||图标||收藏||普通文本"
+  },
+ "icon_collected":{
+    "content":"Favorites",
+    "description":"All||图标||已收藏||普通文本"
+  },
+ "icon_delete":{
+    "content":"Delete",
+    "description":"All||图标||返回||普通文本"
+  },
+ "nav_home":{
+    "content":"Recommend",
+    "description":"All||导航||推荐||普通文本"
+  },
+ "nav_live":{
+    "content":"Live",
+    "description":"All||导航||直播||普通文本"
+  },
+ "nav_vod":{
+    "content":"Video",
+    "description":"All||导航||点播||普通文本"
+  },
+ "nav_mine":{
+    "content":"My VR",
+    "description":"All||导航||我的||普通文本"
+  },
+ "tip_double_return":{
+    "content":"Press return button again to exit.",
+    "description":"All||首页||登录||Toast||普通文本"
+  },
+ "tip_return":{
+    "content":"Exiting",
+    "description":"All||登录||Toast||普通文本"
+  },
+ "expired":{
+    "content":"Remain {0} days",
+    "description":"订购管理页面日期文本"
+  },
+ "has_expired":{
+    "content":"Expired",
+    "description":"订购管理页面日期过期文本"
+  },
+ "subscribe_management":{
+    "content":"My subscription",
+    "description":"订购管理页面标题"
+  },
+ "price":{
+    "content":"Price:",
+    "description":"订购管理页面价格文本"
+  },
+ "end_data_price":{
+    "content":"Expiration date:",
+    "description":"订购管理页面价格到期时间文本"
+  },
+ "subscribe_password":{
+    "content":"Purchase password",
+    "description":"ALL||订购页面||普通文本"
+  },
+ "validity":{
+    "content":"Period",
+    "description":"ALL||订购页面||普通文本"
+  },
+ "bind_close":{
+    "content":"Close",
+    "description":"ALL||同屏设置||普通文本"
+  },
+ "bind_setting":{
+    "content":"STB sync",
+    "description":"ALL||同屏设置||普通文本"
+  },
+ "bind_hint":{
+    "content":"Please input bind code",
+    "description":"同屏输入框提示"
+  },
+ "unbind_hint":{
+    "content":"Please unbind current sync device, before you bind a new one.",
+    "description":"解除绑定操作提示"
+  },
+ "bind_confirm_bind":{
+    "content":"Bind",
+    "description":"绑定按钮提示"
+  },
+ "bind_cancel_bind":{
+    "content":"Unbind",
+    "description":"解除绑定按钮提示"
+  },
+ "recommend_for_you":{
+    "content":"Promotion",
+    "description":"详情页面推荐标题文本"
+  },
+ "vod_min":{
+    "content":"Minutes",
+    "description":"All||导航||详情||普通文本"
+  },
+ "vod_actors":{
+    "content":"Cast:",
+    "description":"All||导航||详情||普通文本"
+  },
+ "vod_director":{
+    "content":"Director:",
+    "description":"All||导航||详情||普通文本"
+  },
+ "vod_detial_content":{
+    "content":"Synopsis",
+    "description":"All||导航||详情||普通文本"
+  },
+ "subscribe_cancel":{
+    "content":"Cancel",
+    "description":"All||订购输入框||普通文本"
+  },
+ "subscribe_confirm":{
+    "content":"Confirm",
+    "description":"All||订购输入框||普通文本"
+  },
+ "get_list_failed":{
+    "content":"Failed to query the data.",
+    "description":"MY||订购管理||提示语||普通文本"
+  },
+ "account_setting":{
+    "content":"Settings",
+    "description":"个人中心账户设置标题"
+  },
+ "account_logout":{
+    "content":"Logout",
+    "description":"个人中心账户注销"
+  },
+ "modify_portrait":{
+    "content":"Modify protrait",
+    "description":"个人中心修改头像页面标题"
+  },
+ "modify_portrait_succ":{
+    "content":"Modify successfully.",
+    "description":"个人中心修改头像页面修改成功提示"
+  },
+ "confirm_logout":{
+    "content":"Are you sure you want to log out?",
+    "description":"个人中心账户确认退出登录"
+  },
+ "version_number":{
+    "content":"( Version: {0} )",
+    "description":"个人中心账户设置展示版本号"
+  },
+ "user_welcome":{
+    "content":"{0} , Welcome!",
+    "description":"个人中心展示用户欢迎标语"
+  },
+ "btn_save":{
+    "content":"Save",
+    "description":"个人中心修改头像页面保存按钮文本"
+  },
+ "my_subscription":{
+    "content":"Subscription",
+    "description":"个人中心我的订购海报标题"
+  },
+ "combo":{
+    "content":"PKG",
+    "description":"套餐角标"
+  },
+ "retry":{
+    "content":"Retry",
+    "description":"登录错误界面重试按钮文本"
+  },
+ "network_connect_error":{
+    "content":"Network connection error! ",
+    "description":"登录错误界面网络连接错误文本"
+  },
+ "notice_title":{
+    "content":"Notice",
+    "description":"提示框标题"
+  },
+ "live_not_exist":{
+    "content":"Content does not exist.",
+    "description":"直播不存在提示"
+  },
+ "live_not_subscribe":{
+    "content":"You have not subscribe the channel({0}), please subscribe it firstly.",
+    "description":"未订购提示"
+  },
+ "unit_month":{
+    "content":"month(s)",
+    "description":"单位月"
+  },
+ "unit_day":{
+    "content":"day(s)",
+    "description":"单位天"
+  },
+ "unit_week":{
+    "content":"week(s)",
+    "description":"单位周"
+  },
+ "lock":{
+    "content":"Lock",
+    "description":"锁定按钮"
+  },
+ "notice_incorrect_pwd":{
+    "content":"The password is incorrect, Please try again.",
+    "description":"错误密码提示"
+  },
+ "zoom":{
+    "content":"Zoom",
+    "description":"缩放按钮"
+  },
+ "stb_sync":{
+    "content":"STB sync",
+    "description":"同屏按钮"
+  },
+ "voice_start_tip":{
+    "content":"You can consider  to press the trigger button and say your command.",
+    "description":""
+  },
+ "voice_listen_tip":{
+    "content":"Please release the \"trigger button\" after saying the command.",
+    "description":""
+  },
+ "voice_thinking_tip":{
+    "content":"I am thiniking, one second.",
+    "description":""
+  },
+ "voice_error_tip":{
+    "content":"Sorry, unknwn command, pleae try again.",
+    "description":""
+  },
+ "voice_note_1":{
+    "content":"您可以试试：我想看刘德华演的电影。",
+    "description":""
+  },
+ "voice_note_2":{
+    "content":"您可以试试：我想看王晶导演的电影。",
+    "description":""
+  },
+ "voice_note_3":{
+    "content":"在影片播放过程中，您可以说播放、暂停、退出等指令。",
+    "description":""
+  },
+ "voice_note_4":{
+    "content":"在影片列表中，您可以说影片的名字进入影片详情。",
+    "description":""
+  },
+ "voice_note_5":{
+    "content":"在影片详情页，您可以说播放直接播放影片。",
+    "description":""
+  },
+ "scene_title":{
+    "content":"Environment",
+    "description":""
+  }
+}
