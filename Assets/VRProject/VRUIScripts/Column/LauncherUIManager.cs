@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public enum ColumnType
 {
@@ -45,7 +46,7 @@ public class LauncherUIManager : UIBase
     Transform recommendButton;
 
     private Transform backImage;
-    Transform button;
+ 
     Transform listContent;
 
     Transform downButton;
@@ -77,8 +78,15 @@ public class LauncherUIManager : UIBase
   //  string paths = Application.dataPath + "/Resources/select.json";
     void Start()
     {
-       // invoke
-      this .Invoke("HideLoadCanvas",2);
+        if (SceneManager.GetActiveScene().name == "Main" )
+        {
+            SceneStatus.sceneEnum = SceneEnum.Main;
+        }
+        else if (SceneManager.GetActiveScene().name == "MainVR")
+        {
+            SceneStatus.sceneEnum = SceneEnum.MainVR;
+        }
+        this .Invoke("HideLoadCanvas",2);
         recommendPart = UIManager.instance.GetGameObject("RecommendPart").transform;
 
         IniLeftButtons();
@@ -87,15 +95,13 @@ public class LauncherUIManager : UIBase
         {
             item.onClick.AddListener(delegate () { RecommendVideoClick(item); });
         }
-        if (Application.platform == RuntimePlatform.WindowsEditor )
-        {
 
+        if (Application.platform == RuntimePlatform.WindowsEditor)
+        {
             StreamReader read = new StreamReader(Application.dataPath + "/Resources/select.json");
 
             jsonTxt = read.ReadToEnd();
         }
-          
-     //   Debug.Log("jsonTxt:" + jsonTxt);
 
     }
     void HideLoadCanvas()
@@ -255,17 +261,17 @@ public class LauncherUIManager : UIBase
         if (Application.platform == RuntimePlatform.Android)
         {
           
-            print("clickParam:" + button.name);
+            Debug .Log("clickParam:" + button.name);
           
             AndroidAPI.GetCurrentPagesVideos(button.name, currentPageIndex, 4);
           
         }
         else
         {
-            Debug.Log("Editor platform");
             TV189MsgReciver.instance.GetVideosJson(jsonTxt);
         }
 
+      
     }
   
     bool is4KLoaded = false;
@@ -278,25 +284,31 @@ public class LauncherUIManager : UIBase
     void ColumuOnClick(Transform columnButton)
     {
         backImage.position = columnButton.position;
+        currentPageIndex = 1;
         if (columnButton.name == "RecommendButton")
         {
             VideoListPartPanel.gameObject.SetActive(false);
             recommendPart.gameObject.SetActive(true);
+            SendMsg(new MsgBase((ushort)UIEvent.HideLivePart));
             columnType = ColumnType.RecommendVideo;
         }
         else if (columnButton.name == "LiveButton")
         {
+
             columnType = ColumnType.Live;
             SendMsg(new MsgBase((ushort)UIEvent.ShowLivePart));
             SendMsg(new MsgBase((ushort)UIEvent.HideVideoDetailRoot));
-            LauncherView.gameObject.SetActive(false);
+            //LauncherView.gameObject.SetActive(false);
+            recommendPart.gameObject.SetActive(false );
+            VideoListPartPanel.gameObject.SetActive(false);
         }
         else
         {
-            if (Application.platform == RuntimePlatform.WindowsEditor)
-            {
-                TV189MsgReciver.instance.GetVideosJson(jsonTxt);
-            }
+            SendMsg(new MsgBase((ushort)UIEvent.HideLivePart));
+            //if (Application.platform == RuntimePlatform.WindowsEditor)
+            //{
+            //    TV189MsgReciver.instance.GetVideosJson(jsonTxt);
+            //}
          
            
 
@@ -376,6 +388,7 @@ public class LauncherUIManager : UIBase
 
         }
         IniSelectItem();
+        currentContentID = leftButtonItems[0].name;
         if (Application.platform == RuntimePlatform.Android)
         {
             AndroidAPI.GetCurrentPagesVideos(leftButtonItems[0].name, 1, 4);
@@ -391,10 +404,15 @@ public class LauncherUIManager : UIBase
             title.text = JsonDataManager.vrDataItems[i].title;
             leftButtonItems[i].name = JsonDataManager.vrDataItems[i].clickParam;//后面会根据名子区别每个item
         }
-        IniSelectItem();
+        IniSelectItem();//用于选中时候，选中UI的显示位置方法
+        currentContentID = leftButtonItems[0].name;
         if (Application.platform == RuntimePlatform.Android)
         {
             AndroidAPI.GetCurrentPagesVideos(leftButtonItems[0].name, 1, 4);
+        }
+        else
+        {
+            TV189MsgReciver.instance.GetVideosJson(jsonTxt);
         }
 
     }
@@ -407,6 +425,7 @@ public class LauncherUIManager : UIBase
             leftButtonItems[i].name = JsonDataManager.screenDataItems[i].clickParam;
         }
         IniSelectItem();
+        currentContentID = leftButtonItems[0].name;
         if (Application.platform == RuntimePlatform.Android)
         {
             AndroidAPI.GetCurrentPagesVideos(leftButtonItems[0].name, 1, 4);
@@ -674,8 +693,7 @@ public class LauncherUIManager : UIBase
 
     Transform videoItemCotent;
  public    int currentPageIndex =1;//具体视频列表的页面索引
-    int totalPageCount;//总共的页面数量
-   // public string currentVideoContentId;
+   
     void IniVideoItemPart()
     {
         PreviosPageButton = UIManager.instance.GetGameObject("PreviosPageButton").GetComponent<Button>();
@@ -700,12 +718,18 @@ public class LauncherUIManager : UIBase
         {
             if (Application.platform == RuntimePlatform.Android)
             {
-               
+                Debug.Log("currentContentID:" + currentContentID);
                 //调用安卓那边的方法，json会回调返回
-                AndroidAPI.GetCurrentPagesVideos(button.name, currentPageIndex, 4);
+                AndroidAPI.GetCurrentPagesVideos(currentContentID, currentPageIndex, 4);
              
             }
-          
+            else
+            {
+              
+                Debug.Log("currentContentID:" + currentContentID);
+                TV189MsgReciver.instance.GetVideosJson(jsonTxt);
+            }
+
         }
         else
         {
@@ -724,8 +748,9 @@ public class LauncherUIManager : UIBase
         {
             if (currentPageIndex<TV189MsgReciver .totalPages || currentPageIndex == TV189MsgReciver.totalPages)
             {
+                Debug.Log("currentContentID:"+ currentContentID);
                 //调用安卓那边的方法，json会回调返回
-                AndroidAPI.GetCurrentPagesVideos(button.name, currentPageIndex, 4);
+                AndroidAPI.GetCurrentPagesVideos(currentContentID, currentPageIndex, 4);
             }
             else
             {
@@ -736,30 +761,21 @@ public class LauncherUIManager : UIBase
             }
           
         }
-        //else
-        //{
-        //    if (currentPageIndex>TV189MsgReciver .totalPages)
-        //    {
-        //        UISettingManager.ShakeUI(NextPagButton.transform, new Vector3(5f, 5f, 5f), 1);
-        //        Debug.Log("已经不能向后翻页！");
-        //        // vrPageIndex = 1;
-        //       // currentPageIndex = TV189MsgReciver.instance.GetTotalPagesCount();
-        //    }
-        //    else
-        //    {
-        //        TV189MsgReciver.instance.GetVideosJson(jsonTxt);
-        //      //  pageShowText = "";
-        //        //  StartCoroutine(GetJsonString());
-        //    }
-           
-        //}
+        else
+        {
+
+            Debug.Log("currentContentID:" + currentContentID);
+            TV189MsgReciver.instance.GetVideosJson(jsonTxt);
+        }
+       
+    
     }
     void ItemOnClick(Transform itemButton)
     {
        
         LauncherView.gameObject.SetActive(false);
 
-      //  currentVideoContentId = itemButton.name;
+    
       JsonDataManager .currentId = itemButton.name;
         MsgBase msg = new MsgBase((ushort)UIEvent.ShowVideoDetailRoot);
         SendMsg(msg);

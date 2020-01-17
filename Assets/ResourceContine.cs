@@ -17,5 +17,8 @@ public class ResourceContine : Singleton <ResourceContine> {
     public Sprite hightLightBlueRay;
     public Sprite normal_4k;
     public Sprite hightLight_4K;
-
+    public Sprite normralLivePlaySpi;
+    public Sprite normalLivePauseSpi;
+    public Sprite HLLivePlaySpi;
+    public Sprite HLLIvePauseSpi;
 }

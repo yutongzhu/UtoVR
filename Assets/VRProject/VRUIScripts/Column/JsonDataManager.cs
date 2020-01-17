@@ -20,12 +20,13 @@ public class JsonDataManager : MonoBehaviour
     public static DataItem leftRecoItem = new DataItem();//首页左边的item
                                                          // public static RecoVideoItemData recoVideoData = new RecoVideoItemData();
     public static string currentId;//当前所选items的id
+    public static int liveTotalCount;//直播item总的数量
     //右边的items
     public static List<ChildrenItem> childrenItems = new List<ChildrenItem>();
 
     public static List<LiveDataItem> liveItems = new List<LiveDataItem>();
     //存储直播
-    public static Dictionary<string, LiveItemData> liceItemDic = new Dictionary<string, LiveItemData>();
+    public static Dictionary<string, VideoItem> liceItemDic = new Dictionary<string, VideoItem>();
     private void Awake()
     {
         instance = this;
@@ -126,12 +127,9 @@ public class JsonDataManager : MonoBehaviour
     void LoadVR()
     {
         AllRoot vr = JsonConvert.DeserializeObject<AllRoot>(retString);
-        // vr.categorys 只有一个
+       
         CategorysItem vrCategorysItem = vr.categorys[0];
         vrDataItems = vrCategorysItem.data;
-     //   print("vrDataItems:"+ vrDataItems.Count );
-       // Debug.Log("vrDataItemsLength" + vrDataItems.Count);
-       // Debug.Log("vrDataItemsLengthqqq" );
         LauncherUIManager.instance.SetVRItemDate();
     }
 
@@ -169,7 +167,7 @@ public class JsonDataManager : MonoBehaviour
     public void LoadLivePart()
     {
 
-        TabsItem liveRoot = tabsItems[4];//推荐专区的
+        TabsItem liveRoot = tabsItems[4];//直播专区的
         string jsonLivePath = HttpUitls.GetJsonPath(tabUrl, liveRoot.path);
         StartCoroutine(Getjson(jsonLivePath, LoadLive));
     }
@@ -179,6 +177,9 @@ public class JsonDataManager : MonoBehaviour
         LiveRoot columnRoot = JsonConvert.DeserializeObject<LiveRoot>(retString);
         liveItems = columnRoot.data;
         Debug.Log("liveItems" + liveItems.Count );
+        Debug.Log("liveItems" + liveItems[14].title);
+        liveTotalCount = liveItems.Count;
+     
         LiveUImanager.instance.SetLiveItemDate();
     }
 
@@ -210,28 +211,32 @@ public class JsonDataManager : MonoBehaviour
 
     }
 
-    int displayCount = 4;
+//    int displayCount = 4;//一行显示的数量
      int pagesCount;//当前应当用到的页数
     //计算页数
- public int GetPages(ColumnType type)
+ public int GetPages(ColumnType type )
     {
         switch (type)
         {
             case ColumnType.VR:
-                pagesCount= GetPageCount(vrDataItems.Count );
+                pagesCount= GetPageCount(vrDataItems.Count,4 );
                 break;
             case ColumnType._4K:
-                pagesCount = GetPageCount(_4kDataItems.Count);
+                pagesCount = GetPageCount(_4kDataItems.Count,4);
 
                 break;
             case ColumnType.GiantScreen:
-                pagesCount = GetPageCount(screenDataItems.Count);
+                pagesCount = GetPageCount(screenDataItems.Count,4);
                 break;
-              
+            case ColumnType.Live:
+                pagesCount = GetPageCount(liveItems.Count, 5);
+            
+                break;
+
         }
         return pagesCount;
     }
-    int GetPageCount(int count)
+    int GetPageCount(int count,int displayCount)
     {
         int pages=0;
         if (count % displayCount == 0)

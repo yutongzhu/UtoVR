@@ -16,21 +16,21 @@ public class VideoUImanager : UIBase {
     public override void ProcessEvent(MsgBase tmpMag)
     {
 
-        switch (tmpMag.msgid)
-        {
+        //switch (tmpMag.msgid)
+        //{
 
-            case (ushort)UIEvent.ShowGamePart:
-                {
+        //    //case (ushort)UIEvent.ShowGamePart:
+        //    //    {
                    
-                }
-                break;
-            case (ushort)UIEvent.HideGamePart:
-                {
+        //    //    }
+        //    //    break;
+        //    //case (ushort)UIEvent.HideGamePart:
+        //    //    {
                 
-                }
-                break;
+        //    //    }
+        //    //    break;
 
-        }
+        //}
     }
 
      
@@ -38,8 +38,8 @@ public class VideoUImanager : UIBase {
     {
         msgids = new ushort[]
 {
-            (ushort )UIEvent .ShowGamePart ,
-             (ushort )UIEvent .HideGamePart
+            //(ushort )UIEvent  ,
+            // (ushort )UIEvent .HideGamePart
 
 
 };
@@ -148,15 +148,18 @@ public class VideoUImanager : UIBase {
         Debug.Log("BackMainClick");
         mediaPlayerCtrl.Stop();
 
-        if (SceneManager.GetActiveScene().name == "Player2D"|| SceneManager.GetActiveScene().name == "Player")
+        if (SceneManager.GetActiveScene().name == "Player2D"
+            || SceneManager.GetActiveScene().name == "Player" 
+            || SceneManager.GetActiveScene().name == "PlayerVR")
         {
             SceneManager.LoadScene("Main");
         }
        else if (SceneManager.GetActiveScene().name == "Player2DVR" 
-            || SceneManager.GetActiveScene().name == "PlayerVR")
+           )
         {
             SceneManager.LoadScene("MainVR");
         }
+        
 
 
         VolumeSlider.gameObject.SetActive(false );

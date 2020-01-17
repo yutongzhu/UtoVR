@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,21 +12,32 @@ using UnityEngine.UI;
 /// </summary>
 public class TV189MsgReciver : MonoBehaviour {
 
-    private static TV189MsgReciver _instance = null;
+    public static TV189MsgReciver instance = null;
 
-    public static TV189MsgReciver instance
+    //public static TV189MsgReciver instance
+    //{
+    //    get
+    //    {
+    //        if (_instance == null)
+    //        {
+    //            GameObject go = new GameObject("TV189MsgReciver");
+    //            _instance = go.AddComponent<TV189MsgReciver>();
+    //        }
+    //        return _instance;
+    //    }
+    //}
+    void Awake()
     {
-        get
+        if (instance == null)
         {
-            if (_instance == null)
-            {
-                GameObject go = new GameObject("TV189MsgReciver");
-                _instance = go.AddComponent<TV189MsgReciver>();
-            }
-            return _instance;
+            DontDestroyOnLoad(gameObject);
+            instance = this;
+        }
+        else if (instance != null)
+        {
+            Destroy(gameObject);
         }
     }
-
     /// <summary>
     /// 获取到视频信息json的回调方法
     /// </summary>
@@ -53,7 +65,7 @@ public class TV189MsgReciver : MonoBehaviour {
     public static int  totalPages;
     public void  GetVideosJson(string json )
     {
-       // print(json);
+      //  print(json);
 
         ClassifyViteoRoot classifyViteoRoot = JsonConvert.DeserializeObject<ClassifyViteoRoot>(json);
         ClassifyInfo classifyInfo = classifyViteoRoot.info;
@@ -121,7 +133,7 @@ public class TV189MsgReciver : MonoBehaviour {
         }
         }
        
-       LauncherUIManager.instance.pageShowText.text = LauncherUIManager.instance.currentPageIndex  + totalPages.ToString ();
+       LauncherUIManager.instance.pageShowText.text = LauncherUIManager.instance.currentPageIndex  +"/"+ totalPages.ToString ();
     }
     public void SetImage(string path, RawImage image)
     {
@@ -186,34 +198,22 @@ public class TV189MsgReciver : MonoBehaviour {
     //播放VR视频
     public void PlayerVR(string url)
     {
-        Debug.Log("PlayerVR000");
-        if (SceneManager.GetActiveScene().name == "Main")
-        {
-            Debug.Log("PlayerVR111");
-
-            MediaPlayerCtrl.m_videoID = url;
-            MediaPlayerCtrl.is3dUD = false;
-      //      MediaPlayerCtrl.infoName = "No";
-            SceneManager.LoadScene("Player", LoadSceneMode.Single);
-        }
-     else  if (SceneManager.GetActiveScene().name == "MainVR")
-        {
             Debug.Log("PlayerVR111");
 
             MediaPlayerCtrl.m_videoID = url;
             MediaPlayerCtrl.is3dUD = false;
             //      MediaPlayerCtrl.infoName = "No";
             SceneManager.LoadScene("PlayerVR", LoadSceneMode.Single);
-        }
+     
     }
 
     //播放2D视频
     public void Player2D(string url)
     {
-        Debug.Log("Player2D000");
+      //  Debug.Log("Player2D000");
         if (SceneManager.GetActiveScene().name == "Main")
         {
-            Debug.Log("Player2D111");
+           // Debug.Log("Player2D111");
             MediaPlayerCtrl.m_videoID = url;
             MediaPlayerCtrl.is3dUD = false;
            // MediaPlayerCtrl.infoName = "No";
@@ -228,6 +228,40 @@ public class TV189MsgReciver : MonoBehaviour {
             SceneManager.LoadScene("Player2DVR", LoadSceneMode.Single);
         }
 
+    }
+
+    public static List<LiveUrlData> liveDataList = new List<LiveUrlData>();
+    public static Dictionary<string , LiveUrlData> liveUrlDic = new Dictionary<string , LiveUrlData>();
+    //播放直播视频
+    public void PlayerLive(string urlJson)
+    {
+        Debug.Log("urlJson" + urlJson);
+        
+        JArray urlArry = (JArray)JsonConvert.DeserializeObject(urlJson);
+        int count = urlArry.Count;
+        if (liveDataList.Count >0)//，每次加载需要重新清理之前数据
+        {
+            liveDataList.Clear();
+        }
+        for (int i = 0; i < count; i++)
+        {
+            LiveUrlData livedata = new LiveUrlData();
+            livedata.playUrl= urlArry[i]["playUrl"].ToString();
+            livedata.audioUrl = urlArry[i]["audioUrl"].ToString();
+            livedata.qualityName = urlArry[i]["qualityName"].ToString();
+            livedata.qualityid = urlArry[i]["qualityid"].ToString();
+            livedata.vid = urlArry[i]["vid"].ToString();
+            liveDataList.Add(livedata);
+            if (!liveUrlDic.ContainsKey(livedata.qualityid))
+            {
+                liveUrlDic.Add(livedata.qualityid, livedata);
+            }
+        }
+        MediaPlayerCtrl.m_videoID = urlArry[0]["playUrl"].ToString(); 
+        MediaPlayerCtrl.is3dUD = false;
+   
+        SceneManager.LoadScene("PlayerLive", LoadSceneMode.Single);
+     
     }
 
     //多码率切换

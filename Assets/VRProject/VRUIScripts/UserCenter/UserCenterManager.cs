@@ -41,23 +41,23 @@ public class UserCenterManager : UIBase
 
 };
         RegistSelf(this, msgids);
-
+      
     }
     void Start()
     {
 
-        userCenterRoot=  UISettingManager.GetUITransform("UserCenterRoot");
-       
-        foreach (Button  item in userCenterRoot.GetComponentsInChildren <Button >())
+        userCenterRoot = UISettingManager.GetUITransform("UserCenterRoot");
+
+        foreach (Button item in userCenterRoot.GetComponentsInChildren<Button>())
         {
-            item.onClick.AddListener(delegate () { ButtonOnClick(item.transform ); });
+            item.onClick.AddListener(delegate () { ButtonOnClick(item.transform); });
         }
 
         CustomerService = UISettingManager.GetUITransform("CustomerService");
-     
-        userCenterRoot.gameObject.SetActive(false );
-        CustomerService.gameObject.SetActive(false );
-     
+
+        userCenterRoot.gameObject.SetActive(false);
+        CustomerService.gameObject.SetActive(false);
+
         UISettingManager.AddButtonClickListener("SureConnectButon", SureConnectButonClick);
     }
     void AddButtonLister(Transform button)

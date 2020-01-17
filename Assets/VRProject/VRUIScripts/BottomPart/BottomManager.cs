@@ -30,11 +30,9 @@ public class BottomManager : UIBase
     public Transform head;
     Transform BottomButtonContent;
     Transform VideoButton;
-    //public Transform singleCamera;
-    //public Transform camera;
-    //public Transform vrCamera;
+   
 
-    Transform PersonButton;
+   // Transform PersonButton;
     Transform ResetButton;
     Transform VRPartButton;
     private void Awake()
@@ -54,13 +52,13 @@ public class BottomManager : UIBase
         BottomButtonContent = UIManager.instance.GetGameObject("BottomButtonContent").transform;
         VideoButton = UIManager.instance.GetGameObject("VideoButton").transform;
       //  GameButton = UIManager.instance.GetGameObject("GameButton").transform;
-        PersonButton = UIManager.instance.GetGameObject("PersonButton").transform;
+     //   PersonButton = UIManager.instance.GetGameObject("PersonButton").transform;
         ResetButton = UIManager.instance.GetGameObject("ResetButton").transform;
         VRPartButton = UIManager.instance.GetGameObject("VRPartButton").transform;
      //  UISettingManager.AddButtonClickListener("BackGameButton",);
         VideoButton.GetComponent<Button>().onClick.AddListener(delegate() { ButtonOnClick(VideoButton); });
         //GameButton.GetComponent<Button>().onClick.AddListener(delegate () { ButtonOnClick(GameButton); });
-        PersonButton.GetComponent<Button>().onClick.AddListener(delegate () { ButtonOnClick(PersonButton); });
+       // PersonButton.GetComponent<Button>().onClick.AddListener(delegate () { ButtonOnClick(PersonButton); });
         ResetButton.GetComponent<Button>().onClick.AddListener(delegate () { ButtonOnClick(ResetButton); });
         VRPartButton.GetComponent<Button>().onClick.AddListener(delegate () { ButtonOnClick(VRPartButton); });
     }

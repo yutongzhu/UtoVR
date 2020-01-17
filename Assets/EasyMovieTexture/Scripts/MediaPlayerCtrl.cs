@@ -33,7 +33,9 @@ public class MediaPlayerCtrl : MonoBehaviour
 
     ///////////以下新添加的属性///////////
     //public static string infoName = ""; //场景信息，调试用的
-    public static string m_videoID = "http://public.vod5g.nty.tv189.com/vod/demo/ar/hello5g-1-1.mp4.m3u8";
+    public static string m_videoID = null;
+       // "http://liveplay.ctx.tv189.com/live/cctv1.m3u8?sign=&sid=C8000000000000000001427180449328&msisdn=17702117048&spid=×tamp=20200113160720&H=115020310221&channelid=059999&nodeid=&videotype=1&encrypt=c56b43fa0c22ea7f689fabcee6239938&ua=30&nettype=11&imsi=null&guid=856f0121-f989-bdfc-a7cc-2d2cc2cf931d&playseek=1";
+        //"http://public.vod5g.nty.tv189.com/vod/demo/ar/hello5g-1-1.mp4.m3u8";
     //"http://cache.utovr.com/s1mwpapg5fmzlcw2ae/L3_6xes4p0pjxfuukir.m3u8"; //视频路径
 
 

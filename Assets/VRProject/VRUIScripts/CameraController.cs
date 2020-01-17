@@ -68,9 +68,10 @@ public class CameraController : MonoBehaviour
             UI = GameObject.Find("UI").transform;
 
         }
-        else if (scene.name == "Player2D" || scene.name == "Player2D")
+        else if (scene.name == "Player2D" || scene.name == "Player2D"
+            || scene.name == "PlayerLive"  )
         {
-            Debug.Log("Player2D");
+           // Debug.Log("Player2D");
             UI = GameObject.Find("Canvas").transform;
         }
 

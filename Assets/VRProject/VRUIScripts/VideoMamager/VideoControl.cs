@@ -24,7 +24,7 @@ public class VideoControl : UIBase
                     if (LauncherUIManager.instance .columnType==ColumnType.RecommendVideo)
                     {
                      
-                        VideoPoster.texture =
+                       VideoPoster.texture =
                        JsonDataManager.VideosDic[JsonDataManager.currentId].coverTexture;
                         VideoDetailName.text =
                             JsonDataManager.VideosDic[JsonDataManager.currentId].title;
@@ -133,26 +133,25 @@ public class VideoControl : UIBase
                 if (Application.platform == RuntimePlatform.Android)
                 {
                     VideoItem data = JsonDataManager.VideosDic[JsonDataManager.currentId];
-
-                    AndroidAPI.StartActivityForUnityTV189(data.contentId, data.clickType, data.clickParam, data.title, 0);
+                   AndroidAPI.StartActivityForUnityTV189(data.contentId, data.clickType, data.clickParam, data.title, 0);
+                   
+                   
                     //  UntiyPlayer
-                    return;
+                  //  return;
                 }
-                else
-                {
-                    if (SceneManager.GetActiveScene().name == "MainVR")
-                    {
-                        SceneManager.LoadScene("Player2DVR", LoadSceneMode.Single);
-
-                    }
-                    else if (SceneManager.GetActiveScene().name == "Main")
-                    {
-                        SceneManager.LoadScene("Player2D", LoadSceneMode.Single);
-                    }
-                   // SceneManager.LoadScene("Player2D", LoadSceneMode.Single);
-                }
+             
             }
         }
+       else if (LauncherUIManager.instance.columnType == ColumnType.VR)
+        {
+            Debug.Log(" ColumnType.VR");
+            ClassifyVideoItem item = TV189MsgReciver.classifyVideosDic[JsonDataManager.currentId];
+            int ClickParam = TV189MsgReciver.getClickParam(int.Parse(item.categoryId), int.Parse(item.contentType));
+
+            AndroidAPI.StartActivityForUnityTV189(item.contentId, 0, "7", item.title, 0);
+               
+        }
+       
         else
         {
             if (Application.internetReachability == NetworkReachability.NotReachable)
@@ -171,20 +170,20 @@ public class VideoControl : UIBase
                     
                     AndroidAPI.StartActivityForUnityTV189(item.contentId, 0, ClickParam.ToString (), item.title, 0);
                  
-                    return;
+                    //return;
                 }
-                else
-                {
-                    if (SceneManager.GetActiveScene().name == "MainVR")
-                    {
-                        SceneManager.LoadScene("Player2DVR", LoadSceneMode.Single);
+                //else
+                //{
+                //    if (SceneManager.GetActiveScene().name == "MainVR")
+                //    {
+                //        SceneManager.LoadScene("Player2DVR", LoadSceneMode.Single);
 
-                    }
-                    else if (SceneManager.GetActiveScene().name == "Main")
-                    {
-                        SceneManager.LoadScene("Player2D", LoadSceneMode.Single);
-                    }
-                }
+                //    }
+                //    else if (SceneManager.GetActiveScene().name == "Main")
+                //    {
+                //        SceneManager.LoadScene("Player2D", LoadSceneMode.Single);
+                //    }
+                //}
             }
         }
       
