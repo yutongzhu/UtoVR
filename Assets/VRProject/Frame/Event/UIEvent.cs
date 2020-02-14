@@ -28,7 +28,9 @@ public enum  UIEvent
     HideVideoPlay,
      
     ShowLivePart,
-    HideLivePart
+    HideLivePart,
+   ShowScreenPlay,
+   HideScreenPlay
 
 
 

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class VideoControl : UIBase
 {
+    public static VideoControl instance;
     public override void ProcessEvent(MsgBase tmpMag)
     {
 
@@ -21,24 +22,25 @@ public class VideoControl : UIBase
             case (ushort)UIEvent.ShowVideoDetailRoot:
 
                 {
-                    if (LauncherUIManager.instance .columnType==ColumnType.RecommendVideo)
+                    Debug.Log("ShowVideoDetailRoot");
+                    if (LauncherUIManager.instance.columnType == ColumnType.RecommendVideo)
                     {
-                     
-                       VideoPoster.texture =
-                       JsonDataManager.VideosDic[JsonDataManager.currentId].coverTexture;
+
+                        VideoPoster.texture =
+                        JsonDataManager.VideosDic[JsonDataManager.currentId].coverTexture;
                         VideoDetailName.text =
                             JsonDataManager.VideosDic[JsonDataManager.currentId].title;
                         IntroduceText.text = JsonDataManager.VideosDic[JsonDataManager.currentId].subscript;
 
                         CountryName.text = "";
                         //表示该视频是否被收藏了
-                      
+
                     }
                     else
                     {
-                        
+
                         ClassifyVideoItem item = TV189MsgReciver.classifyVideosDic[JsonDataManager.currentId];
-                        TV189MsgReciver.instance.SetImage (item.imgM0 , VideoPoster);
+                        TV189MsgReciver.instance.SetImage(item.imgM0, VideoPoster);
 
                         VideoDetailName.text = item.title;
                         IntroduceText.text = item.description;
@@ -56,14 +58,54 @@ public class VideoControl : UIBase
                         CollectionButton.GetComponent<Image>().sprite = CollectedSprite;
                     }
 
-                
+
                 }
                 break;
         }
     }
+    public void ShowDetailFun()
+    {
+        if (LauncherUIManager.instance.columnType == ColumnType.RecommendVideo)
+        {
+
+            VideoPoster.texture =
+            JsonDataManager.VideosDic[JsonDataManager.currentId].coverTexture;
+            VideoDetailName.text =
+                JsonDataManager.VideosDic[JsonDataManager.currentId].title;
+            IntroduceText.text = JsonDataManager.VideosDic[JsonDataManager.currentId].subscript;
+
+            CountryName.text = "";
+            //表示该视频是否被收藏了
+
+        }
+        else
+        {
+
+            ClassifyVideoItem item = TV189MsgReciver.classifyVideosDic[JsonDataManager.currentId];
+            TV189MsgReciver.instance.SetImage(item.imgM0, VideoPoster);
+
+            VideoDetailName.text = item.title;
+            IntroduceText.text = item.description;
+            CountryName.text = item.countryName;
+
+        }
+        VideoDetailRoot.gameObject.SetActive(true);
+
+        if (JsonDataManager.VideosDic[JsonDataManager.currentId].isCollected == false)
+        {
+            CollectionButton.GetComponent<Image>().sprite = NormalCollectedSprite;
+        }
+        else
+        {
+            CollectionButton.GetComponent<Image>().sprite = CollectedSprite;
+        }
+
+    }
+   // public GameObject videoPlay;
+    //public MediaPlayerCtrl mediaPlayerCtrl;
     public Sprite CollectedSprite;
     public Sprite NormalCollectedSprite;
-    Transform VideoDetailRoot;
+   public  Transform VideoDetailRoot;
     Transform CollectionButton;
     Transform BackLauncherButton;
     Transform PlayVidButton;
@@ -78,6 +120,17 @@ public class VideoControl : UIBase
     string collectedPath = "Collection/collection_complete";
     private void Awake()
     {
+       
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+
+        }
+        else if (instance != null)
+        {
+            Destroy(gameObject);
+        }
         msgids = new ushort[]
 {
      (ushort )UIEvent .HideVideoDetailRoot,
@@ -94,8 +147,7 @@ public class VideoControl : UIBase
         {
             AndroidAPI.Init();
         }
-          
-
+   
     }
     private void Initialized()
     {
@@ -116,52 +168,123 @@ public class VideoControl : UIBase
       
        
     }
+    bool isScreenLoaded=false;
     private void PlayVideoClick()
     {
-        VideoDetailRoot.gameObject.SetActive(false);
-        if (LauncherUIManager.instance.columnType == ColumnType.RecommendVideo)
-        {
-          
-            if (Application.internetReachability == NetworkReachability.NotReachable)
+      //  if (Application.platform == RuntimePlatform.WindowsEditor)
+      //  {
+            Transform VideoPlayFather = GameObject.Find("VideoPlayFather").transform;
+            //处于哪种场景状态也更新
+            if (SceneManager.GetActiveScene().name == "Main")
             {
-                Debug.Log("no intent content");
-                //GameObject.Find("Directional Light").GetComponent<Main>().toast("网络无连接");
+                SceneStatus.sceneEnum = SceneEnum.Main;
 
+                TV189MsgReciver.instance.mediaPlayerCtrl =
+                    VideoPlayFather.Find("Cinema/VideoScreen").GetComponent<MediaPlayerCtrl>();
             }
             else
             {
+                SceneStatus.sceneEnum = SceneEnum.MainVR;
+                if (LauncherUIManager.instance.columnType == ColumnType.VR)//vr播放情况
+                {
+                    TV189MsgReciver.instance.mediaPlayerCtrl =
+                 VideoPlayFather.Find("VideoScreenVR").GetComponent<MediaPlayerCtrl>();
+                }
+                else
+                {
+                    TV189MsgReciver.instance.mediaPlayerCtrl =
+                 VideoPlayFather.Find("Cinema/VideoScreen").GetComponent<MediaPlayerCtrl>();
+                }
+
+           }
+
+
+       // }
+       
+        if (Application.platform == RuntimePlatform.WindowsEditor )
+        {
+            TV189MsgReciver.instance.mediaPlayerCtrl.Load(MediaPlayerCtrl.m_videoID);
+
+        }
+           
+        if (Application.internetReachability == NetworkReachability.NotReachable)
+        {
+            Debug.Log("no intent content");
+            //GameObject.Find("Directional Light").GetComponent<Main>().toast("网络无连接");
+            return;
+        }
+        if (LauncherUIManager.instance.columnType == ColumnType.RecommendVideo)
+        {
+                VideoItem data = JsonDataManager.VideosDic[JsonDataManager.currentId];
+                Debug.Log("data.clickParam:"+ data.clickParam);
                 if (Application.platform == RuntimePlatform.Android)
                 {
-                    VideoItem data = JsonDataManager.VideosDic[JsonDataManager.currentId];
                    AndroidAPI.StartActivityForUnityTV189(data.contentId, data.clickType, data.clickParam, data.title, 0);
-                   
-                   
-                    //  UntiyPlayer
-                  //  return;
+                  
                 }
-             
+            VideoDetailRoot.gameObject.SetActive(false);
+            
+
+            if (SceneManager.GetActiveScene().name == "MainVR")
+            {
+                LightManger.instance.VideoCanvasRootVR.SetActive(false);
+                LightManger.instance.VideoScreen.SetActive(true);
+                LightManger.instance.VideoScreenVR.SetActive(false);
+                LightManger.instance.VideoCanvasRoot.SetActive(true);
             }
+            else
+            {
+                Transform videoCanvas = GameObject.Find("UI/VideoCanvas").transform;
+                videoCanvas.Find("VideoCanvasRoot").gameObject.SetActive(true );
+              //  VideoUImanager.instance.VideoCanvasRoot.SetActive(true);
+                LightManger.instance.VideoScreenVR.SetActive(false);
+                LightManger.instance.VideoScreen.SetActive(true);
+            }
+
         }
-       else if (LauncherUIManager.instance.columnType == ColumnType.VR)
+        else if (LauncherUIManager.instance.columnType == ColumnType.VR)
         {
             Debug.Log(" ColumnType.VR");
+            VideoDetailRoot.gameObject.SetActive(false);
             ClassifyVideoItem item = TV189MsgReciver.classifyVideosDic[JsonDataManager.currentId];
-            int ClickParam = TV189MsgReciver.getClickParam(int.Parse(item.categoryId), int.Parse(item.contentType));
 
-            AndroidAPI.StartActivityForUnityTV189(item.contentId, 0, "7", item.title, 0);
+            if (Application.platform == RuntimePlatform.Android)
+            {
+                int ClickParam = TV189MsgReciver.getClickParam(int.Parse(item.categoryId), int.Parse(item.contentType));
+
+                AndroidAPI.StartActivityForUnityTV189(item.contentId, 0, "7", item.title, 0);
+            }
+            else//在window平台
+            {
+                //在vr界面
+                if (SceneManager .GetActiveScene ().name =="MainVR")
+                {
+                  
+                        LightManger.instance.VideoCanvasRootVR.SetActive(true);
+                        LightManger.instance.VideoScreen.SetActive(false);
+                        LightManger.instance.VideoScreenVR.SetActive(true);
+                        LightManger.instance.VideoCanvasRoot.SetActive(false);
+                       
+                   
+                }
+                else
+                {
+                    SceneManager.LoadScene("PlayerVR");
+                }
+              
+
                
+              
+            }
+
+           // VideoDetailRoot.gameObject.SetActive(false);
+
         }
        
         else
         {
-            if (Application.internetReachability == NetworkReachability.NotReachable)
-            {
-                Debug.Log("no intent content");
-              
-
-            }
-            else
-            {
+          
+               
                 if (Application.platform == RuntimePlatform.Android)
                 {
                    
@@ -172,21 +295,15 @@ public class VideoControl : UIBase
                  
                     //return;
                 }
-                //else
-                //{
-                //    if (SceneManager.GetActiveScene().name == "MainVR")
-                //    {
-                //        SceneManager.LoadScene("Player2DVR", LoadSceneMode.Single);
+          
 
-                //    }
-                //    else if (SceneManager.GetActiveScene().name == "Main")
-                //    {
-                //        SceneManager.LoadScene("Player2D", LoadSceneMode.Single);
-                //    }
-                //}
-            }
+            VideoDetailRoot.gameObject.SetActive(false);
+            GameObject.Find("VideoCanvas").transform.Find("VideoCanvasRoot").gameObject.SetActive(true);
+
+            LightManger.instance.VideoScreenVR.SetActive(false);
+            LightManger.instance.VideoScreen.SetActive(true);
         }
-      
+    //    VideoDetailRoot.gameObject.SetActive(false);
     }
     bool isCollected = false;//表示此时是否收藏
     /// <summary>
@@ -215,14 +332,15 @@ public class VideoControl : UIBase
     /// <summary>
     /// 返回主界面
     /// </summary>
-    private void BackLauncherClick()
+    public  void BackLauncherClick()
     {
 
-        MsgBase msg = new MsgBase((ushort)UIEvent.ShowLauncher );
-        SendMsg(msg);
-       // LauncherUIManager.instance.IniLauncer();
+    
+        LauncherUIManager.instance.LauncherView.gameObject .SetActive (true );
         VideoDetailRoot.gameObject.SetActive(false );
-        SendMsg(new MsgBase((ushort)UIEvent.ShowBottomPart ));
-        SendMsg(new MsgBase((ushort)UIEvent.ShowLauncher));
+       // SendMsg(new MsgBase((ushort)UIEvent.ShowBottomPart ));
+      //  BottomManager.instance.BottomButtonContent.gameObject.SetActive(false);
+        //  SendMsg(new MsgBase((ushort)UIEvent.ShowLauncher));
+        BottomManager.instance.BottomButtonContent.gameObject.SetActive(true );
     }
 }

@@ -6,16 +6,24 @@ public class MsgCenter : MonoBehaviour   {
     public static MsgCenter instance;
 	private void Awake()
 	{
-        instance = this;
-       gameObject.AddComponent<UIManager>();
+        //  instance = this;
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+
+        }
+        else if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        gameObject.AddComponent<UIManager>();
        gameObject.AddComponent<AssetManager>();
         gameObject.AddComponent<ILoaderManager >();
         WhiteLabel.String.Init();
     }
 	// Use this for initialization
-	void Start () {
-		
-	}
+	
 	public void SendToMsg(MsgBase tmpMsg)
     {
         AnasysisMsg(tmpMsg);

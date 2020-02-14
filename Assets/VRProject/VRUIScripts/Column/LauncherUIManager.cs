@@ -12,6 +12,14 @@ public enum ColumnType
     GiantScreen,
     Live
 }
+public enum PanelBackStatus
+{
+    Default,
+    VideoDetail,
+   VideoPlayPanel,
+    LivePlayer,
+
+}
 public class LauncherUIManager : UIBase
 {
 
@@ -40,6 +48,7 @@ public class LauncherUIManager : UIBase
         }
     }
     public ColumnType columnType;
+    public PanelBackStatus panelBackStatus;
     public Transform LauncherView;
     Transform recommendPart;
     Transform VideoListPartPanel;
@@ -64,7 +73,16 @@ public class LauncherUIManager : UIBase
     public GameObject loadCanvas;
     private void Awake()
     {
-        instance = this;
+        // instance = this;
+        if (instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            instance = this;
+        }
+        else if (instance != null)
+        {
+            Destroy(gameObject);
+        }
         msgids = new ushort[]
 {
 
@@ -74,34 +92,47 @@ public class LauncherUIManager : UIBase
         RegistSelf(this, msgids);
 
     }
+    public void OnEnable()
+    {
+
+    //    Awake();
+      //  Start();
+
+
+    }
     string jsonTxt="";
-  //  string paths = Application.dataPath + "/Resources/select.json";
+    bool isLoaded;
     void Start()
     {
-        if (SceneManager.GetActiveScene().name == "Main" )
+        if (isLoaded==false)
         {
-            SceneStatus.sceneEnum = SceneEnum.Main;
-        }
-        else if (SceneManager.GetActiveScene().name == "MainVR")
-        {
-            SceneStatus.sceneEnum = SceneEnum.MainVR;
-        }
-        this .Invoke("HideLoadCanvas",2);
-        recommendPart = UIManager.instance.GetGameObject("RecommendPart").transform;
+            isLoaded = true;
+            if (SceneManager.GetActiveScene().name == "Main")
+            {
+                SceneStatus.sceneEnum = SceneEnum.Main;
+            }
+            else if (SceneManager.GetActiveScene().name == "MainVR")
+            {
+                SceneStatus.sceneEnum = SceneEnum.MainVR;
+            }
+            this.Invoke("HideLoadCanvas", 2);
+            recommendPart = UIManager.instance.GetGameObject("RecommendPart").transform;
 
-        IniLeftButtons();
-        IniVideoItemPart();
-        foreach (Button item in recommendPart.GetComponentsInChildren<Button>())
-        {
-            item.onClick.AddListener(delegate () { RecommendVideoClick(item); });
-        }
+            IniLeftButtons();
+            IniVideoItemPart();
+            foreach (Button item in recommendPart.GetComponentsInChildren<Button>())
+            {
+                item.onClick.AddListener(delegate () { RecommendVideoClick(item); });
+            }
 
-        if (Application.platform == RuntimePlatform.WindowsEditor)
-        {
-            StreamReader read = new StreamReader(Application.dataPath + "/Resources/select.json");
+            if (Application.platform == RuntimePlatform.WindowsEditor)
+            {
+                StreamReader read = new StreamReader(Application.dataPath + "/Resources/select.json");
 
-            jsonTxt = read.ReadToEnd();
+                jsonTxt = read.ReadToEnd();
+            }
         }
+     
 
     }
     void HideLoadCanvas()
@@ -120,7 +151,8 @@ public class LauncherUIManager : UIBase
         leftItems.contentId = JsonDataManager.leftRecoItem.contentId;
         leftItems.title = JsonDataManager.leftRecoItem.title;
         leftItems.subscript = JsonDataManager.leftRecoItem.subscript;
-
+        leftItems.clickType = JsonDataManager.leftRecoItem.clickType;
+        leftItems.clickParam = JsonDataManager.leftRecoItem.clickParam;
         if (!JsonDataManager.VideosDic.ContainsKey(leftItems.contentId))
         {
             JsonDataManager.VideosDic.Add(leftItems.contentId, leftItems);//加载图片完成后，加入字典。根据id添加
@@ -157,9 +189,14 @@ public class LauncherUIManager : UIBase
     void RecommendVideoClick(Button button)
     {
         JsonDataManager.currentId = button.name;
-        SendMsg(new MsgBase((ushort)UIEvent.ShowVideoDetailRoot));
-        SendMsg(new MsgBase((ushort)UIEvent.HideBottomPart));
+        //   SendMsg(new MsgBase((ushort)UIEvent.ShowVideoDetailRoot));
+        VideoControl.instance.ShowDetailFun();
+        BottomManager.instance.BottomButtonContent.gameObject.SetActive(false );
+     //   SendMsg(new MsgBase((ushort)UIEvent.HideBottomPart));
         LauncherView.gameObject.SetActive(false);
+
+    
+
     }
     public void IniLauncer()
     {
@@ -168,8 +205,8 @@ public class LauncherUIManager : UIBase
         recommendPart.gameObject.SetActive(true);
         backImage.position = recommendButton.position;
         columnType = ColumnType.RecommendVideo;
-
-    }
+        panelBackStatus = PanelBackStatus.Default;
+            }
     /// <summary>
     /// 上面不同栏目时候的初始化
     /// </summary>
@@ -305,12 +342,9 @@ public class LauncherUIManager : UIBase
         else
         {
             SendMsg(new MsgBase((ushort)UIEvent.HideLivePart));
-            //if (Application.platform == RuntimePlatform.WindowsEditor)
-            //{
-            //    TV189MsgReciver.instance.GetVideosJson(jsonTxt);
-            //}
-         
-           
+        //  LiveUImanager.instance .  LiveRoot.gameObject.SetActive(false);
+
+
 
             LeftPageIndex = 0;
             VideoListPartPanel.gameObject.SetActive(true);
@@ -682,20 +716,37 @@ public class LauncherUIManager : UIBase
         }
 
     }
-   
-    
+    int loadNum = 0;
+  
 
     #region 中间具体视频显示的一些操作
     Button PreviosPageButton;
     Button NextPagButton;
    public  Text pageShowText;
     public List<Button> videoButtonList = new List<Button>();
-
+    GameObject NullDataText;
+    GameObject BottomPageContent;
     Transform videoItemCotent;
  public    int currentPageIndex =1;//具体视频列表的页面索引
-   
+    //当没有数据返回的调用的方法
+    public void NoDataReturned()
+    {
+        NullDataText.SetActive(true );
+        videoItemCotent.gameObject.SetActive(false );
+        BottomPageContent.SetActive(false );
+    }
+
+    public void HaveDataReturned()
+    {
+        NullDataText.SetActive(false);
+        videoItemCotent.gameObject.SetActive(true);
+        BottomPageContent.SetActive(true);
+    }
     void IniVideoItemPart()
     {
+        BottomPageContent= UIManager.instance.GetGameObject("BottomPageContent");
+        NullDataText = UIManager.instance.GetGameObject("NullDataText");
+        NullDataText.SetActive(false );
         PreviosPageButton = UIManager.instance.GetGameObject("PreviosPageButton").GetComponent<Button>();
         NextPagButton = UIManager.instance.GetGameObject("NextPagButton").GetComponent<Button>();
         pageShowText = UIManager.instance.GetGameObject("PageShowText").GetComponent<Text>();
@@ -772,14 +823,21 @@ public class LauncherUIManager : UIBase
     }
     void ItemOnClick(Transform itemButton)
     {
-       
+        panelBackStatus = PanelBackStatus.VideoDetail;
         LauncherView.gameObject.SetActive(false);
 
     
-      JsonDataManager .currentId = itemButton.name;
-        MsgBase msg = new MsgBase((ushort)UIEvent.ShowVideoDetailRoot);
-        SendMsg(msg);
+        JsonDataManager .currentId = itemButton.name;
+        //  MsgBase msg = new MsgBase((ushort)UIEvent.ShowVideoDetailRoot);
+        BottomManager.instance.BottomButtonContent.gameObject.SetActive(false );
+        VideoControl.instance.VideoDetailRoot.gameObject.SetActive(true );
+        VideoControl.instance.ShowDetailFun();//显示界面设置
+        // SendMsg(msg);
+        //  SendMsg(new MsgBase((ushort)UIEvent.ShowVideoDetailRoot));
         SendMsg(new MsgBase((ushort)UIEvent.HideBottomPart ));
+
+       
+
     }
    
   

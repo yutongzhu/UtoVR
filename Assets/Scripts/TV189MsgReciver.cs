@@ -13,19 +13,8 @@ using UnityEngine.UI;
 public class TV189MsgReciver : MonoBehaviour {
 
     public static TV189MsgReciver instance = null;
-
-    //public static TV189MsgReciver instance
-    //{
-    //    get
-    //    {
-    //        if (_instance == null)
-    //        {
-    //            GameObject go = new GameObject("TV189MsgReciver");
-    //            _instance = go.AddComponent<TV189MsgReciver>();
-    //        }
-    //        return _instance;
-    //    }
-    //}
+    public MediaPlayerCtrl mediaPlayerCtrl;
+    
     void Awake()
     {
         if (instance == null)
@@ -51,14 +40,23 @@ public class TV189MsgReciver : MonoBehaviour {
     public  int GetTotalPagesCount(int totalcount)
     {
         int count;
-        if (totalcount / 4==0)
+
+        if (totalcount<4)//当只有一个页面切数量小于一次显示的数量时候
         {
-            count = totalcount / 4;
+            count = 1;
         }
         else
         {
-            count = totalcount / 4+1;
+            if (totalcount / 4 == 0)
+            {
+                count = totalcount / 4;
+            }
+            else
+            {
+                count = totalcount / 4 + 1;
+            }
         }
+       
         return count;
 
     }
@@ -74,66 +72,75 @@ public class TV189MsgReciver : MonoBehaviour {
         {
             classifyVideoItems.Clear();
         }
-       
-        for (int i = 0; i < classifyInfo.data.Count ; i++)
+        if (classifyInfo.data.Count==0)//表示此时的二级界面没有数据
         {
-            classifyVideoItems.Add(classifyInfo.data[i]);
-            VideoItem item = new VideoItem();
-            item.title = classifyInfo.data[i].title;
-            item.contentId  = classifyInfo.data[i].contentId;
-            item.subscript  = classifyInfo.data[i].description;
-          //  item.title = classifyInfo.data[i].title;
-            if (!classifyVideosDic.ContainsKey (classifyVideoItems[i].contentId))
-            {
-                classifyVideosDic.Add(classifyVideoItems[i].contentId, classifyVideoItems[i]);
-
-            }
-            if (!JsonDataManager .VideosDic .ContainsKey(item.contentId))
-            {
-                JsonDataManager.VideosDic.Add(item.contentId, item );
-
-            }
+            LauncherUIManager.instance.NoDataReturned();
         }
-        //正常情况下都是小于等于4的测试时候会走这一步
-        if (classifyInfo.data.Count> LauncherUIManager.instance.videoButtonList.Count)
+        else//二级界面有数据返回的时候
         {
-            for (int i = 0; i < 4; i++)
+            LauncherUIManager.instance.HaveDataReturned();
+            //赋值
+            for (int i = 0; i < classifyInfo.data.Count; i++)
             {
-                LauncherUIManager.instance.videoButtonList[i].name = classifyVideoItems[i].contentId;
-                RawImage im = LauncherUIManager.instance.videoButtonList[i].transform.
-                      Find("poster").GetComponent<RawImage>();
-                Text title = LauncherUIManager.instance.videoButtonList[i].transform.
-                    Find("Text").GetComponent<Text>();
-                title.text = classifyVideoItems[i].title;
-                SetImage(classifyVideoItems[i].imgM0, im);
+                classifyVideoItems.Add(classifyInfo.data[i]);
+                VideoItem item = new VideoItem();
+                item.title = classifyInfo.data[i].title;
+                item.contentId = classifyInfo.data[i].contentId;
+                item.subscript = classifyInfo.data[i].description;
+                //  item.title = classifyInfo.data[i].title;
+                if (!classifyVideosDic.ContainsKey(classifyVideoItems[i].contentId))
+                {
+                    classifyVideosDic.Add(classifyVideoItems[i].contentId, classifyVideoItems[i]);
+
+                }
+                if (!JsonDataManager.VideosDic.ContainsKey(item.contentId))
+                {
+                    JsonDataManager.VideosDic.Add(item.contentId, item);
+
+                }
             }
-        }
-        else
-        {
-            for (int i = 0; i < LauncherUIManager.instance.videoButtonList.Count; i++)
+            //正常情况下都是小于等于4的测试时候会走这一步
+            if (classifyInfo.data.Count > LauncherUIManager.instance.videoButtonList.Count)
             {
-                if (i< classifyVideoItems.Count )
+                for (int i = 0; i < 4; i++)
                 {
                     LauncherUIManager.instance.videoButtonList[i].name = classifyVideoItems[i].contentId;
                     RawImage im = LauncherUIManager.instance.videoButtonList[i].transform.
-                        Find("poster").GetComponent<RawImage>();
-                    Text title= LauncherUIManager.instance.videoButtonList[i].transform.
+                          Find("poster").GetComponent<RawImage>();
+                    Text title = LauncherUIManager.instance.videoButtonList[i].transform.
                         Find("Text").GetComponent<Text>();
                     title.text = classifyVideoItems[i].title;
                     SetImage(classifyVideoItems[i].imgM0, im);
-
-
                 }
-                else
+            }
+            else
+            {
+                for (int i = 0; i < LauncherUIManager.instance.videoButtonList.Count; i++)
                 {
-                    LauncherUIManager.instance.videoButtonList[i].name = "";
+                    if (i < classifyVideoItems.Count)
+                    {
+                        LauncherUIManager.instance.videoButtonList[i].name = classifyVideoItems[i].contentId;
+                        RawImage im = LauncherUIManager.instance.videoButtonList[i].transform.
+                            Find("poster").GetComponent<RawImage>();
+                        Text title = LauncherUIManager.instance.videoButtonList[i].transform.
+                            Find("Text").GetComponent<Text>();
+                        title.text = classifyVideoItems[i].title;
+                        SetImage(classifyVideoItems[i].imgM0, im);
+
+
+                    }
+                    else
+                    {
+                        LauncherUIManager.instance.videoButtonList[i].name = "";
+
+                    }
 
                 }
-               
-        }
+            }
+
+            LauncherUIManager.instance.pageShowText.text = LauncherUIManager.instance.currentPageIndex + "/" + totalPages.ToString();
         }
        
-       LauncherUIManager.instance.pageShowText.text = LauncherUIManager.instance.currentPageIndex  +"/"+ totalPages.ToString ();
     }
     public void SetImage(string path, RawImage image)
     {
@@ -198,35 +205,50 @@ public class TV189MsgReciver : MonoBehaviour {
     //播放VR视频
     public void PlayerVR(string url)
     {
-            Debug.Log("PlayerVR111");
+        LauncherUIManager.instance.panelBackStatus = PanelBackStatus.VideoPlayPanel;
+        Debug.Log("PlayerVR111");
 
             MediaPlayerCtrl.m_videoID = url;
             MediaPlayerCtrl.is3dUD = false;
-            //      MediaPlayerCtrl.infoName = "No";
-            SceneManager.LoadScene("PlayerVR", LoadSceneMode.Single);
-     
-    }
+    
 
+
+        if (SceneManager.GetActiveScene().name == "MainVR")
+        {
+          
+            LightManger.instance.VideoCanvasRootVR.SetActive(true);
+            LightManger.instance.VideoScreen.SetActive(false);
+            LightManger.instance.VideoScreenVR.SetActive(true);
+            LightManger.instance.VideoCanvasRoot.SetActive(false);
+
+
+        }
+        else
+        {
+          //LauncherUIManager .instance  .  panelBackStatus = PanelBackStatus.PlayerVR;
+            SceneManager.LoadScene("PlayerVR");
+        }
+
+        //if (isScreenLoaded == true)
+        //{
+
+        //    mediaPlayerCtrl.Load(MediaPlayerCtrl.m_videoID);
+        //}
+        //else
+        //{
+        //    isScreenLoaded = true;
+        //}
+    }
+    bool isScreenLoaded = false;
     //播放2D视频
     public void Player2D(string url)
     {
-      //  Debug.Log("Player2D000");
-        if (SceneManager.GetActiveScene().name == "Main")
-        {
-           // Debug.Log("Player2D111");
-            MediaPlayerCtrl.m_videoID = url;
+        LauncherUIManager.instance.panelBackStatus = PanelBackStatus.VideoPlayPanel;
+        MediaPlayerCtrl.m_videoID = url;
             MediaPlayerCtrl.is3dUD = false;
-           // MediaPlayerCtrl.infoName = "No";
-            SceneManager.LoadScene("Player2D", LoadSceneMode.Single);
-        }
-       else if (SceneManager.GetActiveScene().name == "MainVR")
-        {
-            Debug.Log("Player2D111");
-            MediaPlayerCtrl.m_videoID = url;
-            MediaPlayerCtrl.is3dUD = false;
-            // MediaPlayerCtrl.infoName = "No";
-            SceneManager.LoadScene("Player2DVR", LoadSceneMode.Single);
-        }
+            mediaPlayerCtrl.Load(MediaPlayerCtrl.m_videoID);
+          
+     
 
     }
 
@@ -259,21 +281,58 @@ public class TV189MsgReciver : MonoBehaviour {
         }
         MediaPlayerCtrl.m_videoID = urlArry[0]["playUrl"].ToString(); 
         MediaPlayerCtrl.is3dUD = false;
-   
-        SceneManager.LoadScene("PlayerLive", LoadSceneMode.Single);
+        //LivePlayerManager.instance.LiveVideoCanvasRoot.gameObject.SetActive(true);
+        //LivePlayerManager.instance.LiveVideoRoot.gameObject.SetActive(true);
+       
+        LiveUImanager.instance.LivePlayDisplay();
      
+
+
+
+        mediaPlayerCtrl.Load(MediaPlayerCtrl.m_videoID);
     }
 
     //多码率切换
     public void ChangeLevelWithPath(string path)
     {
-        if (SceneManager.GetActiveScene().name == "Player" || SceneManager.GetActiveScene().name == "Player2D")
+
+        // if (SceneManager.GetActiveScene().name == "MainVR")
+//{
+        if (LauncherUIManager.instance.columnType == ColumnType.VR)
         {
-            GameObject.Find("VideoScreen").SendMessage("ChangeLevelWithPath", path);
+                GameObject.Find("VideoPlayFather/VideoScreenVR").SendMessage("ChangeLevelWithPath", path);
+         }
+        else
+        {
+            GameObject.Find("VideoPlayFather/Cinema/VideoScreen").SendMessage("ChangeLevelWithPath", path);
         }
+       // }
+       // {
+          //  GameObject.Find("VideoPlayFather/VideoScreen").SendMessage("ChangeLevelWithPath", path);
+        //}
     }
-    
-  
-	
+
+
+   public void AndroidBackClick()
+    {
+
+        if (LauncherUIManager.instance.panelBackStatus == PanelBackStatus.VideoPlayPanel)
+        {
+            VideoUImanager.instance.BackMainClick();
+        }
+        else if (LauncherUIManager.instance.panelBackStatus == PanelBackStatus.VideoDetail)
+        {
+            VideoControl.instance.BackLauncherClick();
+        }
+        else if (LauncherUIManager.instance.panelBackStatus == PanelBackStatus.LivePlayer)
+        {
+            LivePlayerManager .instance.BackMainClick();
+        }
+        else if(LauncherUIManager.instance.panelBackStatus == PanelBackStatus.Default)
+        {
+            Application.Quit();
+        }
+        LauncherUIManager.instance.panelBackStatus = PanelBackStatus.Default;
+    }
 	
 }

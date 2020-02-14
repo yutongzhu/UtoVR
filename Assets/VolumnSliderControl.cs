@@ -2,19 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class VolumnSliderControl : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler, IPointerExitHandler, IDragHandler
 {
-
-    public MediaPlayerCtrl m_srcVideo;
+    public static VolumnSliderControl instance;
+   public   MediaPlayerCtrl m_srcVideo;
     public Slider volumnSlider;
 
-  
+    void Awake()
+    {
+        instance = this;
+    }
     bool volumnUpdate = true;
     // Use this for initialization
     void Start()
     {
+     
         if ( Application.platform == RuntimePlatform.Android)
             
         {
@@ -30,6 +35,35 @@ public class VolumnSliderControl : MonoBehaviour, IPointerDownHandler, IPointerU
     void Update()
     {
 
+        if (VideoUImanager.instance.volumnBarLoad == false)
+        {
+            if (SceneManager.GetActiveScene().name == "Main")
+            {
+                //查找赋值
+                m_srcVideo =
+                     LightManger.instance.VideoScreen.transform.Find("VideoScreen").GetComponent<MediaPlayerCtrl>();
+                
+            }
+
+            else if (SceneManager.GetActiveScene().name == "MainVR")
+            {
+                if (LauncherUIManager.instance.columnType == ColumnType.VR)
+                {
+                    m_srcVideo = LightManger.instance.VideoScreenVR.GetComponent<MediaPlayerCtrl>();
+
+                }
+                else
+                {
+                    m_srcVideo = LightManger.instance.VideoScreen.transform.Find("VideoScreen").GetComponent<MediaPlayerCtrl>();
+
+
+                }
+
+            }
+            VideoUImanager.instance.volumnBarLoad = true;
+        }
+
+
         if (volumnBo == false)//表示正常状态没有对slider进行操作
             return;
         
@@ -39,8 +73,13 @@ public class VolumnSliderControl : MonoBehaviour, IPointerDownHandler, IPointerU
 
             if (volumnSlider != null)
             {
-               //Debug.Log("m_srcVideo.GetVolume:" + AndroidAPI.getVolume());
-               volumnSlider.value = AndroidAPI.getVolume();//  m_srcVideo.GetVolume();
+                //Debug.Log("m_srcVideo.GetVolume:" + AndroidAPI.getVolume());
+                if (Application.platform == RuntimePlatform.Android)
+                {
+                    volumnSlider.value = AndroidAPI.getVolume();
+
+                }
+                    //  m_srcVideo.GetVolume();
             }
 
         }
@@ -79,7 +118,11 @@ public class VolumnSliderControl : MonoBehaviour, IPointerDownHandler, IPointerU
         //   Debug.Log("OnPointerUp:" + m_srcSlider.value);
         //   m_srcVideo.SetVolume(volumnSlider .value );
         //  m_srcVideo.SetSeekBarValue(volumnSlider.value);
-        AndroidAPI.setVolume(volumnSlider.value);
+        if (Application .platform ==RuntimePlatform.Android )
+        {
+            AndroidAPI.setVolume(volumnSlider.value);
+        }
+      
           volumnUpdate = true;
 
     }

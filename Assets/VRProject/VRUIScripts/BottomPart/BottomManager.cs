@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class BottomManager : UIBase
 {
-
+    public static BottomManager instance;
     public override void ProcessEvent(MsgBase tmpMag)
     {
 
@@ -28,7 +28,7 @@ public class BottomManager : UIBase
         }
     }
     public Transform head;
-    Transform BottomButtonContent;
+  public   Transform BottomButtonContent;
     Transform VideoButton;
    
 
@@ -37,6 +37,15 @@ public class BottomManager : UIBase
     Transform VRPartButton;
     private void Awake()
     {
+        if (instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            instance = this;
+        }
+        else if (instance != null)
+        {
+            Destroy(gameObject);
+        }
         msgids = new ushort[]
 {
             (ushort )UIEvent .HideBottomPart  ,
@@ -49,6 +58,10 @@ public class BottomManager : UIBase
     bool isVrEnable;
     void Start()
     {
+        if (SceneManager .GetActiveScene().name =="Main")
+        {
+            head = GameObject.Find("UI/Camera").transform;
+        }
         BottomButtonContent = UIManager.instance.GetGameObject("BottomButtonContent").transform;
         VideoButton = UIManager.instance.GetGameObject("VideoButton").transform;
       //  GameButton = UIManager.instance.GetGameObject("GameButton").transform;
@@ -99,13 +112,16 @@ public class BottomManager : UIBase
         }
         else if (button.name == "VRPartButton")
         {
+            Destroy(GameObject.Find("UI"));
             if (SceneManager.GetActiveScene().name == "MainVR")
             {
+               
                 SceneManager.LoadScene("Main", LoadSceneMode.Single);
 
             }
             else if (SceneManager.GetActiveScene().name == "Main")
             {
+
                 SceneManager.LoadScene("MainVR", LoadSceneMode.Single);
             }
            

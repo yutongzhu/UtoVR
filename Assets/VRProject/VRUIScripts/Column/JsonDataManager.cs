@@ -17,7 +17,7 @@ public class JsonDataManager : MonoBehaviour
     // public static Dictionary<string, RecoVideoItemData> RecoVideoItemDic = new Dictionary<string, RecoVideoItemData>();
     static string tabUrl = "https://nhapi01.tv189.com/cpms/index/_clt4_xtysxkhd_sygb_ceshi_vrjm_sdh_index.json/0/115020310073.htm?bzv=11";
     static public List<TabsItem> tabsItems = new List<TabsItem>();
-    public static DataItem leftRecoItem = new DataItem();//首页左边的item
+  public static DataItem leftRecoItem = new DataItem();//首页左边的item
                                                          // public static RecoVideoItemData recoVideoData = new RecoVideoItemData();
     public static string currentId;//当前所选items的id
     public static int liveTotalCount;//直播item总的数量
@@ -29,7 +29,16 @@ public class JsonDataManager : MonoBehaviour
     public static Dictionary<string, VideoItem> liceItemDic = new Dictionary<string, VideoItem>();
     private void Awake()
     {
-        instance = this;
+        // instance = this;
+        if (instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            instance = this;
+        }
+        else if (instance != null)
+        {
+            Destroy(gameObject);
+        }
         StartCoroutine(Getjson(tabUrl, LoadTabs));
 
 
@@ -47,7 +56,8 @@ public class JsonDataManager : MonoBehaviour
         if (unityWeb.isDone)
         {
              retString = unityWeb.downloadHandler.text;
-         
+
+           // Debug.Log("retString" + retString);
             call();
          
         }
@@ -81,6 +91,9 @@ public class JsonDataManager : MonoBehaviour
         leftRecoItem.title = columnRoot.data[0].title;
         leftRecoItem.subscript = columnRoot.data[0].subscript;
         leftRecoItem.cover = columnRoot.data[0].cover;
+        leftRecoItem.clickType = columnRoot.data[0].clickType;
+        leftRecoItem.clickParam = columnRoot.data[0].clickParam;
+        
         childrenItems = columnRoot.children;
         LauncherUIManager.instance.IniRecommendContent();
     }
@@ -174,13 +187,15 @@ public class JsonDataManager : MonoBehaviour
 
     void LoadLive()
     {
-        LiveRoot columnRoot = JsonConvert.DeserializeObject<LiveRoot>(retString);
+        Debug.Log("LoadLive");
+       LiveRoot columnRoot = JsonConvert.DeserializeObject<LiveRoot>(retString);
         liveItems = columnRoot.data;
         Debug.Log("liveItems" + liveItems.Count );
-        Debug.Log("liveItems" + liveItems[14].title);
+       // Debug.Log("liveItems" + liveItems[14].title);
         liveTotalCount = liveItems.Count;
      
         LiveUImanager.instance.SetLiveItemDate();
+        Debug.Log("LoadLive Over");
     }
 
     public void SetImage(string path, VideoItem item, RawImage image)

@@ -213,16 +213,19 @@
      <Compile Include="Assets\VRProject\VRUIScripts\Common\Test.cs" />
      <Compile Include="Assets\VRProject\VRUIScripts\Common\UIDataManger.cs" />
      <Compile Include="Assets\VRProject\VRUIScripts\Common\UISettingManager.cs" />
+     <Compile Include="Assets\VRProject\VRUIScripts\DestoryObjectControl.cs" />
      <Compile Include="Assets\VRProject\VRUIScripts\Game\GameData.cs" />
      <Compile Include="Assets\VRProject\VRUIScripts\Game\GameItemData.cs" />
      <Compile Include="Assets\VRProject\VRUIScripts\Game\GameItemEvent.cs" />
      <Compile Include="Assets\VRProject\VRUIScripts\Game\GameManager.cs" />
+     <Compile Include="Assets\VRProject\VRUIScripts\LightManger.cs" />
      <Compile Include="Assets\VRProject\VRUIScripts\Live\LiveItemData.cs" />
      <Compile Include="Assets\VRProject\VRUIScripts\Live\LivePlayerManager.cs" />
      <Compile Include="Assets\VRProject\VRUIScripts\Live\LiveSlider.cs" />
      <Compile Include="Assets\VRProject\VRUIScripts\Live\LiveUImanager.cs" />
      <Compile Include="Assets\VRProject\VRUIScripts\Live\LiveUrlRoot.cs" />
      <Compile Include="Assets\VRProject\VRUIScripts\Live\PlayButtonEvent.cs" />
+     <Compile Include="Assets\VRProject\VRUIScripts\MainCameraControl.cs" />
      <Compile Include="Assets\VRProject\VRUIScripts\Recommend\RecoVideoItemData.cs" />
      <Compile Include="Assets\VRProject\VRUIScripts\SceneStatus.cs" />
      <Compile Include="Assets\VRProject\VRUIScripts\Singleton.cs" />
@@ -235,6 +238,7 @@
      <Compile Include="Assets\VRProject\VRUIScripts\UserCenter\UserCenterManager.cs" />
      <Compile Include="Assets\VRProject\VRUIScripts\VideoMamager\VideoControl.cs" />
      <Compile Include="Assets\VRProject\VRUIScripts\VideoPlayer\VideoPlayerManager.cs" />
+     <Compile Include="Assets\VRProject\VRUIScripts\test.cs" />
      <Compile Include="Assets\VRProject\VRUIScripts\tree\RootTree.cs" />
      <Compile Include="Assets\VRProject\VRUIScripts\tree\VideoData.cs" />
      <Compile Include="Assets\VRProject\VRUIScripts\tree\VideoItem.cs" />

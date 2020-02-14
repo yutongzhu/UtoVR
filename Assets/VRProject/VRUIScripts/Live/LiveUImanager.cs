@@ -17,7 +17,7 @@ public class LiveUImanager : UIBase
     Text livePageShowText;
     int currentPage = 1;//当前的页面
     int totalPages ;//当前的页面
-    Transform LiveRoot;
+    public Transform LiveRoot;
     Transform LiveItemCotent;
     Transform LiveNextPage;
     Transform LivePreviosPage;
@@ -58,8 +58,11 @@ public class LiveUImanager : UIBase
                              num++;
                         }
 
-
-                        JsonDataManager.instance .LoadLivePart ();
+                        if (Application.platform==RuntimePlatform.Android )
+                        {
+                            JsonDataManager.instance.LoadLivePart();
+                        }
+                       
                     
                         isLoad = true;
                     }
@@ -77,7 +80,16 @@ public class LiveUImanager : UIBase
     }
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+
+        }
+        else if (instance != null)
+        {
+            Destroy(gameObject);
+        }
         msgids = new ushort[]
 {
      (ushort )UIEvent .ShowLivePart ,
@@ -99,7 +111,7 @@ public class LiveUImanager : UIBase
         livePageShowText = UISettingManager.GetUITransform("LivePageShowText").GetComponent<Text>();
         LiveNextPage = UISettingManager.GetUITransform("LiveNextPage");
         LivePreviosPage = UISettingManager.GetUITransform("LivePreviosPage");
-        UISettingManager.AddButtonClickListener("LiveExitButton", ExitLive);
+     //   UISettingManager.AddButtonClickListener("LiveExitButton", ExitLive);
         UISettingManager.AddButtonClickListener("LiveNextPage", NextLivePage);
         UISettingManager.AddButtonClickListener("LivePreviosPage", PriviousLivePage);
 
@@ -112,6 +124,7 @@ public class LiveUImanager : UIBase
         }
        
     }
+  
     void LiveItemDisplay(int startIndex)//表示items从直播列表的哪一个索引值开始显示
     {
         Debug.Log("startIndext:" + startIndex);
@@ -129,7 +142,7 @@ public class LiveUImanager : UIBase
 
                 if (!JsonDataManager.liceItemDic.ContainsKey(Items.contentId))
                 {
-                    Debug.Log("Items.contentId:" + Items.contentId);
+                   // Debug.Log("Items.contentId:" + Items.contentId);
                     JsonDataManager.liceItemDic.Add(Items.contentId, Items);//加载图片完成后，加入字典。根据id添加
                 }
                 JsonDataManager.instance.SetImage(JsonDataManager.liveItems[startIndex+i].cover, Items, liveRawImages[i]);
@@ -189,43 +202,37 @@ public class LiveUImanager : UIBase
     bool isLiveLoad=false ;
     void LiveItemClick(Transform button)
     {
-      
-        VideoItem data = JsonDataManager.liceItemDic[button.name];
-      
+
+        LauncherUIManager.instance.panelBackStatus = PanelBackStatus.LivePlayer;
+        //  LivePlayerManager.instance.LiveVideoCanvasRoot.gameObject.SetActive(true );
         if (Application.platform == RuntimePlatform.Android)
         {
-        
+            VideoItem data = JsonDataManager.liceItemDic[button.name];
             AndroidAPI.StartActivityForUnityTV189(data.contentId, data.clickType, data.clickParam, data.title, 0);
            // SceneManager.LoadScene("PlayerLive");
 
 
         }
-        //else
-        //{
-        //    JArray urlArry = (JArray)JsonConvert.DeserializeObject(jsonTxt);
-        //    int count = urlArry.Count;
-         
-        //        for (int i = 0; i < count; i++)
-        //        {
-        //            LiveUrlData livedata = new LiveUrlData();
-        //            livedata.playUrl = urlArry[i]["playUrl"].ToString();
-        //            livedata.audioUrl = urlArry[i]["audioUrl"].ToString();
-        //            livedata.qualityName = urlArry[i]["qualityName"].ToString();
-        //            livedata.qualityid = urlArry[i]["qualityid"].ToString();
-        //            livedata.vid = urlArry[i]["vid"].ToString();
-        //            TV189MsgReciver.liveDataList.Add(livedata);
-        //            if (!TV189MsgReciver.liveUrlDic.ContainsKey(livedata.qualityid))
-        //            {
-        //              TV189MsgReciver .  liveUrlDic.Add(livedata.qualityid, livedata);
-        //            }
-        //        }
-             
-         
-        //    MediaPlayerCtrl.m_videoID = urlArry[0]["playUrl"].ToString();
-        //    MediaPlayerCtrl.is3dUD = false;
+        else
+        {
+            LivePlayDisplay();
+            // SceneManager.LoadScene("PlayerLive", LoadSceneMode.Single);
+            // mediaPlayerCtrl.Load(MediaPlayerCtrl.m_videoID);
+        }
+        
 
-        //    SceneManager.LoadScene("PlayerLive", LoadSceneMode.Single);
-        //}
+    }
+    //点击播放直播按钮后的一些UI界面控制
+  public void LivePlayDisplay()
+    {
+
+        LiveRoot.gameObject.SetActive(false);
+        LivePlayerManager.instance.LiveVideoCanvasRoot.gameObject.SetActive(true);
+        LivePlayerManager.instance.LiveVideoRoot.gameObject.SetActive(true);
+        LightManger.instance.VideoScreenVR.SetActive(false);
+        LightManger.instance.VideoScreen.SetActive(true);
+        LauncherUIManager.instance.LauncherView.gameObject.SetActive(false);
+        SendMsg(new MsgBase((ushort)UIEvent.HideBottomPart));
 
     }
 }

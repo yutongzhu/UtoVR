@@ -5,48 +5,18 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
-
+public enum CanvasStatus
+{
+    Default,
+    CanvasEnable,
+    CanvasDisable
+}
 public class CameraController : MonoBehaviour
 {
-    #region
-    //float firstPosX = 0f;
-    //float currentRotY = 0f;
-    //public GameObject roleObj = null;
-    //private void RoleRotation(float detalTime)
-    //{
-
-    //        if (Input.touchCount == 1)
-    //        {
-    //            if (Input.GetTouch(0).phase == TouchPhase.Began)
-    //            {
-    //                firstPosX = Input.GetTouch(0).position.x;
-    //                currentRotY = roleObj.transform.localRotation.eulerAngles.y;
-    //            }
-    //            if (Input.GetTouch(0).phase == TouchPhase.Moved)
-    //            {
-    //                float currentPosX = Input.GetTouch(0).position.x;
-    //                float XAxis = firstPosX - currentPosX;
-    //                if (Mathf.Abs(XAxis) < 5)
-    //                { return; }
-    //                roleObj.transform.localRotation = Quaternion.Euler(new Vector3(0f, currentRotY + XAxis, 0) * 0.1f);
-    //            }
-    //            if (Input.GetTouch(0).phase == TouchPhase.Ended)
-    //            {
-    //                 firstPosX = 0f;
-    //                currentRotY = roleObj.transform.localRotation.eulerAngles.y;
-
-    //            }
-    //        }
+    public static CameraController instance;
 
 
-
-
-
-    //}
-    #endregion
-
-
-   // public Transform target;
+    // public Transform target;
     float distance = 4;
     float xSpeed = 6.0F;
     private float x = 0.0F;
@@ -58,7 +28,17 @@ public class CameraController : MonoBehaviour
     Vector3 position;
     private Transform UI;
     List<Canvas> canvasList = new List<Canvas>();
+    List<GraphicRaycaster> graphicRaycasterList = new List<GraphicRaycaster>();
     Scene scene;
+    public CanvasStatus canvasStatus;
+    public bool screenRotaEnale=true;//表示屏幕滑动旋转效果是否可用
+
+
+    void Awake()
+    {
+        instance = this;
+    
+    } 
     private void Start()
     {
         scene = SceneManager.GetActiveScene();
@@ -78,20 +58,14 @@ public class CameraController : MonoBehaviour
         foreach (Canvas item in UI.GetComponentsInChildren<Canvas>())
         {
             canvasList.Add(item);
+            graphicRaycasterList.Add(item.transform .GetComponent <GraphicRaycaster>());
+
         }
-
+        screenRotaEnale = true;
+      
     }
-    CanvasStatus canvasStatus;
-    public void click() {
-
-        Debug.Log("hlakgjlkjsd;lgj;lhgieha;ro");
-    }
-    enum CanvasStatus
-    {
-        Default,
-        CanvasEnable,
-       CanvasDisable
-    }
+   
+   
     void SetCanvasEventTrue()
     {
         switch (canvasStatus)
@@ -101,14 +75,16 @@ public class CameraController : MonoBehaviour
             case CanvasStatus.CanvasEnable:
                 for (int i = 0; i < canvasList.Count; i++)
                 {
-                    canvasList[i].transform.GetComponent<GraphicRaycaster>().enabled = true;
+                    graphicRaycasterList[i].enabled = true;
                 }
                 canvasStatus = CanvasStatus.Default;
                 break;
             case CanvasStatus.CanvasDisable:
                 for (int i = 0; i < canvasList.Count; i++)
                 {
-                    canvasList[i].transform.GetComponent<GraphicRaycaster>().enabled = false ;
+                    graphicRaycasterList[i].enabled = false ;
+
+
                 }
                 canvasStatus = CanvasStatus.Default;
                 break;
@@ -123,7 +99,32 @@ public class CameraController : MonoBehaviour
     {
         //  position = rotation * new Vector3(0.0F, 0.5f, -distance) + target.transform.position;
         //   transform.position = Vector3.Lerp(transform.position, position, 0.8f);
-     
+        if (scene.name =="Player2D"
+            || scene.name == "Player2DVR")
+        {
+            if (screenRotaEnale==true )
+            {
+              //  Debug.Log("screenRotaEnale");
+                CameraRotate();
+            }
+            else if (screenRotaEnale == false)
+           
+            {
+               // Debug.Log("CanvasEnable");
+                canvasStatus = CanvasStatus.CanvasEnable;
+            }
+        }
+        else
+        {
+            CameraRotate();
+        }
+        
+       
+        SetCanvasEventTrue();
+
+    }
+    void CameraRotate()
+    {
         if (Input.touchCount == 1)
         {
             if (Input.GetTouch(0).phase == TouchPhase.Moved)
@@ -143,7 +144,7 @@ public class CameraController : MonoBehaviour
                     transform.rotation = rotation;
                     // position = rotation * new Vector3(0.0F, 0.5f, -distance) + target.transform.position;
                     //transform.position = Vector3.Lerp(transform.position, position, 0.8f);
-                   
+
                 }
             }
             else
@@ -151,7 +152,6 @@ public class CameraController : MonoBehaviour
                 canvasStatus = CanvasStatus.CanvasEnable;
             }
         }
-        SetCanvasEventTrue();
 
     }
 }

@@ -16,30 +16,45 @@ public class VideoUImanager : UIBase {
     public override void ProcessEvent(MsgBase tmpMag)
     {
 
-        //switch (tmpMag.msgid)
-        //{
+        switch (tmpMag.msgid)
+        {
 
-        //    //case (ushort)UIEvent.ShowGamePart:
-        //    //    {
-                   
-        //    //    }
-        //    //    break;
-        //    //case (ushort)UIEvent.HideGamePart:
-        //    //    {
-                
-        //    //    }
-        //    //    break;
+            case (ushort)UIEvent.ShowScreenPlay:
+                {
+                    VideoCanvasRoot.SetActive(true);
+                    VideoContolRoot.gameObject.SetActive(false);
+                    VolumeSlider.gameObject.SetActive(false);
+                    LevelControl.gameObject.SetActive(false);
+                }
+                break;
+            case (ushort)UIEvent.HideScreenPlay:
+                {
+                    VideoCanvasRoot.SetActive(false);
+                }
+                break;
 
-        //}
+        }
     }
-
-     
+    public static VideoUImanager instance;
+    public bool seekBarLoad = false;//用来控制seekBar脚本的运行时查找视屏播放插件
+    public bool volumnBarLoad = false;//用来控制volumnBar脚本的运行时查找视屏播放插件
     private void Awake()
     {
+          instance = this;
+        //if (instance == null)
+        //{
+        //    DontDestroyOnLoad(gameObject);
+
+        //}
+        //else if (instance != null)
+        //{
+        //    Destroy(gameObject);
+        //}
+    
         msgids = new ushort[]
 {
-            //(ushort )UIEvent  ,
-            // (ushort )UIEvent .HideGamePart
+            (ushort )UIEvent.ShowScreenPlay  ,
+             (ushort )UIEvent .HideScreenPlay
 
 
 };
@@ -47,10 +62,11 @@ public class VideoUImanager : UIBase {
 
     }
     VideoStatus videoStatus;
-    public MediaPlayerCtrl mediaPlayerCtrl;
- 
+   public   MediaPlayerCtrl mediaPlayerCtrl;
+    public GameObject VideoCanvasRoot;
+   // public GameObject VideoPlay;
     Slider VolumeSlider;
-   
+  
     Transform SelectImage;//用于切换不同状态时候
     Image VideoStatusImage;//用于显示此时的清晰度状态
     Transform LevelControl;
@@ -58,9 +74,13 @@ public class VideoUImanager : UIBase {
     Transform PlayButton;
     List<Button> buttonList = new List<Button>();
     void Start () {
-        VolumeSlider= UISettingManager.GetUITransform("VolumeSlider").GetComponent<Slider >();
      
-        PlayButton = UISettingManager.GetUITransform("PlayButton");
+      //  mediaPlayerCtrl = GameObject.Find("VideoPlayFather").transform.
+           // Find("Cinema/VideoScreen").GetComponent<MediaPlayerCtrl>();
+     
+        VolumeSlider = UISettingManager.GetUITransform("VolumeSlider").GetComponent<Slider >();
+   //     VideoCanvasRoot = UISettingManager.GetUIObject("VideoCanvasRoot");
+           PlayButton = UISettingManager.GetUITransform("PlayButton");
         SelectImage= UISettingManager.GetUITransform("SelectImage");
         VideoStatusImage = UISettingManager.GetUITransform("VideoStatusBt").GetComponent <Image >();
         UISettingManager.AddButtonClickListener("PlayButton", PlayVideoClick);
@@ -78,10 +98,20 @@ public class VideoUImanager : UIBase {
             item.onClick.AddListener(delegate() { VideoStatusChange(item); });
             buttonList.Add(item);
         }
-  
-        VideoContolRoot.gameObject.SetActive(false );
-        VolumeSlider.gameObject.SetActive(false );
-        LevelControl.gameObject.SetActive(false );
+        if (SceneManager .GetActiveScene() .name =="PlayerVR")
+        {
+            VideoCanvasRoot.SetActive(true);
+            VideoCanvasRoot.transform.Find("VideoContolRoot").gameObject.SetActive(false);
+        }
+        else
+        {
+            VideoCanvasRoot.transform .Find ("VideoContolRoot").gameObject .SetActive(false);
+           // VideoContolRoot.gameObject.SetActive(false);
+        }
+       
+      
+        VolumeSlider.gameObject.SetActive(false);
+        LevelControl.gameObject.SetActive(false);
     }
     //重播
     void ReplayClick()
@@ -143,36 +173,68 @@ public class VideoUImanager : UIBase {
 /// <summary>
 /// 返回主页面
 /// </summary>
-    void BackMainClick()
+  public   void BackMainClick()
     {
         Debug.Log("BackMainClick");
-        mediaPlayerCtrl.Stop();
+        Transform VideoPlayFather = GameObject.Find("VideoPlayFather").transform;
+        if (SceneManager.GetActiveScene().name == "Main"|| SceneManager.GetActiveScene().name == "MainVR")
+        {
+            MediaPlayerCtrl mediaPlayerCtrl =
+           VideoPlayFather.Find("Cinema/VideoScreen").GetComponent<MediaPlayerCtrl>();
+            mediaPlayerCtrl.Stop();
 
-        if (SceneManager.GetActiveScene().name == "Player2D"
-            || SceneManager.GetActiveScene().name == "Player" 
-            || SceneManager.GetActiveScene().name == "PlayerVR")
-        {
-            SceneManager.LoadScene("Main");
         }
-       else if (SceneManager.GetActiveScene().name == "Player2DVR" 
-           )
+        else
         {
-            SceneManager.LoadScene("MainVR");
+            mediaPlayerCtrl.Stop();
         }
+       
+     
         
 
+        if (SceneStatus.sceneEnum == SceneEnum.MainVR)
+        {
+            LightManger.instance.VideoCanvasRoot.SetActive(false );
+            LightManger.instance.VideoCanvasRootVR.SetActive(false);
+            LightManger.instance.VideoCanvasRoot.transform.Find("VideoContolRoot").gameObject.SetActive(false);
+            LightManger.instance.VideoCanvasRootVR.transform.Find("VideoContolRoot").gameObject.SetActive(false );
+            LightManger.instance.VideoScreen.SetActive(false );
+            LightManger.instance.VideoScreenVR.SetActive(false);
 
-        VolumeSlider.gameObject.SetActive(false );
-        VideoContolRoot.gameObject.SetActive(false );
+        
+        }
+        else
+        {
+           SceneManager.LoadScene("Main");
+
+        }
+
+
+        VideoControl.instance.VideoDetailRoot.gameObject.SetActive(true);
+        VideoCanvasRoot.SetActive(false);
+        //LightManger.instance.VideoPlay.SetActive(false);
     }
     bool VideoAdjusEnable;
     /// <summary>
     /// 显示时评调节的界面
     /// </summary>
-    void ShowVideoAdjustPanel()
+  public   void ShowVideoAdjustPanel()
     {
+        seekBarLoad = false;
+        volumnBarLoad = false;
+
         if (VideoAdjusEnable == false)
         {
+            if (SceneManager.GetActiveScene().name =="Main")
+            {
+            
+                //此时ui控件的相应优先于滑动屏幕旋转
+                CameraController.instance.screenRotaEnale = false;
+            }
+
+           
+            
+           
             VideoContolRoot .gameObject.SetActive(true);
             
             switch ( videoStatus)
@@ -205,8 +267,11 @@ public class VideoUImanager : UIBase {
         }
         else
         {
+
             VideoContolRoot.gameObject.SetActive(false);
             VideoAdjusEnable = false;
+            //滑动屏幕旋转
+            CameraController.instance.screenRotaEnale = true;
         }
     }
     //重置位置的方法

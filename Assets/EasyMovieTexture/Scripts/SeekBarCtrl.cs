@@ -5,6 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using VRStandardAssets.Utils;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 
 
@@ -12,23 +13,41 @@ using System.Collections.Generic;
 
 public class SeekBarCtrl : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler, IPointerExitHandler, IDragHandler
 {
+    public static SeekBarCtrl instance;
 
-    public MediaPlayerCtrl m_srcVideo;
+   public     MediaPlayerCtrl m_srcVideo;
     public Slider m_srcSlider;
 
     public Text currentTime;
     public Text totalTime;
     bool videoUpdate = true;
     // Use this for initialization
+    void Awake()
+    {
+
+        instance = this;
+    }
     void Start()
     {
+        //if (LauncherUIManager .instance .columnType==ColumnType.VR)
+        //{
+        //    m_srcVideo = LightManger.instance.VideoScreenVR.GetComponent<MediaPlayerCtrl>();
+        //}
+        //else
+        //{
+        //    m_srcVideo = LightManger.instance.VideoScreen.GetComponent<MediaPlayerCtrl>();
+        //}
+        
+      //  m_srcVideo = m_srcVideo = GameObject.Find("VideoPlayFather").transform.
+      //   Find("VideoScreen").GetComponent<MediaPlayerCtrl>();
     }
 
     bool getTotalBo;
     //获取视频总时间
     string GetTatalTime()
     {
-        int time = m_srcVideo.GetDuration();
+      
+        int time =  m_srcVideo.GetDuration();
         int durationM = time / 1000 / 60;
         int durationS = time / 1000 % 60;
         string durM = durationM < 10 ? "0" + durationM : durationM + "";
@@ -40,6 +59,7 @@ public class SeekBarCtrl : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     //获取当前视频进程时间
     string GetCurrentTime()
     {
+       
         int time = m_srcVideo.GetSeekPosition();
         int currentM = time / 1000 / 60;
         int currentS = time / 1000 % 60;//秒
@@ -52,6 +72,39 @@ public class SeekBarCtrl : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     // Update is called once per frame
     void Update()
     {
+        if (VideoUImanager.instance .seekBarLoad==false)
+        {
+            if (SceneManager.GetActiveScene().name == "Main")
+            {
+                 //查找赋值
+               m_srcVideo =
+                    LightManger.instance.VideoScreen.transform .Find ("VideoScreen"). GetComponent<MediaPlayerCtrl>();
+                
+
+                Debug.Log("eeeeeee");
+            }
+       //   else if (SceneManager.GetActiveScene().name == "PlayerVR")
+
+            else if (SceneManager.GetActiveScene().name == "MainVR")
+            {
+                if (LauncherUIManager.instance.columnType == ColumnType.VR)
+                {
+                    m_srcVideo =LightManger.instance.VideoScreenVR.GetComponent<MediaPlayerCtrl>();
+                  
+                }
+                else
+                {
+                   m_srcVideo = LightManger.instance.VideoScreen.transform.Find("VideoScreen").GetComponent<MediaPlayerCtrl>();
+
+
+                }
+
+            }
+           VideoUImanager.instance.seekBarLoad = true ;
+        }
+
+
+        //   }
 
         if (videoUpdate == false)//表示正常状态没有对slider进行操作
             return;
@@ -77,9 +130,6 @@ public class SeekBarCtrl : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             }
 
         }
-        //   }
-
-
     }
 
     private PointerEventData pEventData;

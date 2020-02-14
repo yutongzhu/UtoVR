@@ -15,10 +15,11 @@ public enum LiveVideoStatus
 }
 public class LivePlayerManager : UIBase {
     public MediaPlayerCtrl mediaPlayerCtrl;
-    Slider VolumeSlider;
+    Slider LiveVolumeSlider;
     public LiveVideoStatus liveVideoStatus;
-    Transform LevelControl;
-    Transform LiveRoot;
+    Transform LiveLevelControl;
+    public   Transform LiveVideoRoot;
+    public Transform LiveVideoCanvasRoot;
     public static LivePlayerManager instance;
     public List<Transform> liveStatusList = new List<Transform>();
     public Text LiveStatusText;
@@ -34,33 +35,35 @@ public class LivePlayerManager : UIBase {
     }
     void Start () {
 
-
-        LiveRoot = UISettingManager.GetUITransform("VideoContolRoot");
+        LiveVideoCanvasRoot = UISettingManager.GetUITransform("LiveVideoCanvasRoot");
+        LiveVideoRoot = UISettingManager.GetUITransform("LiveVideoRoot");
         LiveStatusText= UISettingManager.GetUITransform("LiveStatusText").GetComponent <Text >();
-        UISettingManager.AddButtonClickListener("BackMainBtn", BackMainClick);
-        UISettingManager.AddButtonClickListener("ShowBtn", LiveAdjustPanel);
+        UISettingManager.AddButtonClickListener("LiveBackBtn", BackMainClick);
+       // UISettingManager.AddButtonClickListener("ShowBtn", LiveAdjustPanel);
         UISettingManager.AddButtonClickListener("LivePlayButton", LivePlayButtonClick);
-        VolumeSlider = UISettingManager.GetUITransform("VolumeSlider").GetComponent<Slider>();
-        UISettingManager.AddButtonClickListener("VolumeButton", SetVolumnPanel);
-        UISettingManager.AddButtonClickListener("LiveVideoStatusBt", ShowLiveControl);
-        VolumeSlider.gameObject.SetActive(false );
-        LevelControl = UISettingManager.GetUITransform("LevelControl");
-        foreach (Button item in LevelControl.GetComponentsInChildren <Button >())
+        LiveVolumeSlider = UISettingManager.GetUITransform("LiveVolumeSlider").GetComponent<Slider>();
+        UISettingManager.AddButtonClickListener("LiveVolumeButton", SetVolumnPanel);
+        UISettingManager.AddButtonClickListener("LiveVideoStatusBt", LiveAdjustPanel);
+        LiveVolumeSlider.gameObject.SetActive(false );
+        LiveLevelControl = UISettingManager.GetUITransform("LiveLevelControl");
+        foreach (Button item in LiveLevelControl.GetComponentsInChildren <Button >())
         {
             liveStatusList.Add(item.transform );
             item.onClick.AddListener(delegate() { ChangeLiveStatus(item.transform); });
         }
-        LevelControl.gameObject.SetActive(false );
+        LiveLevelControl.gameObject.SetActive(false );
 
-        LiveRoot.gameObject.SetActive(false);
-      
-       
+        LiveVideoRoot.gameObject.SetActive(false);
+        LiveVideoCanvasRoot.gameObject.SetActive(false );
+
+        if (Application.platform==RuntimePlatform.Android )
+        {
             for (int i = 0; i < liveStatusList.Count; i++)
             {
-                if (i < TV189MsgReciver.liveDataList.Count )
+                if (i < TV189MsgReciver.liveDataList.Count)
                 {
-                   liveStatusList[i].Find("Text").
-                        GetComponent<Text>().text = TV189MsgReciver.liveDataList[i].qualityName;
+                    liveStatusList[i].Find("Text").
+                         GetComponent<Text>().text = TV189MsgReciver.liveDataList[i].qualityName;
                     liveStatusList[i].name = TV189MsgReciver.liveDataList[i].qualityid;
                 }
                 else
@@ -68,19 +71,27 @@ public class LivePlayerManager : UIBase {
                     liveStatusList[i].gameObject.SetActive(false);
                 }
             }
-        LiveStatusText.text = TV189MsgReciver.liveDataList[0].qualityName;
+            LiveStatusText.text = TV189MsgReciver.liveDataList[0].qualityName;
+        }
+            
+        //if (Application.platform==RuntimePlatform.Android )
+        //{
+         
+        //}
+        
     }
+    //显示码率切换界面
     bool adjustPanelEnable;
     void LiveAdjustPanel()
     {
         if (adjustPanelEnable==false)
         {
-            LiveRoot.gameObject.SetActive(true);
+            LiveLevelControl.gameObject.SetActive(true);
             adjustPanelEnable = true;
         }
         else
         {
-            LiveRoot.gameObject.SetActive(false);
+            LiveLevelControl.gameObject.SetActive(false);
             adjustPanelEnable = false ;
         }
 
@@ -91,39 +102,43 @@ public class LivePlayerManager : UIBase {
         if (volumnEnable == false)
         {
 
-            VolumeSlider.gameObject.SetActive(true);
+            LiveVolumeSlider.gameObject.SetActive(true);
             volumnEnable = true;
         }
         else
         {
-            VolumeSlider.gameObject.SetActive(false);
+            LiveVolumeSlider.gameObject.SetActive(false);
             volumnEnable = false;
         }
     }
     /// <summary>
     /// 返回主页面
     /// </summary>
-    void BackMainClick()
+ public  void BackMainClick()
     {
         Debug.Log("BackMainClick");
-        mediaPlayerCtrl.Stop();
-        if (SceneStatus.sceneEnum==SceneEnum.Main)
+        Transform VideoPlayFather = GameObject.Find("VideoPlayFather").transform;
+        if (SceneManager.GetActiveScene().name == "Main" || SceneManager.GetActiveScene().name == "MainVR")
         {
-            SceneManager.LoadScene("Main");
+            MediaPlayerCtrl mediaPlayerCtrl =
+           VideoPlayFather.Find("Cinema/VideoScreen").GetComponent<MediaPlayerCtrl>();
+            mediaPlayerCtrl.Stop();
+
         }
-        else
-        {
-            SceneManager.LoadScene("MainVR");
-        }
-      
-        VolumeSlider.gameObject.SetActive(false);
-       
+
+        LiveVideoCanvasRoot.gameObject.SetActive(false);
+       LiveVideoRoot.gameObject.SetActive(false);
+        LightManger.instance.VideoScreenVR.SetActive(false);
+        LightManger.instance.VideoScreen.SetActive(false);
+        LauncherUIManager.instance.LauncherView.gameObject.SetActive(true);
+        SendMsg(new MsgBase((ushort)UIEvent.ShowBottomPart));
+        LiveVolumeSlider.gameObject.SetActive(false);
+        LiveUImanager.instance.LiveRoot.gameObject.SetActive(true );
     }
-    //显示码率切换界面
-    void ShowLiveControl()
-    {
-        LevelControl.gameObject.SetActive(true );
-    }
+    
+   
+   
+ 
     bool isPlay=true;
     void LivePlayButtonClick()
     {
@@ -142,7 +157,7 @@ public class LivePlayerManager : UIBase {
     void ChangeLiveStatus(Transform button)
     {
         Debug.Log("ChangeLiveStatus");
-        LevelControl.gameObject.SetActive(false);
+        LiveLevelControl.gameObject.SetActive(false);
         if (Application.platform ==RuntimePlatform.Android)
         {
             //获取当前url
